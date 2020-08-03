@@ -8,7 +8,7 @@
         <span class="ml-2 font-semibold font-sans tracking-wide">
           <strong>{{ name }}</strong>:
           <small class="text-gray">id: {{catId || 1}}</small>
-          <small class="text-gray">Aktywne posty: {{postsCount || 1}}</small>
+          <small class="text-gray">Active posts: {{postsCount || 1}}</small>
         </span>
       </div>
       <div class="d-flex justify-content-between catActions">
@@ -47,12 +47,12 @@ export default {
         this.$notify({
           group: "foo-css",
           title: "Sukces!",
-          text: "Kategoria została usunieta",
-          type: "danger"
+          text: "Category została usunieta",
+          type: "danger",
         })
       );
-    }
-  }
+    },
+  },
 };
 </script>
 

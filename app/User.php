@@ -47,4 +47,9 @@ class User extends Authenticatable
     {
         return $this->allowed_login;
     }
+
+    public function posts()
+    {
+        return $this->hasMany('App\Post');
+    }
 }

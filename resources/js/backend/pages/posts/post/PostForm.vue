@@ -3,7 +3,7 @@
     <div class="card postForm">
       <div class="card-header">
         <div>
-          <h3 class="card-title">Główne treści</h3>
+          <h3 class="card-title">Main content</h3>
         </div>
         <!-- Small switch -->
         <div class="form-group">
@@ -21,7 +21,7 @@
       </div>
       <div class="card-body">
         <div class="form-group" v-if="postData">
-          <label for="inputName">Tytuł posta</label>
+          <label for="inputName">Title</label>
           <input type="text" id="inputName" class="form-control" v-model="postData.title" />
         </div>
         <div class="form-group" v-if="postData">
@@ -30,7 +30,7 @@
         </div>
         <hr />
         <div class="form-group" v-if="postData">
-          <label for="inputShortDescription">Zajawka</label>
+          <label for="inputShortDescription">Short description</label>
           <textarea
             id="inputShortDescription"
             class="form-control"
@@ -39,7 +39,7 @@
           ></textarea>
         </div>
         <div class="form-group" v-if="postData">
-          <label for="inputDescription">Główny tekst</label>
+          <label for="inputDescription">Main content</label>
           <vue-editor :row="10" id="inputDescription" v-model="postData.description"></vue-editor>
         </div>
       </div>
@@ -51,18 +51,18 @@
 import { VueEditor } from "vue2-editor";
 export default {
   components: {
-    VueEditor
+    VueEditor,
   },
   props: {
     postData: {
-      required: true
-    }
+      required: true,
+    },
   },
   methods: {
     changeStatus() {
       this.postData.published = !this.postData.published;
-    }
-  }
+    },
+  },
 };
 </script>
 <style lang="scss">

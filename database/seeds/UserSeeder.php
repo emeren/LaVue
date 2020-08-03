@@ -26,6 +26,10 @@ class UserSeeder extends Seeder
         $admin->save();
 
         //Create 10 more users
-        factory('App\User', 10)->create();
+
+        factory('App\User', 3)->create()->each(function ($user) {
+            $count = random_int(1, 5);
+            $user->posts()->saveMany(factory('App\Post', $count)->make());
+        });;
     }
 }

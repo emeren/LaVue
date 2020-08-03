@@ -1,26 +1,29 @@
 <template>
   <div class="container-fluid">
-    <ContentHeader :title="isEditing ? 'Edycja posta' : 'Dodaj post'"></ContentHeader>
+    <ContentHeader :title="isEditing ? 'Edit post' : 'Create post'"></ContentHeader>
     <div class="row">
       <InfoBox
         :size="`4`"
         :number="countTitleChar"
         bg="success"
-        title="Długosc tytułu"
+        title="Title length"
         icon="fa-list"
       ></InfoBox>
       <InfoBox
         :size="`4`"
         :number="countDescChar"
         bg="success"
-        title="Długość opisu"
+        title="Description length"
         icon="fa-book-open"
       ></InfoBox>
-      <InfoBox :size="`4`" :number="5" bg="info" title="Słowa kluczowe" icon="fa-pen"></InfoBox>
+      <InfoBox :size="`4`" :number="5" bg="info" title="Key words" icon="fa-pen"></InfoBox>
     </div>
     <div class="row">
       <div class="col-md-12 topButtons">
-        <div></div>
+        <div>
+          Created by:
+          <a href="#">{{this.postData.author.email}}</a>
+        </div>
         <div>
           <input
             :value="submitBusttonText"
@@ -47,7 +50,7 @@
       </div>
     </div>
     <div class="row justify-content-end">
-      <a class="btn btn-danger btn-secondar text-white mr-2" @click="$router.go(-1)">Anuluj</a>
+      <a class="btn btn-danger btn-secondar text-white mr-2" @click="$router.go(-1)">Cancle</a>
       <input
         type="submit"
         :value="submitBusttonText"
@@ -76,7 +79,7 @@ export default {
     PostThumbnail,
     PostGallery,
     PostInfo,
-    PostMeta
+    PostMeta,
   },
   data() {
     return {
@@ -93,8 +96,8 @@ export default {
         publish_from: "",
         publish_to: "",
         published: 1,
-        categories: []
-      }
+        categories: [],
+      },
     };
   },
   // watch: {
@@ -106,14 +109,15 @@ export default {
   //   }
   // },
   created() {
+    console.log(this.postData);
     if (this.$route.params.id > 0) {
-      this.submitBusttonText = "Zaktualizuj";
+      this.submitBusttonText = "Update";
       this.pageTitle = "Edycja artykulu";
       this.postData = this.singlePost(this.$route.params.id);
       this.isEditing = true;
     } else {
-      this.pageTitle = "Tworzenie artykułu";
-      this.submitBusttonText = "Dodaj artykuł";
+      this.pageTitle = "Creating article";
+      this.submitBusttonText = "Add Article";
       this.isEditing = false;
     }
   },
@@ -128,7 +132,7 @@ export default {
       let text = this.postData.description;
       this.textChar = text.length;
       return this.textChar;
-    }
+    },
   },
   methods: {
     formSubmit() {
@@ -138,9 +142,9 @@ export default {
       this.$store.dispatch("posts/updatePost", this.postData).then(
         this.$notify({
           group: "foo-css",
-          title: "Aktualizacja",
-          text: "Post został zaktualizowany",
-          type: "success"
+          title: "Update",
+          text: "Post updated",
+          type: "success",
         }),
         this.$router.push({ name: "posts" })
       );
@@ -149,14 +153,14 @@ export default {
       this.$store.dispatch("posts/createPost", this.postData).then(
         this.$notify({
           group: "foo-css",
-          title: "Sukces!",
-          text: "Post został dodany do bazy",
-          type: "success"
+          title: "Success!",
+          text: "Post added to database",
+          type: "success",
         })
       );
       this.$router.push({ name: "posts" });
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -168,5 +172,6 @@ export default {
 .topButtons {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 </style>

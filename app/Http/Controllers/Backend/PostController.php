@@ -54,6 +54,7 @@ class PostController extends Controller
             "title" => $request->title,
             "description" => $request->description,
             "thumbnail" => $request->thumbnail,
+            "user_id" => $request->user_id,
             "gallery" => $request->gallery,
             "publish_from" => $request->publish_from,
             "publish_to" => $request->publish_to,

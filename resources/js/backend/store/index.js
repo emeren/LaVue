@@ -9,6 +9,7 @@ const vuexLocalStorage = new VuexPersist({
 });
 //stores
 import dashboardStore from "./modules/dashboardStore";
+import usersStore from "./modules/usersStore";
 
 import postsStore from "./modules/posts";
 import categoriesStore from "./modules/categoriesStore";
@@ -17,8 +18,8 @@ export default new Vuex.Store({
     // plugins: [vuexLocalStorage.plugin],
     modules: {
         dashboard: dashboardStore,
+        users: usersStore,
         posts: postsStore,
         categories: categoriesStore,
-
     }
 });

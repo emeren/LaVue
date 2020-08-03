@@ -1,7 +1,7 @@
 <template>
   <div class="card">
     <div class="card-header">
-      <h3 class="card-title">Główny obrazek</h3>
+      <h3 class="card-title">Thumbnail</h3>
 
       <div class="card-tools">
         <button
@@ -27,25 +27,25 @@ import { mapGetters } from "vuex";
 export default {
   props: {
     postData: {
-      required: true
-    }
+      required: true,
+    },
   },
   data() {
     return {
-      setCategory: []
+      setCategory: [],
     };
   },
   computed: {
     ...mapGetters("posts", ["usedCategories"]),
     categories() {
       return this.activePostsCategories;
-    }
+    },
   },
   methods: {
     categoryChange(e) {
       // console.log(e.target.value);
-    }
-  }
+    },
+  },
 };
 </script>
 

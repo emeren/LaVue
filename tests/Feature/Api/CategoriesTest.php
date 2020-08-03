@@ -3,6 +3,7 @@
 namespace Tests\Feature\Api;
 
 use App\Category;
+use App\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\ResetsDatabase;
 use Tests\MigrateFreshDB;
@@ -201,6 +202,7 @@ class CategoriesTest extends TestCase
 
             'title' => 'name1',
             'description' => 'desc1',
+            'user_id' => User::all()->random()->id,
             'thumbnail' => 'test',
             'gallery' => 'test',
             'publish_from' => date('Y-m-d', date_timestamp_get(now())),

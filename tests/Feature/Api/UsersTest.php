@@ -68,7 +68,7 @@ class UsersTest extends TestCase
         $apiEndpoint->assertSuccessful();
         $apiEndpoint->assertJsonStructure([
             "data" => [
-                0 => ["id", "name", "email", "email_verified_at", "allowed_login", "created_at", "updated_at"]
+                0 => ["id", "name", "email", "allowed_login", "created_at", "updated_at"]
             ]
         ]);
     }

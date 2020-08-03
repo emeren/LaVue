@@ -16,8 +16,9 @@
       </div>
     </div>
     <div class="card-body">
+      <div></div>
       <div class="form-group">
-        <label for="inputEstimatedBudget">Data publikacji</label>
+        <label for="inputEstimatedBudget">Pubish data</label>
         <input
           type="text"
           id="inputEstimatedDuration"
@@ -27,7 +28,7 @@
         />
       </div>
       <div class="form-group">
-        <label for="inputSpentBudget">Zakończ publikacje</label>
+        <label for="inputSpentBudget">Finish</label>
         <input
           type="text"
           id="inputEstimatedDuration"
@@ -37,7 +38,7 @@
         />
       </div>
       <div class="form-group" v-if="postData">
-        <label for="inputEstimatedDuration">Utworzono</label>
+        <label for="inputEstimatedDuration">Created at</label>
         <input
           type="text"
           id="inputEstimatedDuration"
@@ -55,9 +56,9 @@
 export default {
   props: {
     postData: {
-      required: true
-    }
-  }
+      required: true,
+    },
+  },
 };
 </script>
 

@@ -32,7 +32,7 @@
           </div>
 
           <div class="form-group">
-            <label for="inputName">Kategoria nadrzędna</label>
+            <label for="inputName">Category nadrzędna</label>
             <select
               class="form-control"
               v-model="catData.name"
@@ -40,7 +40,7 @@
               v-if="flatCats"
               required
             >
-              <option>brak</option>
+              <option>none</option>
               <option v-for="category in flatCats" :key="category.id">{{category.name}}</option>
             </select>
           </div>
@@ -59,7 +59,7 @@
     </div>
     <div class="row justify-content-end" v-if="editing">
       <div class="col-md-4">
-        <a class="btn btn-danger float-left text-white" @click="cancleEdit">Anuluj</a>
+        <a class="btn btn-danger float-left text-white" @click="cancleEdit">Cancle</a>
         <input
           type="submit"
           class="btn btn-success float-right"
@@ -86,12 +86,12 @@ import { VueEditor } from "vue2-editor";
 import { mapGetters } from "vuex";
 export default {
   components: {
-    VueEditor
+    VueEditor,
   },
   props: {
     cats: {
-      required: true
-    }
+      required: true,
+    },
   },
   data() {
     return {
@@ -100,14 +100,14 @@ export default {
         parent_id: null,
         name: "",
         description: "",
-        published: 0
-      }
+        published: 0,
+      },
     };
   },
   watch: {
-    singleCategory: function(val) {
+    singleCategory: function (val) {
       this.catData = val;
-    }
+    },
   },
   computed: {
     flatCats() {
@@ -122,7 +122,7 @@ export default {
     ...mapGetters("categories", ["singleCategory"]),
     ...mapGetters("categories", ["getCategories"]),
     ...mapGetters("categories", ["editing"]),
-    ...mapGetters("categories", ["flatCategories"])
+    ...mapGetters("categories", ["flatCategories"]),
   },
 
   methods: {
@@ -134,8 +134,8 @@ export default {
         this.$notify({
           group: "foo-css",
           title: "Aktualizacja",
-          text: "Kategoria została zaktualizowana",
-          type: "success"
+          text: "Category została zaktualizowana",
+          type: "success",
         })
       );
       this.cancleEdit();
@@ -145,19 +145,19 @@ export default {
         this.$notify({
           group: "foo-css",
           title: "Sukces!",
-          text: "Kategoria została dodana",
-          type: "success"
+          text: "Category została dodana",
+          type: "success",
         })
       );
       this.cancleEdit();
     },
     cancleEdit() {
       this.$store.dispatch("categories/editCategory");
-    }
+    },
   },
   changeStatus() {
     this.catData.published = !this.catData.published;
-  }
+  },
 };
 </script>
 <style lang="scss">

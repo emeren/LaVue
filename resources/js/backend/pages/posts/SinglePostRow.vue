@@ -24,7 +24,7 @@
         :key="index"
       >{{ getCategoryName(catId) }}</span>
     </td>
-    <td v-else>brak</td>
+    <td v-else>none</td>
     <!-- STATUS-->
     <td class="project-state">
       <span
@@ -49,44 +49,44 @@ import { mapGetters } from "vuex";
 export default {
   name: "SinglePostRow",
   components: {
-    PostActions
+    PostActions,
   },
   props: {
     postData: {
-      required: true
-    }
+      required: true,
+    },
   },
   data() {
     return {
-      post: {}
+      post: {},
     };
   },
   computed: {
     ...mapGetters("posts", ["activePostsCategories"]),
-    ...mapGetters("categories", ["getUniqeCats"])
+    ...mapGetters("categories", ["getUniqeCats"]),
   },
   methods: {
     changeStatus() {
       this.post = this.postData;
       this.post.published = !this.post.published;
 
-      this.$store.dispatch("posts/updatePost", this.post).then(res => {
+      this.$store.dispatch("posts/updatePost", this.post).then((res) => {
         this.$notify({
           group: "foo-css",
           title: "Aktualizacja",
           text: "Status zaktualizowany",
-          type: "success"
+          type: "success",
         });
       });
     },
     getCategoryName(catId) {
-      let category = this.getUniqeCats.filter(cat => cat.id == catId);
+      let category = this.getUniqeCats.filter((cat) => cat.id == catId);
       if (category.length) {
         return category[0]["name"];
       }
-      return "brak";
-    }
-  }
+      return "none";
+    },
+  },
 };
 </script>
 

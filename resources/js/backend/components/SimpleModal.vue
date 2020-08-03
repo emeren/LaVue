@@ -42,32 +42,32 @@ export default {
     show: { type: Boolean, required: true },
     title: {
       type: String,
-      default: "Modal :title"
+      default: "Modal :title",
     },
     body: {
       type: String,
-      default: "Modal :body"
+      default: "Modal :body",
     },
     submitButtonText: {
       type: String,
       required: false,
-      default: "Anuluj"
+      default: "Cancle",
     },
     submitButtonClass: {
       type: String,
       required: false,
-      default: "btn btn-danger mr-auto"
+      default: "btn btn-danger mr-auto",
     },
     cancelButtonText: {
       type: String,
       required: false,
-      default: "Anuluj"
+      default: "Cancle",
     },
     cancelButtonClass: {
       type: String,
       required: false,
-      default: "btn btn-default"
-    }
+      default: "btn btn-default",
+    },
   },
   methods: {
     close() {
@@ -76,10 +76,10 @@ export default {
     submit() {
       this.$emit("onSubmit", {
         status: "success",
-        message: "Foru submited" /* Or optional success message */
+        message: "Foru submited" /* Or optional success message */,
       });
-    }
-  }
+    },
+  },
 };
 </script>
 

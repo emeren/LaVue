@@ -9,7 +9,7 @@ class ApisController extends Controller
 {
     //
     /**
-     * Zwraca wszystkie województwa z podległymi powiatami i gminami
+     * Zwraca All województwa z podległymi powiatami i gminami
      *
      * @return void
      */

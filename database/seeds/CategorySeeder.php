@@ -25,7 +25,6 @@ class CategorySeeder extends Seeder
                 if ($count > 0) {
                     $category->children()->saveMany(factory(App\Category::class, $count)->make());
                 }
-                $category->posts()->saveMany(factory(App\Post::class, 10)->create());
             });
         }
 

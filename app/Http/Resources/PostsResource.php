@@ -4,6 +4,7 @@ namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 use App\Http\Resources\CategoriesResource;
+use App\Http\Resources\UsersResource;
 use App\Category;
 
 
@@ -30,6 +31,7 @@ class PostsResource extends JsonResource
             'id' => $this->id,
             'title' => $this->title,
             'description' => $this->description,
+            'author' => $this->author,
             'thumbnail' => $this->thumbnail,
             'gallery' => $this->gallery,
             'publish_from' => (string) $this->publish_from,

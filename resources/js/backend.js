@@ -28,7 +28,7 @@ Vue.use(ClientTable, {
         filterPlaceholder: "Wyszukaj",
         limit: "Elementów:",
         page: "Strona:",
-        noResults: "Brak pasujących elementów",
+        noResults: "none pasujących elementów",
         filterBy: "Filtruj wg. {column}",
         loading: "Ładuję...",
         defaultOption: "Wybierz {column}",

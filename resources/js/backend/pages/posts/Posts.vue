@@ -6,15 +6,15 @@
         :size="`4`"
         :number="categoriesCount"
         bg="success"
-        title="Aktywne kategorie"
+        title="Active catagories"
         icon="fa-list"
       ></InfoBox>
-      <InfoBox :size="`4`" :number="postsCount" bg="success" title="Artykuły" icon="fa-book-open"></InfoBox>
+      <InfoBox :size="`4`" :number="postsCount" bg="success" title="Articles" icon="fa-book-open"></InfoBox>
       <InfoBox
         :size="`4`"
         :number="deletedPostsCount"
         bg="danger"
-        title="Usunięte artykuły"
+        title="Articles removed"
         icon="fa-trash"
       ></InfoBox>
 
@@ -33,7 +33,7 @@
               <th style="width: 10%">Img</th>
               <th style="width: 30%">Tytuł</th>
               <th style="width: 15%">Data</th>
-              <th style="width: 20%">Kategoria</th>
+              <th style="width: 20%">Category</th>
               <th style="width: 5%" class="text-center">Status</th>
               <th style="width: 20%"></th>
             </tr>
@@ -46,7 +46,7 @@
               :postData="post"
             ></SinglePostRow>
           </paginate>
-          <div class="noData" v-else>Brak danych :(</div>
+          <div class="noData" v-else>none danych :(</div>
         </table>
         <!-- /.card-body -->
       </tr>
@@ -67,19 +67,20 @@ export default {
     InfoBox,
     ContentHeader,
     SinglePostRow,
-    PostsFilters
+    PostsFilters,
   },
   mounted() {
     //TODO check if posts exists
     this.$store.dispatch("posts/loadPosts");
     this.$store.dispatch("categories/loadCategories");
+    console.log();
   },
   data() {
     return {
       //filter when page load
       // filters: { status: "all", category: 0 },
       paginate: ["posts"],
-      perPage: 8
+      perPage: 8,
     };
   },
 
@@ -89,15 +90,16 @@ export default {
       "deletedPostsCount",
       "categoriesCount",
       "activePostsCategories",
-      "filteredPosts"
+      "filteredPosts",
     ]),
     posts() {
+      console.log("filteredPots", this.filteredPosts);
       return this.filteredPosts;
     },
     categories() {
       return this.activePostsCategories;
-    }
-  }
+    },
+  },
 };
 </script>
 

@@ -24,7 +24,7 @@
         <span class="ml-2 font-semibold font-sans tracking-wide">
           <strong>{{ el.name }}</strong>:
           <small class="text-gray">id: {{ el.id }}</small>
-          <small class="text-gray">Aktywne posty: {{ el.posts }}</small>
+          <small class="text-gray">Active posts: {{ el.posts }}</small>
         </span>
       </div>
       <div class="d-flex justify-content-between catActions">
@@ -48,22 +48,22 @@ export default {
     value: {
       required: false,
       type: Array,
-      default: null
+      default: null,
     },
     list: {
       required: false,
       type: Array,
-      default: null
-    }
+      default: null,
+    },
   },
   components: {
-    draggable
+    draggable,
   },
 
   data() {
     return {
       showSubCatHelper: false,
-      parentChild: []
+      parentChild: [],
     };
   },
   watch: {
@@ -73,8 +73,8 @@ export default {
       handler(newVal, oldVal) {
         console.log("newVal :", newVal);
         this.parentChild = newVal;
-      }
-    }
+      },
+    },
   },
   computed: {
     dragOptions() {
@@ -82,12 +82,12 @@ export default {
         animation: 0,
         group: "description",
         disabled: false,
-        ghostClass: "ghost"
+        ghostClass: "ghost",
       };
     },
     realValue() {
       return this.value ? this.value : this.list;
-    }
+    },
   },
   methods: {
     emitter(value) {
@@ -102,8 +102,8 @@ export default {
         this.$notify({
           group: "foo-css",
           title: "Sukces!",
-          text: "Kategoria została usunieta",
-          type: "danger"
+          text: "Category została usunieta",
+          type: "danger",
         })
       );
     },
@@ -113,14 +113,14 @@ export default {
     },
     setParentChild(parentChild) {
       this.$store.dispatch("categories/setParentChild", parentChild);
-    }
+    },
 
     // handleChange() {},
     // add: function(event) {},
     // start: function(event) {},
     // log: function(event, value) {},
     // drop: function(event) {}
-  }
+  },
 };
 </script>
 

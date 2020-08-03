@@ -6,6 +6,7 @@ namespace Tests\Feature\Api;
 // use Illuminate\Foundation\Testing\WithFaker;
 
 use App\Post;
+use App\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\ResetsDatabase;
 use Tests\TestCase;
@@ -42,6 +43,7 @@ class PostsTest extends TestCase
         $post =  Post::firstOrCreate([
             'title' => 'test',
             'description' => 'test',
+            'user_id' => 1,
             'thumbnail' => 'test',
             'gallery' => 'test',
             'publish_from' => date('Y-m-d', date_timestamp_get(now())),
@@ -114,9 +116,11 @@ class PostsTest extends TestCase
                 'published' => true,
             ]
         );
+        $userId = User::all()->random()->id;
         $response = $this->json('POST', '/panel/api/posts', [
             'title' => 'test',
             'description' => 'test',
+            'user_id' => $userId,
             'thumbnail' => 'test',
             'gallery' => 'test',
             'publish_from' => date('Y-m-d', date_timestamp_get(now())),
@@ -128,6 +132,7 @@ class PostsTest extends TestCase
             [
                 'title' => 'test',
                 'description' => 'test',
+                'user_id' => $userId,
                 'thumbnail' => 'test',
                 'gallery' => 'test',
                 'publish_from' => date('Y-m-d', date_timestamp_get(now())),
@@ -147,6 +152,7 @@ class PostsTest extends TestCase
         $post = factory(Post::class)->create([
             'title' => 'title1',
             'description' => 'desc1',
+            'user_id' => User::all()->random()->id,
             'thumbnail' => 'test',
             'gallery' => 'test',
             'publish_from' => date('Y-m-d', date_timestamp_get(now())),
@@ -194,6 +200,7 @@ class PostsTest extends TestCase
         $post = factory(Post::class)->create([
             'title' => 'title1',
             'description' => 'desc1',
+            'user_id' => User::all()->random()->id,
             'thumbnail' => 'test',
             'gallery' => 'test',
             'publish_from' => date('Y-m-d', date_timestamp_get(now())),

@@ -18,9 +18,7 @@ export default {
       csrf: "",
     };
   },
-  mounted() {
-    this.csrf = window.Laravel.csrfToken;
-  },
+  mounted() {},
   methods: {
     submitForm() {
       window.localStorage.clear();

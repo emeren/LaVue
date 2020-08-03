@@ -17,8 +17,18 @@ class Post extends Model
      * @var array
      */
     protected $fillable = [
-        'title', 'description', 'thumbnail', 'gallery', 'publish_from', 'publish_to', 'published'
+        'title', 'description', 'user_id', 'thumbnail', 'gallery', 'publish_from', 'publish_to', 'published'
     ];
+
+    /**
+     * post belongs to user
+     *
+     * @var array
+     */
+    public function author()
+    {
+        return $this->belongsTo('App\User', 'user_id');
+    }
 
     /**
      * Get the category.

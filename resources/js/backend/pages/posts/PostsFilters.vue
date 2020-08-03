@@ -11,21 +11,21 @@
         <input @keyup="searchByWord" type="text" class="form-control" v-model="filters.search" />
       </div>
       <div class="form-group">
-        <label>Kategoria:</label>
+        <label>Category:</label>
         <select class="custom-select" @change="changeCategory">
-          <option :value="null">Wszystkie</option>
+          <option :value="null">All</option>
           <option
             v-for="(category, index) in postsCategories"
             :key="index"
             :value="category"
           >{{getCategoryName(category)}}</option>
-          <option value="0">brak</option>
+          <option value="0">none</option>
         </select>
       </div>
       <div class="form-group">
         <label>Status:</label>
         <select class="custom-select" @change="changeStatus">
-          <option value="all">Wszystkie</option>
+          <option value="all">All</option>
           <option value="published">Opublikowane</option>
           <option value="unpublished">Nieopublikowane</option>
         </select>
@@ -43,8 +43,8 @@ export default {
       filters: {
         status: "all",
         category: "",
-        search: ""
-      }
+        search: "",
+      },
     };
   },
   computed: {
@@ -52,7 +52,7 @@ export default {
     ...mapGetters("categories", ["getUniqeCats"]),
     postsCategories() {
       return this.activePostsCategories;
-    }
+    },
   },
   methods: {
     changeStatus(e) {
@@ -68,13 +68,13 @@ export default {
       this.$store.dispatch("posts/searchByWord", this.filters.search);
     },
     getCategoryName(catId) {
-      let category = this.getUniqeCats.filter(cat => cat.id == catId);
+      let category = this.getUniqeCats.filter((cat) => cat.id == catId);
       if (category.length) {
         return category[0]["name"];
       }
-      return "brak";
-    }
-  }
+      return "none";
+    },
+  },
 };
 </script>
 
