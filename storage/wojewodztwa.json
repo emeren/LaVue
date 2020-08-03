@@ -1,0 +1,4580 @@
+[
+  {
+    "id": "02",
+    "name": "dolnośląskie",
+    "powiaty": [
+      {
+        "id": "0201",
+        "name": "bolesławiecki",
+        "gminy": [
+          { "id": "020101", "name": "Bolesławiec" },
+          { "id": "020103", "name": "Gromadka" },
+          { "id": "020104", "name": "Nowogrodziec" },
+          { "id": "020105", "name": "Osiecznica" },
+          { "id": "020106", "name": "Warta Bolesławiecka" }
+        ]
+      },
+      {
+        "id": "0202",
+        "name": "dzierżoniowski",
+        "gminy": [
+          { "id": "020201", "name": "Bielawa" },
+          { "id": "020202", "name": "Dzierżoniów" },
+          { "id": "020203", "name": "Pieszyce" },
+          { "id": "020204", "name": "Piława Górna" },
+          { "id": "020206", "name": "Łagiewniki" },
+          { "id": "020207", "name": "Niemcza" }
+        ]
+      },
+      {
+        "id": "0203",
+        "name": "głogowski",
+        "gminy": [
+          { "id": "020301", "name": "Głogów" },
+          { "id": "020303", "name": "Jerzmanowa" },
+          { "id": "020304", "name": "Kotla" },
+          { "id": "020305", "name": "Pęcław" },
+          { "id": "020306", "name": "Żukowice" }
+        ]
+      },
+      {
+        "id": "0204",
+        "name": "górowski",
+        "gminy": [
+          { "id": "020401", "name": "Góra" },
+          { "id": "020402", "name": "Jemielno" },
+          { "id": "020403", "name": "Niechlów" },
+          { "id": "020404", "name": "Wąsosz" }
+        ]
+      },
+      {
+        "id": "0205",
+        "name": "jaworski",
+        "gminy": [
+          { "id": "020501", "name": "Jawor" },
+          { "id": "020502", "name": "Bolków" },
+          { "id": "020503", "name": "Męcinka" },
+          { "id": "020504", "name": "Mściwojów" },
+          { "id": "020505", "name": "Paszowice" },
+          { "id": "020506", "name": "Wądroże Wielkie" }
+        ]
+      },
+      {
+        "id": "0206",
+        "name": "jeleniogórski",
+        "gminy": [
+          { "id": "020601", "name": "Karpacz" },
+          { "id": "020602", "name": "Kowary" },
+          { "id": "020603", "name": "Piechowice" },
+          { "id": "020604", "name": "Szklarska Poręba" },
+          { "id": "020605", "name": "Janowice Wielkie" },
+          { "id": "020606", "name": "Jeżów Sudecki" },
+          { "id": "020607", "name": "Mysłakowice" },
+          { "id": "020608", "name": "Podgórzyn" },
+          { "id": "020609", "name": "Stara Kamienica" }
+        ]
+      },
+      {
+        "id": "0207",
+        "name": "kamiennogórski",
+        "gminy": [
+          { "id": "020701", "name": "Kamienna Góra" },
+          { "id": "020703", "name": "Lubawka" },
+          { "id": "020704", "name": "Marciszów" }
+        ]
+      },
+      {
+        "id": "0208",
+        "name": "kłodzki",
+        "gminy": [
+          { "id": "020801", "name": "Duszniki-Zdrój" },
+          { "id": "020802", "name": "Kłodzko" },
+          { "id": "020803", "name": "Kudowa-Zdrój" },
+          { "id": "020804", "name": "Nowa Ruda" },
+          { "id": "020805", "name": "Polanica-Zdrój" },
+          { "id": "020806", "name": "Bystrzyca Kłodzka" },
+          { "id": "020808", "name": "Lądek-Zdrój" },
+          { "id": "020809", "name": "Lewin Kłodzki" },
+          { "id": "020810", "name": "Międzylesie" },
+          { "id": "020812", "name": "Radków" },
+          { "id": "020813", "name": "Stronie Śląskie" },
+          { "id": "020814", "name": "Szczytna" }
+        ]
+      },
+      {
+        "id": "0209",
+        "name": "legnicki",
+        "gminy": [
+          { "id": "020901", "name": "Chojnów" },
+          { "id": "020903", "name": "Krotoszyce" },
+          { "id": "020904", "name": "Kunice" },
+          { "id": "020905", "name": "Legnickie Pole" },
+          { "id": "020906", "name": "Miłkowice" },
+          { "id": "020907", "name": "Prochowice" },
+          { "id": "020908", "name": "Ruja" }
+        ]
+      },
+      {
+        "id": "0210",
+        "name": "lubański",
+        "gminy": [
+          { "id": "021001", "name": "Lubań" },
+          { "id": "021002", "name": "Świeradów-Zdrój" },
+          { "id": "021003", "name": "Leśna" },
+          { "id": "021005", "name": "Olszyna" },
+          { "id": "021006", "name": "Platerówka" },
+          { "id": "021007", "name": "Siekierczyn" }
+        ]
+      },
+      {
+        "id": "0211",
+        "name": "lubiński",
+        "gminy": [
+          { "id": "021101", "name": "Lubin" },
+          { "id": "021103", "name": "Rudna" },
+          { "id": "021104", "name": "Ścinawa" }
+        ]
+      },
+      {
+        "id": "0212",
+        "name": "lwówecki",
+        "gminy": [
+          { "id": "021201", "name": "Gryfów Śląski" },
+          { "id": "021202", "name": "Lubomierz" },
+          { "id": "021203", "name": "Lwówek Śląski" },
+          { "id": "021204", "name": "Mirsk" },
+          { "id": "021205", "name": "Wleń" }
+        ]
+      },
+      {
+        "id": "0213",
+        "name": "milicki",
+        "gminy": [
+          { "id": "021301", "name": "Cieszków" },
+          { "id": "021302", "name": "Krośnice" },
+          { "id": "021303", "name": "Milicz" }
+        ]
+      },
+      {
+        "id": "0214",
+        "name": "oleśnicki",
+        "gminy": [
+          { "id": "021401", "name": "Oleśnica" },
+          { "id": "021402", "name": "Bierutów" },
+          { "id": "021403", "name": "Dobroszyce" },
+          { "id": "021404", "name": "Dziadowa Kłoda" },
+          { "id": "021405", "name": "Międzybórz" },
+          { "id": "021407", "name": "Syców" },
+          { "id": "021408", "name": "Twardogóra" }
+        ]
+      },
+      {
+        "id": "0215",
+        "name": "oławski",
+        "gminy": [
+          { "id": "021501", "name": "Oława" },
+          { "id": "021502", "name": "Domaniów" },
+          { "id": "021503", "name": "Jelcz-Laskowice" }
+        ]
+      },
+      {
+        "id": "0216",
+        "name": "polkowicki",
+        "gminy": [
+          { "id": "021601", "name": "Chocianów" },
+          { "id": "021602", "name": "Gaworzyce" },
+          { "id": "021603", "name": "Grębocice" },
+          { "id": "021604", "name": "Polkowice" },
+          { "id": "021605", "name": "Przemków" },
+          { "id": "021606", "name": "Radwanice" }
+        ]
+      },
+      {
+        "id": "0217",
+        "name": "strzeliński",
+        "gminy": [
+          { "id": "021701", "name": "Borów" },
+          { "id": "021702", "name": "Kondratowice" },
+          { "id": "021703", "name": "Przeworno" },
+          { "id": "021704", "name": "Strzelin" },
+          { "id": "021705", "name": "Wiązów" }
+        ]
+      },
+      {
+        "id": "0218",
+        "name": "średzki",
+        "gminy": [
+          { "id": "021801", "name": "Kostomłoty" },
+          { "id": "021802", "name": "Malczyce" },
+          { "id": "021803", "name": "Miękinia" },
+          { "id": "021804", "name": "Środa Śląska" },
+          { "id": "021805", "name": "Udanin" }
+        ]
+      },
+      {
+        "id": "0219",
+        "name": "świdnicki",
+        "gminy": [
+          { "id": "021901", "name": "Świdnica" },
+          { "id": "021902", "name": "Świebodzice" },
+          { "id": "021903", "name": "Dobromierz" },
+          { "id": "021904", "name": "Jaworzyna Śląska" },
+          { "id": "021905", "name": "Marcinowice" },
+          { "id": "021906", "name": "Strzegom" },
+          { "id": "021908", "name": "Żarów" }
+        ]
+      },
+      {
+        "id": "0220",
+        "name": "trzebnicki",
+        "gminy": [
+          { "id": "022001", "name": "Oborniki Śląskie" },
+          { "id": "022002", "name": "Prusice" },
+          { "id": "022003", "name": "Trzebnica" },
+          { "id": "022004", "name": "Wisznia Mała" },
+          { "id": "022005", "name": "Zawonia" },
+          { "id": "022006", "name": "Żmigród" }
+        ]
+      },
+      {
+        "id": "0221",
+        "name": "wałbrzyski",
+        "gminy": [
+          { "id": "022101", "name": "Boguszów-Gorce" },
+          { "id": "022102", "name": "Jedlina-Zdrój" },
+          { "id": "022103", "name": "Szczawno-Zdrój" },
+          { "id": "022104", "name": "Czarny Bór" },
+          { "id": "022105", "name": "Głuszyca" },
+          { "id": "022106", "name": "Mieroszów" },
+          { "id": "022107", "name": "Stare Bogaczowice" },
+          { "id": "022108", "name": "Walim" }
+        ]
+      },
+      {
+        "id": "0222",
+        "name": "wołowski",
+        "gminy": [
+          { "id": "022201", "name": "Brzeg Dolny" },
+          { "id": "022202", "name": "Wińsko" },
+          { "id": "022203", "name": "Wołów" }
+        ]
+      },
+      {
+        "id": "0223",
+        "name": "wrocławski",
+        "gminy": [
+          { "id": "022301", "name": "Czernica" },
+          { "id": "022302", "name": "Długołęka" },
+          { "id": "022303", "name": "Jordanów Śląski" },
+          { "id": "022304", "name": "Kąty Wrocławskie" },
+          { "id": "022305", "name": "Kobierzyce" },
+          { "id": "022306", "name": "Mietków" },
+          { "id": "022307", "name": "Sobótka" },
+          { "id": "022308", "name": "Siechnice" },
+          { "id": "022309", "name": "Żórawina" }
+        ]
+      },
+      {
+        "id": "0224",
+        "name": "ząbkowicki",
+        "gminy": [
+          { "id": "022401", "name": "Bardo" },
+          { "id": "022402", "name": "Ciepłowody" },
+          { "id": "022403", "name": "Kamieniec Ząbkowicki" },
+          { "id": "022404", "name": "Stoszowice" },
+          { "id": "022405", "name": "Ząbkowice Śląskie" },
+          { "id": "022406", "name": "Ziębice" },
+          { "id": "022407", "name": "Złoty Stok" }
+        ]
+      },
+      {
+        "id": "0225",
+        "name": "zgorzelecki",
+        "gminy": [
+          { "id": "022501", "name": "Zawidów" },
+          { "id": "022502", "name": "Zgorzelec" },
+          { "id": "022503", "name": "Bogatynia" },
+          { "id": "022504", "name": "Pieńsk" },
+          { "id": "022505", "name": "Sulików" },
+          { "id": "022506", "name": "Węgliniec" }
+        ]
+      },
+      {
+        "id": "0226",
+        "name": "złotoryjski",
+        "gminy": [
+          { "id": "022601", "name": "Wojcieszów" },
+          { "id": "022602", "name": "Złotoryja" },
+          { "id": "022603", "name": "Pielgrzymka" },
+          { "id": "022604", "name": "Świerzawa" },
+          { "id": "022605", "name": "Zagrodno" }
+        ]
+      },
+      {
+        "id": "0261",
+        "name": "Jelenia Góra",
+        "gminy": [{ "id": "0261", "name": "Jelenia Góra" }]
+      },
+      {
+        "id": "0262",
+        "name": "Legnica",
+        "gminy": [{ "id": "0262", "name": "Legnica" }]
+      },
+      {
+        "id": "0264",
+        "name": "Wrocław",
+        "gminy": [{ "id": "0264", "name": "Wrocław" }]
+      },
+      {
+        "id": "0265",
+        "name": "Wałbrzych",
+        "gminy": [{ "id": "0265", "name": "Wałbrzych" }]
+      }
+    ]
+  },
+  {
+    "id": "04",
+    "name": "kujawsko-pomorskie",
+    "powiaty": [
+      {
+        "id": "0401",
+        "name": "aleksandrowski",
+        "gminy": [
+          { "id": "040101", "name": "Aleksandrów Kujawski" },
+          { "id": "040102", "name": "Ciechocinek" },
+          { "id": "040103", "name": "Nieszawa" },
+          { "id": "040105", "name": "Bądkowo" },
+          { "id": "040106", "name": "Koneck" },
+          { "id": "040107", "name": "Raciążek" },
+          { "id": "040108", "name": "Waganiec" },
+          { "id": "040109", "name": "Zakrzewo" }
+        ]
+      },
+      {
+        "id": "0402",
+        "name": "brodnicki",
+        "gminy": [
+          { "id": "040201", "name": "Brodnica" },
+          { "id": "040202", "name": "Bobrowo" },
+          { "id": "040204", "name": "Brzozie" },
+          { "id": "040205", "name": "Górzno" },
+          { "id": "040206", "name": "Bartniczka" },
+          { "id": "040207", "name": "Jabłonowo Pomorskie" },
+          { "id": "040208", "name": "Osiek" },
+          { "id": "040209", "name": "Świedziebnia" },
+          { "id": "040210", "name": "Zbiczno" }
+        ]
+      },
+      {
+        "id": "0403",
+        "name": "bydgoski",
+        "gminy": [
+          { "id": "040301", "name": "Białe Błota" },
+          { "id": "040302", "name": "Dąbrowa Chełmińska" },
+          { "id": "040303", "name": "Dobrcz" },
+          { "id": "040304", "name": "Koronowo" },
+          { "id": "040305", "name": "Nowa Wieś Wielka" },
+          { "id": "040306", "name": "Osielsko" },
+          { "id": "040307", "name": "Sicienko" },
+          { "id": "040308", "name": "Solec Kujawski" }
+        ]
+      },
+      {
+        "id": "0404",
+        "name": "chełmiński",
+        "gminy": [
+          { "id": "040401", "name": "Chełmno" },
+          { "id": "040403", "name": "Kijewo Królewskie" },
+          { "id": "040404", "name": "Lisewo" },
+          { "id": "040405", "name": "Papowo Biskupie" },
+          { "id": "040406", "name": "Stolno" },
+          { "id": "040407", "name": "Unisław" }
+        ]
+      },
+      {
+        "id": "0405",
+        "name": "golubsko-dobrzyński",
+        "gminy": [
+          { "id": "040501", "name": "Golub-Dobrzyń" },
+          { "id": "040502", "name": "Ciechocin" },
+          { "id": "040504", "name": "Kowalewo Pomorskie" },
+          { "id": "040505", "name": "Radomin" },
+          { "id": "040506", "name": "Zbójno" }
+        ]
+      },
+      {
+        "id": "0406",
+        "name": "grudziądzki",
+        "gminy": [
+          { "id": "040601", "name": "Grudziądz" },
+          { "id": "040602", "name": "Gruta" },
+          { "id": "040603", "name": "Łasin" },
+          { "id": "040604", "name": "Radzyń Chełmiński" },
+          { "id": "040605", "name": "Rogóźno" },
+          { "id": "040606", "name": "Świecie nad Osą" }
+        ]
+      },
+      {
+        "id": "0407",
+        "name": "inowrocławski",
+        "gminy": [
+          { "id": "040701", "name": "Inowrocław" },
+          { "id": "040702", "name": "Dąbrowa Biskupia" },
+          { "id": "040703", "name": "Gniewkowo" },
+          { "id": "040705", "name": "Janikowo" },
+          { "id": "040706", "name": "Kruszwica" },
+          { "id": "040707", "name": "Pakość" },
+          { "id": "040708", "name": "Rojewo" },
+          { "id": "040709", "name": "Złotniki Kujawskie" }
+        ]
+      },
+      {
+        "id": "0408",
+        "name": "lipnowski",
+        "gminy": [
+          { "id": "040801", "name": "Lipno" },
+          { "id": "040802", "name": "Bobrowniki" },
+          { "id": "040803", "name": "Chrostkowo" },
+          { "id": "040804", "name": "Dobrzyń nad Wisłą" },
+          { "id": "040805", "name": "Kikół" },
+          { "id": "040807", "name": "Skępe" },
+          { "id": "040808", "name": "Tłuchowo" },
+          { "id": "040809", "name": "Wielgie" }
+        ]
+      },
+      {
+        "id": "0409",
+        "name": "mogileński",
+        "gminy": [
+          { "id": "040901", "name": "Dąbrowa" },
+          { "id": "040902", "name": "Jeziora Wielkie" },
+          { "id": "040903", "name": "Mogilno" },
+          { "id": "040904", "name": "Strzelno" }
+        ]
+      },
+      {
+        "id": "0410",
+        "name": "nakielski",
+        "gminy": [
+          { "id": "041001", "name": "Kcynia" },
+          { "id": "041002", "name": "Mrocza" },
+          { "id": "041003", "name": "Nakło nad Notecią" },
+          { "id": "041004", "name": "Sadki" },
+          { "id": "041005", "name": "Szubin" }
+        ]
+      },
+      {
+        "id": "0411",
+        "name": "radziejowski",
+        "gminy": [
+          { "id": "041101", "name": "Radziejów" },
+          { "id": "041102", "name": "Bytoń" },
+          { "id": "041103", "name": "Dobre" },
+          { "id": "041104", "name": "Osięciny" },
+          { "id": "041105", "name": "Piotrków Kujawski" },
+          { "id": "041107", "name": "Topólka" }
+        ]
+      },
+      {
+        "id": "0412",
+        "name": "rypiński",
+        "gminy": [
+          { "id": "041201", "name": "Rypin" },
+          { "id": "041202", "name": "Brzuze" },
+          { "id": "041203", "name": "Rogowo" },
+          { "id": "041205", "name": "Skrwilno" },
+          { "id": "041206", "name": "Wąpielsk" }
+        ]
+      },
+      {
+        "id": "0413",
+        "name": "sępoleński",
+        "gminy": [
+          { "id": "041301", "name": "Kamień Krajeński" },
+          { "id": "041302", "name": "Sępólno Krajeńskie" },
+          { "id": "041303", "name": "Sośno" },
+          { "id": "041304", "name": "Więcbork" }
+        ]
+      },
+      {
+        "id": "0414",
+        "name": "świecki",
+        "gminy": [
+          { "id": "041401", "name": "Bukowiec" },
+          { "id": "041402", "name": "Dragacz" },
+          { "id": "041403", "name": "Drzycim" },
+          { "id": "041404", "name": "Jeżewo" },
+          { "id": "041405", "name": "Lniano" },
+          { "id": "041406", "name": "Nowe" },
+          { "id": "041407", "name": "Osie" },
+          { "id": "041408", "name": "Pruszcz" },
+          { "id": "041409", "name": "Świecie" },
+          { "id": "041410", "name": "Świekatowo" },
+          { "id": "041411", "name": "Warlubie" }
+        ]
+      },
+      {
+        "id": "0415",
+        "name": "toruński",
+        "gminy": [
+          { "id": "041501", "name": "Chełmża" },
+          { "id": "041503", "name": "Czernikowo" },
+          { "id": "041504", "name": "Lubicz" },
+          { "id": "041505", "name": "Łubianka" },
+          { "id": "041506", "name": "Łysomice" },
+          { "id": "041507", "name": "Obrowo" },
+          { "id": "041508", "name": "Wielka Nieszawka" },
+          { "id": "041509", "name": "Zławieś Wielka" }
+        ]
+      },
+      {
+        "id": "0416",
+        "name": "tucholski",
+        "gminy": [
+          { "id": "041601", "name": "Cekcyn" },
+          { "id": "041602", "name": "Gostycyn" },
+          { "id": "041603", "name": "Kęsowo" },
+          { "id": "041604", "name": "Lubiewo" },
+          { "id": "041605", "name": "Śliwice" },
+          { "id": "041606", "name": "Tuchola" }
+        ]
+      },
+      {
+        "id": "0417",
+        "name": "wąbrzeski",
+        "gminy": [
+          { "id": "041701", "name": "Wąbrzeźno" },
+          { "id": "041702", "name": "Dębowa Łąka" },
+          { "id": "041703", "name": "Książki" },
+          { "id": "041704", "name": "Płużnica" },
+          { "id": "041705", "name": "Ryńsk" }
+        ]
+      },
+      {
+        "id": "0418",
+        "name": "włocławski",
+        "gminy": [
+          { "id": "041801", "name": "Kowal" },
+          { "id": "041802", "name": "Baruchowo" },
+          { "id": "041803", "name": "Boniewo" },
+          { "id": "041804", "name": "Brześć Kujawski" },
+          { "id": "041805", "name": "Choceń" },
+          { "id": "041806", "name": "Chodecz" },
+          { "id": "041807", "name": "Fabianki" },
+          { "id": "041808", "name": "Izbica Kujawska" },
+          { "id": "041810", "name": "Lubanie" },
+          { "id": "041811", "name": "Lubień Kujawski" },
+          { "id": "041812", "name": "Lubraniec" },
+          { "id": "041813", "name": "Włocławek" }
+        ]
+      },
+      {
+        "id": "0419",
+        "name": "żniński",
+        "gminy": [
+          { "id": "041901", "name": "Barcin" },
+          { "id": "041902", "name": "Gąsawa" },
+          { "id": "041903", "name": "Janowiec Wielkopolski" },
+          { "id": "041904", "name": "Łabiszyn" },
+          { "id": "041905", "name": "Rogowo" },
+          { "id": "041906", "name": "Żnin" }
+        ]
+      },
+      {
+        "id": "0461",
+        "name": "Bydgoszcz",
+        "gminy": [{ "id": "0461", "name": "Bydgoszcz" }]
+      },
+      {
+        "id": "0462",
+        "name": "Grudziądz",
+        "gminy": [{ "id": "0461", "name": "Bydgoszcz" }]
+      },
+      {
+        "id": "0463",
+        "name": "Toruń",
+        "gminy": [{ "id": "0461", "name": "Bydgoszcz" }]
+      },
+      {
+        "id": "0464",
+        "name": "Włocławek",
+        "gminy": [{ "id": "0461", "name": "Bydgoszcz" }]
+      }
+    ]
+  },
+  {
+    "id": "06",
+    "name": "lubelskie",
+    "powiaty": [
+      {
+        "id": "0601",
+        "name": "bialski",
+        "gminy": [
+          { "id": "060101", "name": "Międzyrzec Podlaski" },
+          { "id": "060102", "name": "Terespol" },
+          { "id": "060103", "name": "Biała Podlaska" },
+          { "id": "060104", "name": "Drelów" },
+          { "id": "060105", "name": "Janów Podlaski" },
+          { "id": "060106", "name": "Kodeń" },
+          { "id": "060107", "name": "Konstantynów" },
+          { "id": "060108", "name": "Leśna Podlaska" },
+          { "id": "060109", "name": "Łomazy" },
+          { "id": "060111", "name": "Piszczac" },
+          { "id": "060112", "name": "Rokitno" },
+          { "id": "060113", "name": "Rossosz" },
+          { "id": "060114", "name": "Sławatycze" },
+          { "id": "060115", "name": "Sosnówka" },
+          { "id": "060117", "name": "Tuczna" },
+          { "id": "060118", "name": "Wisznice" },
+          { "id": "060119", "name": "Zalesie" }
+        ]
+      },
+      {
+        "id": "0602",
+        "name": "biłgorajski",
+        "gminy": [
+          { "id": "060201", "name": "Biłgoraj" },
+          { "id": "060202", "name": "Aleksandrów" },
+          { "id": "060204", "name": "Biszcza" },
+          { "id": "060205", "name": "Frampol" },
+          { "id": "060206", "name": "Goraj" },
+          { "id": "060207", "name": "Józefów" },
+          { "id": "060208", "name": "Księżpol" },
+          { "id": "060209", "name": "Łukowa" },
+          { "id": "060210", "name": "Obsza" },
+          { "id": "060211", "name": "Potok Górny" },
+          { "id": "060212", "name": "Tarnogród" },
+          { "id": "060213", "name": "Tereszpol" },
+          { "id": "060214", "name": "Turobin" }
+        ]
+      },
+      {
+        "id": "0603",
+        "name": "chełmski",
+        "gminy": [
+          { "id": "060301", "name": "Rejowiec Fabryczny" },
+          { "id": "060302", "name": "Białopole" },
+          { "id": "060303", "name": "Chełm" },
+          { "id": "060304", "name": "Dorohusk" },
+          { "id": "060305", "name": "Dubienka" },
+          { "id": "060306", "name": "Kamień" },
+          { "id": "060307", "name": "Leśniowice" },
+          { "id": "060309", "name": "Ruda-Huta" },
+          { "id": "060310", "name": "Sawin" },
+          { "id": "060311", "name": "Siedliszcze" },
+          { "id": "060312", "name": "Wierzbica" },
+          { "id": "060313", "name": "Wojsławice" },
+          { "id": "060314", "name": "Żmudź" },
+          { "id": "060315", "name": "Rejowiec" }
+        ]
+      },
+      {
+        "id": "0604",
+        "name": "hrubieszowski",
+        "gminy": [
+          { "id": "060401", "name": "Hrubieszów" },
+          { "id": "060402", "name": "Dołhobyczów" },
+          { "id": "060403", "name": "Horodło" },
+          { "id": "060405", "name": "Mircze" },
+          { "id": "060406", "name": "Trzeszczany" },
+          { "id": "060407", "name": "Uchanie" },
+          { "id": "060408", "name": "Werbkowice" }
+        ]
+      },
+      {
+        "id": "0605",
+        "name": "janowski",
+        "gminy": [
+          { "id": "060501", "name": "Batorz" },
+          { "id": "060502", "name": "Chrzanów" },
+          { "id": "060503", "name": "Dzwola" },
+          { "id": "060504", "name": "Godziszów" },
+          { "id": "060505", "name": "Janów Lubelski" },
+          { "id": "060506", "name": "Modliborzyce" },
+          { "id": "060507", "name": "Potok Wielki" }
+        ]
+      },
+      {
+        "id": "0606",
+        "name": "krasnostawski",
+        "gminy": [
+          { "id": "060601", "name": "Krasnystaw" },
+          { "id": "060602", "name": "Fajsławice" },
+          { "id": "060603", "name": "Gorzków" },
+          { "id": "060604", "name": "Izbica" },
+          { "id": "060606", "name": "Kraśniczyn" },
+          { "id": "060607", "name": "Łopiennik Górny" },
+          { "id": "060609", "name": "Rudnik" },
+          { "id": "060610", "name": "Siennica Różana" },
+          { "id": "060611", "name": "Żółkiewka" }
+        ]
+      },
+      {
+        "id": "0607",
+        "name": "kraśnicki",
+        "gminy": [
+          { "id": "060701", "name": "Kraśnik" },
+          { "id": "060702", "name": "Annopol" },
+          { "id": "060703", "name": "Dzierzkowice" },
+          { "id": "060704", "name": "Gościeradów" },
+          { "id": "060706", "name": "Szastarka" },
+          { "id": "060707", "name": "Trzydnik Duży" },
+          { "id": "060708", "name": "Urzędów" },
+          { "id": "060709", "name": "Wilkołaz" },
+          { "id": "060710", "name": "Zakrzówek" }
+        ]
+      },
+      {
+        "id": "0608",
+        "name": "lubartowski",
+        "gminy": [
+          { "id": "060801", "name": "Lubartów" },
+          { "id": "060802", "name": "Abramów" },
+          { "id": "060803", "name": "Firlej" },
+          { "id": "060804", "name": "Jeziorzany" },
+          { "id": "060805", "name": "Kamionka" },
+          { "id": "060806", "name": "Kock" },
+          { "id": "060808", "name": "Michów" },
+          { "id": "060809", "name": "Niedźwiada" },
+          { "id": "060810", "name": "Ostrów Lubelski" },
+          { "id": "060811", "name": "Ostrówek" },
+          { "id": "060812", "name": "Serniki" },
+          { "id": "060813", "name": "Uścimów" }
+        ]
+      },
+      {
+        "id": "0609",
+        "name": "lubelski",
+        "gminy": [
+          { "id": "060901", "name": "Bełżyce" },
+          { "id": "060902", "name": "Borzechów" },
+          { "id": "060903", "name": "Bychawa" },
+          { "id": "060904", "name": "Garbów" },
+          { "id": "060905", "name": "Głusk" },
+          { "id": "060906", "name": "Jabłonna" },
+          { "id": "060907", "name": "Jastków" },
+          { "id": "060908", "name": "Konopnica" },
+          { "id": "060909", "name": "Krzczonów" },
+          { "id": "060910", "name": "Niedrzwica Duża" },
+          { "id": "060911", "name": "Niemce" },
+          { "id": "060912", "name": "Strzyżewice" },
+          { "id": "060913", "name": "Wojciechów" },
+          { "id": "060914", "name": "Wólka" },
+          { "id": "060915", "name": "Wysokie" },
+          { "id": "060916", "name": "Zakrzew" }
+        ]
+      },
+      {
+        "id": "0610",
+        "name": "łęczyński",
+        "gminy": [
+          { "id": "061001", "name": "Cyców" },
+          { "id": "061002", "name": "Ludwin" },
+          { "id": "061003", "name": "Łęczna" },
+          { "id": "061004", "name": "Milejów" },
+          { "id": "061005", "name": "Puchaczów" },
+          { "id": "061006", "name": "Spiczyn" }
+        ]
+      },
+      {
+        "id": "0611",
+        "name": "łukowski",
+        "gminy": [
+          { "id": "061101", "name": "Łuków" },
+          { "id": "061102", "name": "Stoczek Łukowski" },
+          { "id": "061103", "name": "Adamów" },
+          { "id": "061104", "name": "Krzywda" },
+          { "id": "061106", "name": "Serokomla" },
+          { "id": "061107", "name": "Stanin" },
+          { "id": "061109", "name": "Trzebieszów" },
+          { "id": "061110", "name": "Wojcieszków" },
+          { "id": "061111", "name": "Wola Mysłowska" }
+        ]
+      },
+      {
+        "id": "0612",
+        "name": "opolski",
+        "gminy": [
+          { "id": "061201", "name": "Chodel" },
+          { "id": "061202", "name": "Józefów nad Wisłą" },
+          { "id": "061203", "name": "Karczmiska" },
+          { "id": "061204", "name": "Łaziska" },
+          { "id": "061205", "name": "Opole Lubelskie" },
+          { "id": "061206", "name": "Poniatowa" },
+          { "id": "061207", "name": "Wilków" }
+        ]
+      },
+      {
+        "id": "0613",
+        "name": "parczewski",
+        "gminy": [
+          { "id": "061301", "name": "Dębowa Kłoda" },
+          { "id": "061302", "name": "Jabłoń" },
+          { "id": "061303", "name": "Milanów" },
+          { "id": "061304", "name": "Parczew" },
+          { "id": "061305", "name": "Podedwórze" },
+          { "id": "061306", "name": "Siemień" },
+          { "id": "061307", "name": "Sosnowica" }
+        ]
+      },
+      {
+        "id": "0614",
+        "name": "puławski",
+        "gminy": [
+          { "id": "061401", "name": "Puławy" },
+          { "id": "061402", "name": "Baranów" },
+          { "id": "061403", "name": "Janowiec" },
+          { "id": "061404", "name": "Kazimierz Dolny" },
+          { "id": "061405", "name": "Końskowola" },
+          { "id": "061406", "name": "Kurów" },
+          { "id": "061407", "name": "Markuszów" },
+          { "id": "061408", "name": "Nałęczów" },
+          { "id": "061410", "name": "Wąwolnica" },
+          { "id": "061411", "name": "Żyrzyn" }
+        ]
+      },
+      {
+        "id": "0615",
+        "name": "radzyński",
+        "gminy": [
+          { "id": "061501", "name": "Radzyń Podlaski" },
+          { "id": "061502", "name": "Borki" },
+          { "id": "061503", "name": "Czemierniki" },
+          { "id": "061504", "name": "Kąkolewnica" },
+          { "id": "061505", "name": "Komarówka Podlaska" },
+          { "id": "061507", "name": "Ulan-Majorat" },
+          { "id": "061508", "name": "Wohyń" }
+        ]
+      },
+      {
+        "id": "0616",
+        "name": "rycki",
+        "gminy": [
+          { "id": "061601", "name": "Dęblin" },
+          { "id": "061602", "name": "Kłoczew" },
+          { "id": "061603", "name": "Nowodwór" },
+          { "id": "061604", "name": "Ryki" },
+          { "id": "061605", "name": "Stężyca" },
+          { "id": "061606", "name": "Ułęż" }
+        ]
+      },
+      {
+        "id": "0617",
+        "name": "świdnicki",
+        "gminy": [
+          { "id": "061701", "name": "Świdnik" },
+          { "id": "061702", "name": "Mełgiew" },
+          { "id": "061703", "name": "Piaski" },
+          { "id": "061704", "name": "Rybczewice" },
+          { "id": "061705", "name": "Trawniki" }
+        ]
+      },
+      {
+        "id": "0618",
+        "name": "tomaszowski",
+        "gminy": [
+          { "id": "061801", "name": "Tomaszów Lubelski" },
+          { "id": "061802", "name": "Bełżec" },
+          { "id": "061803", "name": "Jarczów" },
+          { "id": "061804", "name": "Krynice" },
+          { "id": "061805", "name": "Lubycza Królewska" },
+          { "id": "061806", "name": "Łaszczów" },
+          { "id": "061807", "name": "Rachanie" },
+          { "id": "061808", "name": "Susiec" },
+          { "id": "061809", "name": "Tarnawatka" },
+          { "id": "061810", "name": "Telatyn" },
+          { "id": "061812", "name": "Tyszowce" },
+          { "id": "061813", "name": "Ulhówek" }
+        ]
+      },
+      {
+        "id": "0619",
+        "name": "włodawski",
+        "gminy": [
+          { "id": "061901", "name": "Włodawa" },
+          { "id": "061902", "name": "Hanna" },
+          { "id": "061903", "name": "Hańsk" },
+          { "id": "061904", "name": "Stary Brus" },
+          { "id": "061905", "name": "Urszulin" },
+          { "id": "061907", "name": "Wola Uhruska" },
+          { "id": "061908", "name": "Wyryki" }
+        ]
+      },
+      {
+        "id": "0620",
+        "name": "zamojski",
+        "gminy": [
+          { "id": "062001", "name": "Adamów" },
+          { "id": "062002", "name": "Grabowiec" },
+          { "id": "062003", "name": "Komarów-Osada" },
+          { "id": "062004", "name": "Krasnobród" },
+          { "id": "062005", "name": "Łabunie" },
+          { "id": "062006", "name": "Miączyn" },
+          { "id": "062007", "name": "Nielisz" },
+          { "id": "062008", "name": "Radecznica" },
+          { "id": "062009", "name": "Sitno" },
+          { "id": "062010", "name": "Skierbieszów" },
+          { "id": "062011", "name": "Stary Zamość" },
+          { "id": "062012", "name": "Sułów" },
+          { "id": "062013", "name": "Szczebrzeszyn" },
+          { "id": "062014", "name": "Zamość" },
+          { "id": "062015", "name": "Zwierzyniec" }
+        ]
+      },
+      {
+        "id": "0661",
+        "name": "Biała Podlaska",
+        "gminy": [{ "id": "0661", "name": "Biała Podlaska" }]
+      },
+      {
+        "id": "0662",
+        "name": "Chełm",
+        "gminy": [{ "id": "0662", "name": "Chełm" }]
+      },
+      {
+        "id": "0663",
+        "name": "Lublin",
+        "gminy": [{ "id": "0663", "name": "Lublin" }]
+      },
+      {
+        "id": "0664",
+        "name": "Zamość",
+        "gminy": [{ "id": "0664", "name": "Zamość" }]
+      }
+    ]
+  },
+  {
+    "id": "08",
+    "name": "lubuskie",
+    "powiaty": [
+      {
+        "id": "0801",
+        "name": "gorzowski",
+        "gminy": [
+          { "id": "080101", "name": "Kostrzyn nad Odrą" },
+          { "id": "080102", "name": "Bogdaniec" },
+          { "id": "080103", "name": "Deszczno" },
+          { "id": "080104", "name": "Kłodawa" },
+          { "id": "080105", "name": "Lubiszyn" },
+          { "id": "080106", "name": "Santok" },
+          { "id": "080107", "name": "Witnica" }
+        ]
+      },
+      {
+        "id": "0802",
+        "name": "krośnieński",
+        "gminy": [
+          { "id": "080201", "name": "Gubin" },
+          { "id": "080202", "name": "Bobrowice" },
+          { "id": "080203", "name": "Bytnica" },
+          { "id": "080204", "name": "Dąbie" },
+          { "id": "080206", "name": "Krosno Odrzańskie" },
+          { "id": "080207", "name": "Maszewo" }
+        ]
+      },
+      {
+        "id": "0803",
+        "name": "międzyrzecki",
+        "gminy": [
+          { "id": "080301", "name": "Bledzew" },
+          { "id": "080302", "name": "Międzyrzecz" },
+          { "id": "080303", "name": "Przytoczna" },
+          { "id": "080304", "name": "Pszczew" },
+          { "id": "080305", "name": "Skwierzyna" },
+          { "id": "080306", "name": "Trzciel" }
+        ]
+      },
+      {
+        "id": "0804",
+        "name": "nowosolski",
+        "gminy": [
+          { "id": "080401", "name": "Nowa Sól" },
+          { "id": "080402", "name": "Bytom Odrzański" },
+          { "id": "080403", "name": "Kolsko" },
+          { "id": "080404", "name": "Kożuchów" },
+          { "id": "080406", "name": "Nowe Miasteczko" },
+          { "id": "080407", "name": "Otyń" },
+          { "id": "080408", "name": "Siedlisko" }
+        ]
+      },
+      {
+        "id": "0805",
+        "name": "słubicki",
+        "gminy": [
+          { "id": "080501", "name": "Cybinka" },
+          { "id": "080502", "name": "Górzyca" },
+          { "id": "080503", "name": "Ośno Lubuskie" },
+          { "id": "080504", "name": "Rzepin" },
+          { "id": "080505", "name": "Słubice" }
+        ]
+      },
+      {
+        "id": "0806",
+        "name": "strzelecko-drezdenecki",
+        "gminy": [
+          { "id": "080601", "name": "Dobiegniew" },
+          { "id": "080602", "name": "Drezdenko" },
+          { "id": "080603", "name": "Stare Kurowo" },
+          { "id": "080604", "name": "Strzelce Krajeńskie" },
+          { "id": "080605", "name": "Zwierzyn" }
+        ]
+      },
+      {
+        "id": "0807",
+        "name": "sulęciński",
+        "gminy": [
+          { "id": "080701", "name": "Krzeszyce" },
+          { "id": "080702", "name": "Lubniewice" },
+          { "id": "080703", "name": "Słońsk" },
+          { "id": "080704", "name": "Sulęcin" },
+          { "id": "080705", "name": "Torzym" }
+        ]
+      },
+      {
+        "id": "0808",
+        "name": "świebodziński",
+        "gminy": [
+          { "id": "080801", "name": "Lubrza" },
+          { "id": "080802", "name": "Łagów" },
+          { "id": "080803", "name": "Skąpe" },
+          { "id": "080804", "name": "Szczaniec" },
+          { "id": "080805", "name": "Świebodzin" },
+          { "id": "080806", "name": "Zbąszynek" }
+        ]
+      },
+      {
+        "id": "0809",
+        "name": "zielonogórski",
+        "gminy": [
+          { "id": "080901", "name": "Babimost" },
+          { "id": "080902", "name": "Bojadła" },
+          { "id": "080903", "name": "Czerwieńsk" },
+          { "id": "080904", "name": "Kargowa" },
+          { "id": "080905", "name": "Nowogród Bobrzański" },
+          { "id": "080906", "name": "Sulechów" },
+          { "id": "080907", "name": "Świdnica" },
+          { "id": "080908", "name": "Trzebiechów" },
+          { "id": "080909", "name": "Zabór" }
+        ]
+      },
+      {
+        "id": "0810",
+        "name": "żagański",
+        "gminy": [
+          { "id": "081001", "name": "Gozdnica" },
+          { "id": "081002", "name": "Żagań" },
+          { "id": "081003", "name": "Brzeźnica" },
+          { "id": "081004", "name": "Iłowa" },
+          { "id": "081005", "name": "Małomice" },
+          { "id": "081006", "name": "Niegosławice" },
+          { "id": "081007", "name": "Szprotawa" },
+          { "id": "081008", "name": "Wymiarki" }
+        ]
+      },
+      {
+        "id": "0811",
+        "name": "żarski",
+        "gminy": [
+          { "id": "081101", "name": "Łęknica" },
+          { "id": "081102", "name": "Żary" },
+          { "id": "081103", "name": "Brody" },
+          { "id": "081104", "name": "Jasień" },
+          { "id": "081105", "name": "Lipinki Łużyckie" },
+          { "id": "081106", "name": "Lubsko" },
+          { "id": "081107", "name": "Przewóz" },
+          { "id": "081108", "name": "Trzebiel" },
+          { "id": "081109", "name": "Tuplice" }
+        ]
+      },
+      {
+        "id": "0812",
+        "name": "wschowski",
+        "gminy": [
+          { "id": "081201", "name": "Sława" },
+          { "id": "081202", "name": "Szlichtyngowa" },
+          { "id": "081203", "name": "Wschowa" }
+        ]
+      },
+      {
+        "id": "0861",
+        "name": "Gorzów Wielkopolski",
+        "gminy": [{ "id": "0861", "name": "Gorzów Wielkopolski" }]
+      },
+      {
+        "id": "0862",
+        "name": "Zielona Góra",
+        "gminy": [{ "id": "0862", "name": "Zielona Góra" }]
+      }
+    ]
+  },
+  {
+    "id": "10",
+    "name": "łódzkie",
+    "powiaty": [
+      {
+        "id": "1001",
+        "name": "bełchatowski",
+        "gminy": [
+          { "id": "100101", "name": "Bełchatów" },
+          { "id": "100103", "name": "Drużbice" },
+          { "id": "100104", "name": "Kleszczów" },
+          { "id": "100105", "name": "Kluki" },
+          { "id": "100106", "name": "Rusiec" },
+          { "id": "100107", "name": "Szczerców" },
+          { "id": "100108", "name": "Zelów" }
+        ]
+      },
+      {
+        "id": "1021",
+        "name": "brzeziński",
+        "gminy": [
+          { "id": "102101", "name": "Brzeziny" },
+          { "id": "102103", "name": "Dmosin" },
+          { "id": "102104", "name": "Jeżów" },
+          { "id": "102105", "name": "Rogów" }
+        ]
+      },
+      {
+        "id": "1002",
+        "name": "kutnowski",
+        "gminy": [
+          { "id": "100202", "name": "Bedlno" },
+          { "id": "100203", "name": "Dąbrowice" },
+          { "id": "100204", "name": "Krośniewice" },
+          { "id": "100205", "name": "Krzyżanów" },
+          { "id": "100201", "name": "Kutno" },
+          { "id": "100207", "name": "Łanięta" },
+          { "id": "100208", "name": "Nowe Ostrowy" },
+          { "id": "100209", "name": "Oporów" },
+          { "id": "100210", "name": "Strzelce" },
+          { "id": "100211", "name": "Żychlin" }
+        ]
+      },
+      {
+        "id": "1003",
+        "name": "łaski",
+        "gminy": [
+          { "id": "100301", "name": "Buczek" },
+          { "id": "100302", "name": "Łask" },
+          { "id": "100303", "name": "Sędziejowice" },
+          { "id": "100304", "name": "Widawa" },
+          { "id": "100305", "name": "Wodzierady" }
+        ]
+      },
+      {
+        "id": "1004",
+        "name": "łęczycki",
+        "gminy": [
+          { "id": "100402", "name": "Daszyna" },
+          { "id": "100403", "name": "Góra Świętej Małgorzaty" },
+          { "id": "100404", "name": "Grabów" },
+          { "id": "100401", "name": "Łęczyca" },
+          { "id": "100406", "name": "Piątek" },
+          { "id": "100407", "name": "Świnice Warckie" },
+          { "id": "100408", "name": "Witonia" }
+        ]
+      },
+      {
+        "id": "1005",
+        "name": "łowicki",
+        "gminy": [
+          { "id": "100502", "name": "Bielawy" },
+          { "id": "100503", "name": "Chąśno" },
+          { "id": "100504", "name": "Domaniewice" },
+          { "id": "100505", "name": "Kiernozia" },
+          { "id": "100506", "name": "Kocierzew Południowy" },
+          { "id": "100501", "name": "Łowicz" },
+          { "id": "100508", "name": "Łyszkowice" },
+          { "id": "100509", "name": "Nieborów" },
+          { "id": "100510", "name": "Zduny" }
+        ]
+      },
+      {
+        "id": "1006",
+        "name": "łódzki wschodni",
+        "gminy": [
+          { "id": "100602", "name": "Andrespol" },
+          { "id": "100603", "name": "Brójce" },
+          { "id": "100607", "name": "Koluszki" },
+          { "id": "100608", "name": "Nowosolna" },
+          { "id": "100610", "name": "Rzgów" },
+          { "id": "100611", "name": "Tuszyn" }
+        ]
+      },
+      {
+        "id": "1007",
+        "name": "opoczyński",
+        "gminy": [
+          { "id": "100701", "name": "Białaczów" },
+          { "id": "100702", "name": "Drzewica" },
+          { "id": "100703", "name": "Mniszków" },
+          { "id": "100704", "name": "Opoczno" },
+          { "id": "100705", "name": "Paradyż" },
+          { "id": "100706", "name": "Poświętne" },
+          { "id": "100707", "name": "Sławno" },
+          { "id": "100708", "name": "Żarnów" }
+        ]
+      },
+      {
+        "id": "1008",
+        "name": "pabianicki",
+        "gminy": [
+          { "id": "100803", "name": "Dłutów" },
+          { "id": "100804", "name": "Dobroń" },
+          { "id": "100801", "name": "Konstantynów Łódzki" },
+          { "id": "100805", "name": "Ksawerów" },
+          { "id": "100806", "name": "Lutomiersk" },
+          { "id": "100802", "name": "Pabianice" }
+        ]
+      },
+      {
+        "id": "1009",
+        "name": "pajęczański",
+        "gminy": [
+          { "id": "100901", "name": "Działoszyn" },
+          { "id": "100902", "name": "Kiełczygłów" },
+          { "id": "100903", "name": "Nowa Brzeźnica" },
+          { "id": "100904", "name": "Pajęczno" },
+          { "id": "100905", "name": "Rząśnia" },
+          { "id": "100906", "name": "Siemkowice" },
+          { "id": "100907", "name": "Strzelce Wielkie" },
+          { "id": "100908", "name": "Sulmierzyce" }
+        ]
+      },
+      {
+        "id": "1010",
+        "name": "piotrkowski",
+        "gminy": [
+          { "id": "101001", "name": "Aleksandrów" },
+          { "id": "101002", "name": "Czarnocin" },
+          { "id": "101003", "name": "Gorzkowice" },
+          { "id": "101004", "name": "Grabica" },
+          { "id": "101005", "name": "Łęki Szlacheckie" },
+          { "id": "101006", "name": "Moszczenica" },
+          { "id": "101007", "name": "Ręczno" },
+          { "id": "101008", "name": "Rozprza" },
+          { "id": "101009", "name": "Sulejów" },
+          { "id": "101010", "name": "Wola Krzysztoporska" },
+          { "id": "101011", "name": "Wolbórz" }
+        ]
+      },
+      {
+        "id": "1011",
+        "name": "poddębicki",
+        "gminy": [
+          { "id": "101101", "name": "Dalików" },
+          { "id": "101102", "name": "Pęczniew" },
+          { "id": "101103", "name": "Poddębice" },
+          { "id": "101104", "name": "Uniejów" },
+          { "id": "101105", "name": "Wartkowice" },
+          { "id": "101106", "name": "Zadzim" }
+        ]
+      },
+      {
+        "id": "1012",
+        "name": "radomszczański",
+        "gminy": [
+          { "id": "101202", "name": "Dobryszyce" },
+          { "id": "101203", "name": "Gidle" },
+          { "id": "101204", "name": "Gomunice" },
+          { "id": "101205", "name": "Kamieńsk" },
+          { "id": "101206", "name": "Kobiele Wielkie" },
+          { "id": "101207", "name": "Kodrąb" },
+          { "id": "101208", "name": "Lgota Wielka" },
+          { "id": "101209", "name": "Ładzice" },
+          { "id": "101210", "name": "Masłowice" },
+          { "id": "101211", "name": "Przedbórz" },
+          { "id": "101201", "name": "Radomsko" },
+          { "id": "101213", "name": "Wielgomłyny" },
+          { "id": "101214", "name": "Żytno" }
+        ]
+      },
+      {
+        "id": "1013",
+        "name": "rawski",
+        "gminy": [
+          { "id": "101302", "name": "Biała Rawska" },
+          { "id": "101303", "name": "Cielądz" },
+          { "id": "101301", "name": "Rawa Mazowiecka" },
+          { "id": "101305", "name": "Regnów" },
+          { "id": "101306", "name": "Sadkowice" }
+        ]
+      },
+      {
+        "id": "1014",
+        "name": "sieradzki",
+        "gminy": [
+          { "id": "101402", "name": "Błaszki" },
+          { "id": "101403", "name": "Brąszewice" },
+          { "id": "101404", "name": "Brzeźnio" },
+          { "id": "101405", "name": "Burzenin" },
+          { "id": "101406", "name": "Goszczanów" },
+          { "id": "101407", "name": "Klonowa" },
+          { "id": "101401", "name": "Sieradz" },
+          { "id": "101409", "name": "Warta" },
+          { "id": "101410", "name": "Wróblew" },
+          { "id": "101411", "name": "Złoczew" }
+        ]
+      },
+      {
+        "id": "1015",
+        "name": "skierniewicki",
+        "gminy": [
+          { "id": "101501", "name": "Bolimów" },
+          { "id": "101502", "name": "Głuchów" },
+          { "id": "101503", "name": "Godzianów" },
+          { "id": "101504", "name": "Kowiesy" },
+          { "id": "101505", "name": "Lipce Reymontowskie" },
+          { "id": "101506", "name": "Maków" },
+          { "id": "101507", "name": "Nowy Kawęczyn" },
+          { "id": "101508", "name": "Skierniewice" },
+          { "id": "101509", "name": "Słupia" }
+        ]
+      },
+      {
+        "id": "1016",
+        "name": "tomaszowski",
+        "gminy": [
+          { "id": "101602", "name": "Będków" },
+          { "id": "101603", "name": "Budziszewice" },
+          { "id": "101604", "name": "Czerniewice" },
+          { "id": "101605", "name": "Inowłódz" },
+          { "id": "101606", "name": "Lubochnia" },
+          { "id": "101607", "name": "Rokiciny" },
+          { "id": "101608", "name": "Rzeczyca" },
+          { "id": "101601", "name": "Tomaszów Mazowiecki" },
+          { "id": "101610", "name": "Ujazd" },
+          { "id": "101611", "name": "Żelechlinek" }
+        ]
+      },
+      {
+        "id": "1017",
+        "name": "wieluński",
+        "gminy": [
+          { "id": "101701", "name": "Biała" },
+          { "id": "101702", "name": "Czarnożyły" },
+          { "id": "101703", "name": "Konopnica" },
+          { "id": "101704", "name": "Mokrsko" },
+          { "id": "101705", "name": "Osjaków" },
+          { "id": "101706", "name": "Ostrówek" },
+          { "id": "101707", "name": "Pątnów" },
+          { "id": "101708", "name": "Skomlin" },
+          { "id": "101709", "name": "Wieluń" },
+          { "id": "101710", "name": "Wierzchlas" }
+        ]
+      },
+      {
+        "id": "1018",
+        "name": "wieruszowski",
+        "gminy": [
+          { "id": "101801", "name": "Bolesławiec" },
+          { "id": "101802", "name": "Czastary" },
+          { "id": "101803", "name": "Galewice" },
+          { "id": "101804", "name": "Lututów" },
+          { "id": "101805", "name": "Łubnice" },
+          { "id": "101806", "name": "Sokolniki" },
+          { "id": "101807", "name": "Wieruszów" }
+        ]
+      },
+      {
+        "id": "1019",
+        "name": "zduńskowolski",
+        "gminy": [
+          { "id": "101902", "name": "Szadek" },
+          { "id": "101903", "name": "Zapolice" },
+          { "id": "101901", "name": "Zduńska Wola" }
+        ]
+      },
+      {
+        "id": "1020",
+        "name": "zgierski",
+        "gminy": [
+          { "id": "102004", "name": "Aleksandrów Łódzki" },
+          { "id": "102001", "name": "Głowno" },
+          { "id": "102002", "name": "Ozorków" },
+          { "id": "102007", "name": "Parzęczew" },
+          { "id": "102008", "name": "Stryków" },
+          { "id": "102003", "name": "Zgierz" }
+        ]
+      },
+      {
+        "id": "1061",
+        "name": "Łódź",
+        "gminy": [{ "id": "106101", "name": "Łódź" }]
+      },
+      {
+        "id": "1062",
+        "name": "Piotrków Trybunalski",
+        "gminy": [{ "id": "106201", "name": "Piotrków Trybunalski" }]
+      },
+      {
+        "id": "1063",
+        "name": "Skierniewice",
+        "gminy": [{ "id": "106301", "name": "Skierniewice" }]
+      }
+    ]
+  },
+  {
+    "id": "12",
+    "name": "małopolskie",
+    "powiaty": [
+      {
+        "id": "1201",
+        "name": "bocheński",
+        "gminy": [
+          { "id": "120101", "name": "Bochnia" },
+          { "id": "120103", "name": "Drwinia" },
+          { "id": "120104", "name": "Lipnica Murowana" },
+          { "id": "120105", "name": "Łapanów" },
+          { "id": "120106", "name": "Nowy Wiśnicz" },
+          { "id": "120107", "name": "Rzezawa" },
+          { "id": "120108", "name": "Trzciana" },
+          { "id": "120109", "name": "Żegocina" }
+        ]
+      },
+      {
+        "id": "1202",
+        "name": "brzeski",
+        "gminy": [
+          { "id": "120201", "name": "Borzęcin" },
+          { "id": "120202", "name": "Brzesko" },
+          { "id": "120203", "name": "Czchów" },
+          { "id": "120204", "name": "Dębno" },
+          { "id": "120205", "name": "Gnojnik" },
+          { "id": "120206", "name": "Iwkowa" },
+          { "id": "120207", "name": "Szczurowa" }
+        ]
+      },
+      {
+        "id": "1203",
+        "name": "chrzanowski",
+        "gminy": [
+          { "id": "120301", "name": "Alwernia" },
+          { "id": "120302", "name": "Babice" },
+          { "id": "120303", "name": "Chrzanów" },
+          { "id": "120304", "name": "Libiąż" },
+          { "id": "120305", "name": "Trzebinia" }
+        ]
+      },
+      {
+        "id": "1204",
+        "name": "dąbrowski",
+        "gminy": [
+          { "id": "120401", "name": "Bolesław" },
+          { "id": "120402", "name": "Dąbrowa Tarnowska" },
+          { "id": "120403", "name": "Gręboszów" },
+          { "id": "120404", "name": "Mędrzechów" },
+          { "id": "120405", "name": "Olesno" },
+          { "id": "120406", "name": "Radgoszcz" },
+          { "id": "120407", "name": "Szczucin" }
+        ]
+      },
+      {
+        "id": "1205",
+        "name": "gorlicki",
+        "gminy": [
+          { "id": "120501", "name": "Gorlice" },
+          { "id": "120502", "name": "Biecz" },
+          { "id": "120503", "name": "Bobowa" },
+          { "id": "120505", "name": "Lipinki" },
+          { "id": "120506", "name": "Łużna" },
+          { "id": "120507", "name": "Moszczenica" },
+          { "id": "120508", "name": "Ropa" },
+          { "id": "120509", "name": "Sękowa" },
+          { "id": "120510", "name": "Uście Gorlickie" }
+        ]
+      },
+      {
+        "id": "1206",
+        "name": "krakowski",
+        "gminy": [
+          { "id": "120601", "name": "Czernichów" },
+          { "id": "120602", "name": "Igołomia-Wawrzeńczyce" },
+          { "id": "120603", "name": "Iwanowice" },
+          { "id": "120604", "name": "Jerzmanowice-Przeginia" },
+          { "id": "120605", "name": "Kocmyrzów-Luborzyca" },
+          { "id": "120606", "name": "Krzeszowice" },
+          { "id": "120607", "name": "Liszki" },
+          { "id": "120608", "name": "Michałowice" },
+          { "id": "120609", "name": "Mogilany" },
+          { "id": "120610", "name": "Skała" },
+          { "id": "120611", "name": "Skawina" },
+          { "id": "120612", "name": "Słomniki" },
+          { "id": "120613", "name": "Sułoszowa" },
+          { "id": "120614", "name": "Świątniki Górne" },
+          { "id": "120615", "name": "Wielka Wieś" },
+          { "id": "120616", "name": "Zabierzów" },
+          { "id": "120617", "name": "Zielonki" }
+        ]
+      },
+      {
+        "id": "1207",
+        "name": "limanowski",
+        "gminy": [
+          { "id": "120701", "name": "Limanowa" },
+          { "id": "120702", "name": "Mszana Dolna" },
+          { "id": "120703", "name": "Dobra" },
+          { "id": "120704", "name": "Jodłownik" },
+          { "id": "120705", "name": "Kamienica" },
+          { "id": "120706", "name": "Laskowa" },
+          { "id": "120708", "name": "Łukowica" },
+          { "id": "120710", "name": "Niedźwiedź" },
+          { "id": "120711", "name": "Słopnice" },
+          { "id": "120712", "name": "Tymbark" }
+        ]
+      },
+      {
+        "id": "1208",
+        "name": "miechowski",
+        "gminy": [
+          { "id": "120801", "name": "Charsznica" },
+          { "id": "120802", "name": "Gołcza" },
+          { "id": "120803", "name": "Kozłów" },
+          { "id": "120804", "name": "Książ Wielki" },
+          { "id": "120805", "name": "Miechów" },
+          { "id": "120806", "name": "Racławice" },
+          { "id": "120807", "name": "Słaboszów" }
+        ]
+      },
+      {
+        "id": "1209",
+        "name": "myślenicki",
+        "gminy": [
+          { "id": "120901", "name": "Dobczyce" },
+          { "id": "120902", "name": "Lubień" },
+          { "id": "120903", "name": "Myślenice" },
+          { "id": "120904", "name": "Pcim" },
+          { "id": "120905", "name": "Raciechowice" },
+          { "id": "120906", "name": "Siepraw" },
+          { "id": "120907", "name": "Sułkowice" },
+          { "id": "120908", "name": "Tokarnia" },
+          { "id": "120909", "name": "Wiśniowa" }
+        ]
+      },
+      {
+        "id": "1210",
+        "name": "nowosądecki",
+        "gminy": [
+          { "id": "121001", "name": "Grybów" },
+          { "id": "121002", "name": "Chełmiec" },
+          { "id": "121003", "name": "Gródek nad Dunajcem" },
+          { "id": "121005", "name": "Kamionka Wielka" },
+          { "id": "121006", "name": "Korzenna" },
+          { "id": "121007", "name": "Krynica-Zdrój" },
+          { "id": "121008", "name": "Łabowa" },
+          { "id": "121009", "name": "Łącko" },
+          { "id": "121010", "name": "Łososina Dolna" },
+          { "id": "121011", "name": "Muszyna" },
+          { "id": "121012", "name": "Nawojowa" },
+          { "id": "121013", "name": "Piwniczna-Zdrój" },
+          { "id": "121014", "name": "Podegrodzie" },
+          { "id": "121015", "name": "Rytro" },
+          { "id": "121016", "name": "Stary Sącz" }
+        ]
+      },
+      {
+        "id": "1211",
+        "name": "nowotarski",
+        "gminy": [
+          { "id": "121101", "name": "Nowy Targ" },
+          { "id": "121102", "name": "Szczawnica" },
+          { "id": "121103", "name": "Czarny Dunajec" },
+          { "id": "121104", "name": "Czorsztyn" },
+          { "id": "121105", "name": "Jabłonka" },
+          { "id": "121106", "name": "Krościenko nad Dunajcem" },
+          { "id": "121107", "name": "Lipnica Wielka" },
+          { "id": "121108", "name": "Łapsze Niżne" },
+          { "id": "121110", "name": "Ochotnica Dolna" },
+          { "id": "121111", "name": "Raba Wyżna" },
+          { "id": "121112", "name": "Rabka-Zdrój" },
+          { "id": "121113", "name": "Spytkowice" },
+          { "id": "121114", "name": "Szaflary" }
+        ]
+      },
+      {
+        "id": "1212",
+        "name": "olkuski",
+        "gminy": [
+          { "id": "121201", "name": "Bukowno" },
+          { "id": "121203", "name": "Bolesław" },
+          { "id": "121204", "name": "Klucze" },
+          { "id": "121205", "name": "Olkusz" },
+          { "id": "121206", "name": "Trzyciąż" },
+          { "id": "121207", "name": "Wolbrom" }
+        ]
+      },
+      {
+        "id": "1213",
+        "name": "oświęcimski",
+        "gminy": [
+          { "id": "121301", "name": "Oświęcim" },
+          { "id": "121302", "name": "Brzeszcze" },
+          { "id": "121303", "name": "Chełmek" },
+          { "id": "121304", "name": "Kęty" },
+          { "id": "121305", "name": "Osiek" },
+          { "id": "121307", "name": "Polanka Wielka" },
+          { "id": "121308", "name": "Przeciszów" },
+          { "id": "121309", "name": "Zator" }
+        ]
+      },
+      {
+        "id": "1214",
+        "name": "proszowicki",
+        "gminy": [
+          { "id": "121401", "name": "Koniusza" },
+          { "id": "121402", "name": "Koszyce" },
+          { "id": "121403", "name": "Nowe Brzesko" },
+          { "id": "121404", "name": "Pałecznica" },
+          { "id": "121405", "name": "Proszowice" },
+          { "id": "121406", "name": "Radziemice" }
+        ]
+      },
+      {
+        "id": "1215",
+        "name": "suski",
+        "gminy": [
+          { "id": "121501", "name": "Jordanów" },
+          { "id": "121502", "name": "Sucha Beskidzka" },
+          { "id": "121503", "name": "Budzów" },
+          { "id": "121504", "name": "Bystra-Sidzina" },
+          { "id": "121506", "name": "Maków Podhalański" },
+          { "id": "121507", "name": "Stryszawa" },
+          { "id": "121508", "name": "Zawoja" },
+          { "id": "121509", "name": "Zembrzyce" }
+        ]
+      },
+      {
+        "id": "1216",
+        "name": "tarnowski",
+        "gminy": [
+          { "id": "121601", "name": "Ciężkowice" },
+          { "id": "121602", "name": "Gromnik" },
+          { "id": "121603", "name": "Lisia Góra" },
+          { "id": "121604", "name": "Pleśna" },
+          { "id": "121605", "name": "Radłów" },
+          { "id": "121606", "name": "Ryglice" },
+          { "id": "121607", "name": "Rzepiennik Strzyżewski" },
+          { "id": "121608", "name": "Skrzyszów" },
+          { "id": "121609", "name": "Tarnów" },
+          { "id": "121610", "name": "Tuchów" },
+          { "id": "121611", "name": "Wierzchosławice" },
+          { "id": "121612", "name": "Wietrzychowice" },
+          { "id": "121613", "name": "Wojnicz" },
+          { "id": "121614", "name": "Zakliczyn" },
+          { "id": "121615", "name": "Żabno" },
+          { "id": "121616", "name": "Szerzyny" }
+        ]
+      },
+      {
+        "id": "1217",
+        "name": "tatrzański",
+        "gminy": [
+          { "id": "121701", "name": "Zakopane" },
+          { "id": "121702", "name": "Biały Dunajec" },
+          { "id": "121703", "name": "Bukowina Tatrzańska" },
+          { "id": "121704", "name": "Kościelisko" },
+          { "id": "121705", "name": "Poronin" }
+        ]
+      },
+      {
+        "id": "1218",
+        "name": "wadowicki",
+        "gminy": [
+          { "id": "121801", "name": "Andrychów" },
+          { "id": "121802", "name": "Brzeźnica" },
+          { "id": "121803", "name": "Kalwaria Zebrzydowska" },
+          { "id": "121804", "name": "Lanckorona" },
+          { "id": "121805", "name": "Mucharz" },
+          { "id": "121806", "name": "Spytkowice" },
+          { "id": "121807", "name": "Stryszów" },
+          { "id": "121808", "name": "Tomice" },
+          { "id": "121809", "name": "Wadowice" },
+          { "id": "121810", "name": "Wieprz" }
+        ]
+      },
+      {
+        "id": "1219",
+        "name": "wielicki",
+        "gminy": [
+          { "id": "121901", "name": "Biskupice" },
+          { "id": "121902", "name": "Gdów" },
+          { "id": "121903", "name": "Kłaj" },
+          { "id": "121904", "name": "Niepołomice" },
+          { "id": "121905", "name": "Wieliczka" }
+        ]
+      },
+      {
+        "id": "1261",
+        "name": "Kraków",
+        "gminy": [{ "id": "1261", "name": "Kraków" }]
+      },
+      {
+        "id": "1262",
+        "name": "Nowy Sącz",
+        "gminy": [{ "id": "1262", "name": "Nowy Sącz" }]
+      },
+      {
+        "id": "1263",
+        "name": "Tarnów",
+        "gminy": [{ "id": "1263", "name": "Tarnów" }]
+      }
+    ]
+  },
+  {
+    "id": "14",
+    "name": "mazowieckie",
+    "powiaty": [
+      {
+        "id": "1401",
+        "name": "białobrzeski",
+        "gminy": [
+          { "id": "140101", "name": "Białobrzegi" },
+          { "id": "140102", "name": "Promna" },
+          { "id": "140103", "name": "Radzanów" },
+          { "id": "140104", "name": "Stara Błotnica" },
+          { "id": "140105", "name": "Stromiec" },
+          { "id": "140106", "name": "Wyśmierzyce" }
+        ]
+      },
+      {
+        "id": "1402",
+        "name": "ciechanowski",
+        "gminy": [
+          { "id": "140201", "name": "Ciechanów" },
+          { "id": "140203", "name": "Glinojeck" },
+          { "id": "140204", "name": "Gołymin-Ośrodek" },
+          { "id": "140205", "name": "Grudusk" },
+          { "id": "140206", "name": "Ojrzeń" },
+          { "id": "140207", "name": "Opinogóra Górna" },
+          { "id": "140208", "name": "Regimin" },
+          { "id": "140209", "name": "Sońsk" }
+        ]
+      },
+      {
+        "id": "1403",
+        "name": "garwoliński",
+        "gminy": [
+          { "id": "140301", "name": "Garwolin" },
+          { "id": "140302", "name": "Łaskarzew" },
+          { "id": "140303", "name": "Borowie" },
+          { "id": "140305", "name": "Górzno" },
+          { "id": "140307", "name": "Maciejowice" },
+          { "id": "140308", "name": "Miastków Kościelny" },
+          { "id": "140309", "name": "Parysów" },
+          { "id": "140310", "name": "Pilawa" },
+          { "id": "140311", "name": "Sobolew" },
+          { "id": "140312", "name": "Trojanów" },
+          { "id": "140313", "name": "Wilga" },
+          { "id": "140314", "name": "Żelechów" }
+        ]
+      },
+      {
+        "id": "1404",
+        "name": "gostyniński",
+        "gminy": [
+          { "id": "140401", "name": "Gostynin" },
+          { "id": "140403", "name": "Pacyna" },
+          { "id": "140404", "name": "Sanniki" },
+          { "id": "140405", "name": "Szczawin Kościelny" }
+        ]
+      },
+      {
+        "id": "1405",
+        "name": "grodziski",
+        "gminy": [
+          { "id": "140501", "name": "Milanówek" },
+          { "id": "140502", "name": "Podkowa Leśna" },
+          { "id": "140503", "name": "Baranów" },
+          { "id": "140504", "name": "Grodzisk Mazowiecki" },
+          { "id": "140505", "name": "Jaktorów" },
+          { "id": "140506", "name": "Żabia Wola" }
+        ]
+      },
+      {
+        "id": "1406",
+        "name": "grójecki",
+        "gminy": [
+          { "id": "140601", "name": "Belsk Duży" },
+          { "id": "140602", "name": "Błędów" },
+          { "id": "140603", "name": "Chynów" },
+          { "id": "140604", "name": "Goszczyn" },
+          { "id": "140605", "name": "Grójec" },
+          { "id": "140606", "name": "Jasieniec" },
+          { "id": "140607", "name": "Mogielnica" },
+          { "id": "140608", "name": "Nowe Miasto nad Pilicą" },
+          { "id": "140609", "name": "Pniewy" },
+          { "id": "140611", "name": "Warka" }
+        ]
+      },
+      {
+        "id": "1407",
+        "name": "kozienicki",
+        "gminy": [
+          { "id": "140701", "name": "Garbatka-Letnisko" },
+          { "id": "140702", "name": "Głowaczów" },
+          { "id": "140703", "name": "Gniewoszów" },
+          { "id": "140704", "name": "Grabów nad Pilicą" },
+          { "id": "140705", "name": "Kozienice" },
+          { "id": "140706", "name": "Magnuszew" },
+          { "id": "140707", "name": "Sieciechów" }
+        ]
+      },
+      {
+        "id": "1408",
+        "name": "legionowski",
+        "gminy": [
+          { "id": "140801", "name": "Legionowo" },
+          { "id": "140802", "name": "Jabłonna" },
+          { "id": "140803", "name": "Nieporęt" },
+          { "id": "140804", "name": "Serock" },
+          { "id": "140805", "name": "Wieliszew" }
+        ]
+      },
+      {
+        "id": "1409",
+        "name": "lipski",
+        "gminy": [
+          { "id": "140901", "name": "Chotcza" },
+          { "id": "140902", "name": "Ciepielów" },
+          { "id": "140903", "name": "Lipsko" },
+          { "id": "140904", "name": "Rzeczniów" },
+          { "id": "140905", "name": "Sienno" },
+          { "id": "140906", "name": "Solec nad Wisłą" }
+        ]
+      },
+      {
+        "id": "1410",
+        "name": "łosicki",
+        "gminy": [
+          { "id": "141001", "name": "Huszlew" },
+          { "id": "141002", "name": "Łosice" },
+          { "id": "141003", "name": "Olszanka" },
+          { "id": "141004", "name": "Platerów" },
+          { "id": "141005", "name": "Sarnaki" },
+          { "id": "141006", "name": "Stara Kornica" }
+        ]
+      },
+      {
+        "id": "1411",
+        "name": "makowski",
+        "gminy": [
+          { "id": "141101", "name": "Maków Mazowiecki" },
+          { "id": "141102", "name": "Czerwonka" },
+          { "id": "141103", "name": "Karniewo" },
+          { "id": "141104", "name": "Krasnosielc" },
+          { "id": "141105", "name": "Młynarze" },
+          { "id": "141106", "name": "Płoniawy-Bramura" },
+          { "id": "141107", "name": "Różan" },
+          { "id": "141108", "name": "Rzewnie" },
+          { "id": "141109", "name": "Sypniewo" },
+          { "id": "141110", "name": "Szelków" }
+        ]
+      },
+      {
+        "id": "1412",
+        "name": "miński",
+        "gminy": [
+          { "id": "141201", "name": "Mińsk Mazowiecki" },
+          { "id": "141204", "name": "Cegłów" },
+          { "id": "141205", "name": "Dębe Wielkie" },
+          { "id": "141206", "name": "Dobre" },
+          { "id": "141207", "name": "Halinów" },
+          { "id": "141208", "name": "Jakubów" },
+          { "id": "141209", "name": "Kałuszyn" },
+          { "id": "141210", "name": "Latowicz" },
+          { "id": "141212", "name": "Mrozy" },
+          { "id": "141213", "name": "Siennica" },
+          { "id": "141214", "name": "Stanisławów" },
+          { "id": "141215", "name": "Sulejówek" }
+        ]
+      },
+      {
+        "id": "1413",
+        "name": "mławski",
+        "gminy": [
+          { "id": "141301", "name": "Mława" },
+          { "id": "141302", "name": "Dzierzgowo" },
+          { "id": "141303", "name": "Lipowiec Kościelny" },
+          { "id": "141304", "name": "Radzanów" },
+          { "id": "141305", "name": "Strzegowo" },
+          { "id": "141306", "name": "Stupsk" },
+          { "id": "141307", "name": "Szreńsk" },
+          { "id": "141308", "name": "Szydłowo" },
+          { "id": "141309", "name": "Wieczfnia Kościelna" },
+          { "id": "141310", "name": "Wiśniewo" }
+        ]
+      },
+      {
+        "id": "1414",
+        "name": "nowodworski",
+        "gminy": [
+          { "id": "141401", "name": "Nowy Dwór Mazowiecki" },
+          { "id": "141402", "name": "Czosnów" },
+          { "id": "141403", "name": "Leoncin" },
+          { "id": "141404", "name": "Nasielsk" },
+          { "id": "141405", "name": "Pomiechówek" },
+          { "id": "141406", "name": "Zakroczym" }
+        ]
+      },
+      {
+        "id": "1415",
+        "name": "ostrołęcki",
+        "gminy": [
+          { "id": "141501", "name": "Baranowo" },
+          { "id": "141502", "name": "Czarnia" },
+          { "id": "141503", "name": "Czerwin" },
+          { "id": "141504", "name": "Goworowo" },
+          { "id": "141505", "name": "Kadzidło" },
+          { "id": "141506", "name": "Lelis" },
+          { "id": "141507", "name": "Łyse" },
+          { "id": "141508", "name": "Myszyniec" },
+          { "id": "141509", "name": "Olszewo-Borki" },
+          { "id": "141510", "name": "Rzekuń" },
+          { "id": "141511", "name": "Troszyn" }
+        ]
+      },
+      {
+        "id": "1416",
+        "name": "ostrowski",
+        "gminy": [
+          { "id": "141601", "name": "Ostrów Mazowiecka" },
+          { "id": "141602", "name": "Andrzejewo" },
+          { "id": "141603", "name": "Boguty-Pianki" },
+          { "id": "141604", "name": "Brok" },
+          { "id": "141605", "name": "Małkinia Górna" },
+          { "id": "141606", "name": "Nur" },
+          { "id": "141608", "name": "Stary Lubotyń" },
+          { "id": "141609", "name": "Szulborze Wielkie" },
+          { "id": "141610", "name": "Wąsewo" },
+          { "id": "141611", "name": "Zaręby Kościelne" }
+        ]
+      },
+      {
+        "id": "1417",
+        "name": "otwocki",
+        "gminy": [
+          { "id": "141701", "name": "Józefów" },
+          { "id": "141702", "name": "Otwock" },
+          { "id": "141703", "name": "Celestynów" },
+          { "id": "141704", "name": "Karczew" },
+          { "id": "141705", "name": "Kołbiel" },
+          { "id": "141706", "name": "Osieck" },
+          { "id": "141707", "name": "Sobienie-Jeziory" },
+          { "id": "141708", "name": "Wiązowna" }
+        ]
+      },
+      {
+        "id": "1418",
+        "name": "piaseczyński",
+        "gminy": [
+          { "id": "141801", "name": "Góra Kalwaria" },
+          { "id": "141802", "name": "Konstancin-Jeziorna" },
+          { "id": "141803", "name": "Lesznowola" },
+          { "id": "141804", "name": "Piaseczno" },
+          { "id": "141805", "name": "Prażmów" },
+          { "id": "141806", "name": "Tarczyn" }
+        ]
+      },
+      {
+        "id": "1419",
+        "name": "płocki",
+        "gminy": [
+          { "id": "141901", "name": "Bielsk" },
+          { "id": "141902", "name": "Bodzanów" },
+          { "id": "141903", "name": "Brudzeń Duży" },
+          { "id": "141904", "name": "Bulkowo" },
+          { "id": "141905", "name": "Drobin" },
+          { "id": "141906", "name": "Gąbin" },
+          { "id": "141907", "name": "Łąck" },
+          { "id": "141908", "name": "Mała Wieś" },
+          { "id": "141909", "name": "Nowy Duninów" },
+          { "id": "141910", "name": "Radzanowo" },
+          { "id": "141911", "name": "Słubice" },
+          { "id": "141912", "name": "Słupno" },
+          { "id": "141913", "name": "Stara Biała" },
+          { "id": "141914", "name": "Staroźreby" },
+          { "id": "141915", "name": "Wyszogród" }
+        ]
+      },
+      {
+        "id": "1420",
+        "name": "płoński",
+        "gminy": [
+          { "id": "142001", "name": "Płońsk" },
+          { "id": "142002", "name": "Raciąż" },
+          { "id": "142003", "name": "Baboszewo" },
+          { "id": "142004", "name": "Czerwińsk nad Wisłą" },
+          { "id": "142005", "name": "Dzierzążnia" },
+          { "id": "142006", "name": "Joniec" },
+          { "id": "142007", "name": "Naruszewo" },
+          { "id": "142008", "name": "Nowe Miasto" },
+          { "id": "142011", "name": "Sochocin" },
+          { "id": "142012", "name": "Załuski" }
+        ]
+      },
+      {
+        "id": "1421",
+        "name": "pruszkowski",
+        "gminy": [
+          { "id": "142101", "name": "Piastów" },
+          { "id": "142102", "name": "Pruszków" },
+          { "id": "142103", "name": "Brwinów" },
+          { "id": "142104", "name": "Michałowice" },
+          { "id": "142105", "name": "Nadarzyn" },
+          { "id": "142106", "name": "Raszyn" }
+        ]
+      },
+      {
+        "id": "1422",
+        "name": "przasnyski",
+        "gminy": [
+          { "id": "142201", "name": "Przasnysz" },
+          { "id": "142202", "name": "Chorzele" },
+          { "id": "142203", "name": "Czernice Borowe" },
+          { "id": "142204", "name": "Jednorożec" },
+          { "id": "142205", "name": "Krasne" },
+          { "id": "142206", "name": "Krzynowłoga Mała" }
+        ]
+      },
+      {
+        "id": "1423",
+        "name": "przysuski",
+        "gminy": [
+          { "id": "142301", "name": "Borkowice" },
+          { "id": "142302", "name": "Gielniów" },
+          { "id": "142303", "name": "Klwów" },
+          { "id": "142304", "name": "Odrzywół" },
+          { "id": "142305", "name": "Potworów" },
+          { "id": "142306", "name": "Przysucha" },
+          { "id": "142307", "name": "Rusinów" },
+          { "id": "142308", "name": "Wieniawa" }
+        ]
+      },
+      {
+        "id": "1424",
+        "name": "pułtuski",
+        "gminy": [
+          { "id": "142401", "name": "Gzy" },
+          { "id": "142402", "name": "Obryte" },
+          { "id": "142403", "name": "Pokrzywnica" },
+          { "id": "142404", "name": "Pułtusk" },
+          { "id": "142405", "name": "Świercze" },
+          { "id": "142406", "name": "Winnica" },
+          { "id": "142407", "name": "Zatory" }
+        ]
+      },
+      {
+        "id": "1425",
+        "name": "radomski",
+        "gminy": [
+          { "id": "142501", "name": "Pionki" },
+          { "id": "142502", "name": "Gózd" },
+          { "id": "142503", "name": "Iłża" },
+          { "id": "142504", "name": "Jastrzębia" },
+          { "id": "142505", "name": "Jedlińsk" },
+          { "id": "142506", "name": "Jedlnia-Letnisko" },
+          { "id": "142507", "name": "Kowala" },
+          { "id": "142509", "name": "Przytyk" },
+          { "id": "142510", "name": "Skaryszew" },
+          { "id": "142511", "name": "Wierzbica" },
+          { "id": "142512", "name": "Wolanów" },
+          { "id": "142513", "name": "Zakrzew" }
+        ]
+      },
+      {
+        "id": "1426",
+        "name": "siedlecki",
+        "gminy": [
+          { "id": "142601", "name": "Domanice" },
+          { "id": "142602", "name": "Korczew" },
+          { "id": "142603", "name": "Kotuń" },
+          { "id": "142604", "name": "Mokobody" },
+          { "id": "142605", "name": "Mordy" },
+          { "id": "142606", "name": "Paprotnia" },
+          { "id": "142607", "name": "Przesmyki" },
+          { "id": "142608", "name": "Siedlce" },
+          { "id": "142609", "name": "Skórzec" },
+          { "id": "142610", "name": "Suchożebry" },
+          { "id": "142611", "name": "Wiśniew" },
+          { "id": "142612", "name": "Wodynie" },
+          { "id": "142613", "name": "Zbuczyn" }
+        ]
+      },
+      {
+        "id": "1427",
+        "name": "sierpecki",
+        "gminy": [
+          { "id": "142701", "name": "Sierpc" },
+          { "id": "142702", "name": "Gozdowo" },
+          { "id": "142703", "name": "Mochowo" },
+          { "id": "142704", "name": "Rościszewo" },
+          { "id": "142706", "name": "Szczutowo" },
+          { "id": "142707", "name": "Zawidz" }
+        ]
+      },
+      {
+        "id": "1428",
+        "name": "sochaczewski",
+        "gminy": [
+          { "id": "142801", "name": "Sochaczew" },
+          { "id": "142802", "name": "Brochów" },
+          { "id": "142803", "name": "Iłów" },
+          { "id": "142804", "name": "Młodzieszyn" },
+          { "id": "142805", "name": "Nowa Sucha" },
+          { "id": "142806", "name": "Rybno" },
+          { "id": "142808", "name": "Teresin" }
+        ]
+      },
+      {
+        "id": "1429",
+        "name": "sokołowski",
+        "gminy": [
+          { "id": "142901", "name": "Sokołów Podlaski" },
+          { "id": "142902", "name": "Bielany" },
+          { "id": "142903", "name": "Ceranów" },
+          { "id": "142904", "name": "Jabłonna Lacka" },
+          { "id": "142905", "name": "Kosów Lacki" },
+          { "id": "142906", "name": "Repki" },
+          { "id": "142907", "name": "Sabnie" },
+          { "id": "142909", "name": "Sterdyń" }
+        ]
+      },
+      {
+        "id": "1430",
+        "name": "szydłowiecki",
+        "gminy": [
+          { "id": "143001", "name": "Chlewiska" },
+          { "id": "143002", "name": "Jastrząb" },
+          { "id": "143003", "name": "Mirów" },
+          { "id": "143004", "name": "Orońsko" },
+          { "id": "143005", "name": "Szydłowiec" }
+        ]
+      },
+      {
+        "id": "1432",
+        "name": "warszawski zachodni",
+        "gminy": [
+          { "id": "143201", "name": "Błonie" },
+          { "id": "143202", "name": "Izabelin" },
+          { "id": "143203", "name": "Kampinos" },
+          { "id": "143204", "name": "Leszno" },
+          { "id": "143205", "name": "Łomianki" },
+          { "id": "143206", "name": "Ożarów Mazowiecki" },
+          { "id": "143207", "name": "Stare Babice" }
+        ]
+      },
+      {
+        "id": "1433",
+        "name": "węgrowski",
+        "gminy": [
+          { "id": "143301", "name": "Węgrów" },
+          { "id": "143302", "name": "Grębków" },
+          { "id": "143303", "name": "Korytnica" },
+          { "id": "143304", "name": "Liw" },
+          { "id": "143305", "name": "Łochów" },
+          { "id": "143306", "name": "Miedzna" },
+          { "id": "143307", "name": "Sadowne" },
+          { "id": "143308", "name": "Stoczek" },
+          { "id": "143309", "name": "Wierzbno" }
+        ]
+      },
+      {
+        "id": "1434",
+        "name": "wołomiński",
+        "gminy": [
+          { "id": "143401", "name": "Kobyłka" },
+          { "id": "143402", "name": "Marki" },
+          { "id": "143403", "name": "Ząbki" },
+          { "id": "143404", "name": "Zielonka" },
+          { "id": "143405", "name": "Dąbrówka" },
+          { "id": "143406", "name": "Jadów" },
+          { "id": "143407", "name": "Klembów" },
+          { "id": "143408", "name": "Poświętne" },
+          { "id": "143409", "name": "Radzymin" },
+          { "id": "143410", "name": "Strachówka" },
+          { "id": "143411", "name": "Tłuszcz" },
+          { "id": "143412", "name": "Wołomin" }
+        ]
+      },
+      {
+        "id": "1435",
+        "name": "wyszkowski",
+        "gminy": [
+          { "id": "143501", "name": "Brańszczyk" },
+          { "id": "143502", "name": "Długosiodło" },
+          { "id": "143503", "name": "Rząśnik" },
+          { "id": "143504", "name": "Somianka" },
+          { "id": "143505", "name": "Wyszków" },
+          { "id": "143506", "name": "Zabrodzie" }
+        ]
+      },
+      {
+        "id": "1436",
+        "name": "zwoleński",
+        "gminy": [
+          { "id": "143601", "name": "Kazanów" },
+          { "id": "143602", "name": "Policzna" },
+          { "id": "143603", "name": "Przyłęk" },
+          { "id": "143604", "name": "Tczów" },
+          { "id": "143605", "name": "Zwoleń" }
+        ]
+      },
+      {
+        "id": "1437",
+        "name": "żuromiński",
+        "gminy": [
+          { "id": "143701", "name": "Bieżuń" },
+          { "id": "143702", "name": "Kuczbork-Osada" },
+          { "id": "143703", "name": "Lubowidz" },
+          { "id": "143704", "name": "Lutocin" },
+          { "id": "143705", "name": "Siemiątkowo" },
+          { "id": "143706", "name": "Żuromin" }
+        ]
+      },
+      {
+        "id": "1438",
+        "name": "żyrardowski",
+        "gminy": [
+          { "id": "143801", "name": "Żyrardów" },
+          { "id": "143802", "name": "Mszczonów" },
+          { "id": "143803", "name": "Puszcza Mariańska" },
+          { "id": "143804", "name": "Radziejowice" },
+          { "id": "143805", "name": "Wiskitki" }
+        ]
+      },
+      {
+        "id": "1461",
+        "name": "Ostrołęka",
+        "gminy": [{ "id": "1461", "name": "Ostrołęka" }]
+      },
+      {
+        "id": "1462",
+        "name": "Płock",
+        "gminy": [{ "id": "1462", "name": "Płock" }]
+      },
+      {
+        "id": "1463",
+        "name": "Radom",
+        "gminy": [{ "id": "1463", "name": "Radom" }]
+      },
+      {
+        "id": "1464",
+        "name": "Siedlce",
+        "gminy": [{ "id": "1464", "name": "Siedlce" }]
+      },
+      {
+        "id": "1465",
+        "name": "Warszawa",
+        "gminy": [{ "id": "1465", "name": "Warszawa" }]
+      }
+    ]
+  },
+  {
+    "id": "16",
+    "name": "opolskie",
+    "powiaty": [
+      {
+        "id": "1601",
+        "name": "brzeski",
+        "gminy": [
+          { "id": "160101", "name": "Brzeg" },
+          { "id": "160102", "name": "Skarbimierz" },
+          { "id": "160103", "name": "Grodków" },
+          { "id": "160104", "name": "Lewin Brzeski" },
+          { "id": "160105", "name": "Lubsza" },
+          { "id": "160106", "name": "Olszanka" }
+        ]
+      },
+      {
+        "id": "1602",
+        "name": "głubczycki",
+        "gminy": [
+          { "id": "160201", "name": "Baborów" },
+          { "id": "160202", "name": "Branice" },
+          { "id": "160203", "name": "Głubczyce" },
+          { "id": "160204", "name": "Kietrz" }
+        ]
+      },
+      {
+        "id": "1603",
+        "name": "kędzierzyńsko-kozielski",
+        "gminy": [
+          { "id": "160301", "name": "Kędzierzyn-Koźle" },
+          { "id": "160302", "name": "Bierawa" },
+          { "id": "160303", "name": "Cisek" },
+          { "id": "160304", "name": "Pawłowiczki" },
+          { "id": "160305", "name": "Polska Cerekiew" },
+          { "id": "160306", "name": "Reńska Wieś" }
+        ]
+      },
+      {
+        "id": "1604",
+        "name": "kluczborski",
+        "gminy": [
+          { "id": "160401", "name": "Byczyna" },
+          { "id": "160402", "name": "Kluczbork" },
+          { "id": "160403", "name": "Lasowice Wielkie" },
+          { "id": "160404", "name": "Wołczyn" }
+        ]
+      },
+      {
+        "id": "1605",
+        "name": "krapkowicki",
+        "gminy": [
+          { "id": "160501", "name": "Gogolin" },
+          { "id": "160502", "name": "Krapkowice" },
+          { "id": "160503", "name": "Strzeleczki" },
+          { "id": "160504", "name": "Walce" },
+          { "id": "160505", "name": "Zdzieszowice" }
+        ]
+      },
+      {
+        "id": "1606",
+        "name": "namysłowski",
+        "gminy": [
+          { "id": "160601", "name": "Domaszowice" },
+          { "id": "160602", "name": "Namysłów" },
+          { "id": "160603", "name": "Pokój" },
+          { "id": "160604", "name": "Świerczów" },
+          { "id": "160605", "name": "Wilków" }
+        ]
+      },
+      {
+        "id": "1607",
+        "name": "nyski",
+        "gminy": [
+          { "id": "160701", "name": "Głuchołazy" },
+          { "id": "160702", "name": "Kamiennik" },
+          { "id": "160703", "name": "Korfantów" },
+          { "id": "160704", "name": "Łambinowice" },
+          { "id": "160705", "name": "Nysa" },
+          { "id": "160706", "name": "Otmuchów" },
+          { "id": "160707", "name": "Paczków" },
+          { "id": "160708", "name": "Pakosławice" },
+          { "id": "160709", "name": "Skoroszyce" }
+        ]
+      },
+      {
+        "id": "1608",
+        "name": "oleski",
+        "gminy": [
+          { "id": "160801", "name": "Dobrodzień" },
+          { "id": "160802", "name": "Gorzów Śląski" },
+          { "id": "160803", "name": "Olesno" },
+          { "id": "160804", "name": "Praszka" },
+          { "id": "160805", "name": "Radłów" },
+          { "id": "160806", "name": "Rudniki" },
+          { "id": "160807", "name": "Zębowice" }
+        ]
+      },
+      {
+        "id": "1609",
+        "name": "opolski",
+        "gminy": [
+          { "id": "160901", "name": "Chrząstowice" },
+          { "id": "160902", "name": "Dąbrowa" },
+          { "id": "160903", "name": "Dobrzeń Wielki" },
+          { "id": "160904", "name": "Komprachcice" },
+          { "id": "160905", "name": "Łubniany" },
+          { "id": "160906", "name": "Murów" },
+          { "id": "160907", "name": "Niemodlin" },
+          { "id": "160908", "name": "Ozimek" },
+          { "id": "160909", "name": "Popielów" },
+          { "id": "160910", "name": "Prószków" },
+          { "id": "160911", "name": "Tarnów Opolski" },
+          { "id": "160912", "name": "Tułowice" },
+          { "id": "160913", "name": "Turawa" }
+        ]
+      },
+      {
+        "id": "1610",
+        "name": "prudnicki",
+        "gminy": [
+          { "id": "161001", "name": "Biała" },
+          { "id": "161002", "name": "Głogówek" },
+          { "id": "161003", "name": "Lubrza" },
+          { "id": "161004", "name": "Prudnik" }
+        ]
+      },
+      {
+        "id": "1611",
+        "name": "strzelecki",
+        "gminy": [
+          { "id": "161101", "name": "Izbicko" },
+          { "id": "161102", "name": "Jemielnica" },
+          { "id": "161103", "name": "Kolonowskie" },
+          { "id": "161104", "name": "Leśnica" },
+          { "id": "161105", "name": "Strzelce Opolskie" },
+          { "id": "161106", "name": "Ujazd" },
+          { "id": "161107", "name": "Zawadzkie" }
+        ]
+      },
+      {
+        "id": "1661",
+        "name": "Opole",
+        "gminy": [{ "id": "1661", "name": "Opole" }]
+      }
+    ]
+  },
+  {
+    "id": "18",
+    "name": "podkarpackie",
+    "powiaty": [
+      {
+        "id": "1801",
+        "name": "bieszczadzki",
+        "gminy": [
+          { "id": "180103", "name": "Czarna" },
+          { "id": "180105", "name": "Lutowiska" },
+          { "id": "180108", "name": "Ustrzyki Dolne" }
+        ]
+      },
+      {
+        "id": "1802",
+        "name": "brzozowski",
+        "gminy": [
+          { "id": "180201", "name": "Brzozów" },
+          { "id": "180202", "name": "Domaradz" },
+          { "id": "180203", "name": "Dydnia" },
+          { "id": "180204", "name": "Haczów" },
+          { "id": "180205", "name": "Jasienica Rosielna" },
+          { "id": "180206", "name": "Nozdrzec" }
+        ]
+      },
+      {
+        "id": "1803",
+        "name": "dębicki",
+        "gminy": [
+          { "id": "180301", "name": "Dębica" },
+          { "id": "180302", "name": "Brzostek" },
+          { "id": "180303", "name": "Czarna" },
+          { "id": "180305", "name": "Jodłowa" },
+          { "id": "180306", "name": "Pilzno" },
+          { "id": "180307", "name": "Żyraków" }
+        ]
+      },
+      {
+        "id": "1804",
+        "name": "jarosławski",
+        "gminy": [
+          { "id": "180401", "name": "Jarosław" },
+          { "id": "180402", "name": "Radymno" },
+          { "id": "180403", "name": "Chłopice" },
+          { "id": "180405", "name": "Laszki" },
+          { "id": "180406", "name": "Pawłosiów" },
+          { "id": "180407", "name": "Pruchnik" },
+          { "id": "180409", "name": "Rokietnica" },
+          { "id": "180410", "name": "Roźwienica" },
+          { "id": "180411", "name": "Wiązownica" }
+        ]
+      },
+      {
+        "id": "1805",
+        "name": "jasielski",
+        "gminy": [
+          { "id": "180501", "name": "Jasło" },
+          { "id": "180502", "name": "Brzyska" },
+          { "id": "180503", "name": "Dębowiec" },
+          { "id": "180505", "name": "Kołaczyce" },
+          { "id": "180506", "name": "Krempna" },
+          { "id": "180507", "name": "Nowy Żmigród" },
+          { "id": "180508", "name": "Osiek Jasielski" },
+          { "id": "180509", "name": "Skołyszyn" },
+          { "id": "180511", "name": "Tarnowiec" }
+        ]
+      },
+      {
+        "id": "1806",
+        "name": "kolbuszowski",
+        "gminy": [
+          { "id": "180601", "name": "Cmolas" },
+          { "id": "180602", "name": "Kolbuszowa" },
+          { "id": "180603", "name": "Majdan Królewski" },
+          { "id": "180604", "name": "Niwiska" },
+          { "id": "180605", "name": "Raniżów" },
+          { "id": "180606", "name": "Dzikowiec" }
+        ]
+      },
+      {
+        "id": "1807",
+        "name": "krośnieński",
+        "gminy": [
+          { "id": "180701", "name": "Chorkówka" },
+          { "id": "180702", "name": "Dukla" },
+          { "id": "180703", "name": "Iwonicz-Zdrój" },
+          { "id": "180704", "name": "Jedlicze" },
+          { "id": "180705", "name": "Korczyna" },
+          { "id": "180706", "name": "Krościenko Wyżne" },
+          { "id": "180707", "name": "Miejsce Piastowe" },
+          { "id": "180708", "name": "Rymanów" },
+          { "id": "180709", "name": "Wojaszówka" },
+          { "id": "180710", "name": "Jaśliska" }
+        ]
+      },
+      {
+        "id": "1808",
+        "name": "leżajski",
+        "gminy": [
+          { "id": "180801", "name": "Leżajsk" },
+          { "id": "180802", "name": "Grodzisko Dolne" },
+          { "id": "180803", "name": "Kuryłówka" },
+          { "id": "180805", "name": "Nowa Sarzyna" }
+        ]
+      },
+      {
+        "id": "1809",
+        "name": "lubaczowski",
+        "gminy": [
+          { "id": "180901", "name": "Lubaczów" },
+          { "id": "180902", "name": "Cieszanów" },
+          { "id": "180903", "name": "Horyniec-Zdrój" },
+          { "id": "180905", "name": "Narol" },
+          { "id": "180906", "name": "Oleszyce" },
+          { "id": "180907", "name": "Stary Dzików" },
+          { "id": "180908", "name": "Wielkie Oczy" }
+        ]
+      },
+      {
+        "id": "1810",
+        "name": "łańcucki",
+        "gminy": [
+          { "id": "181001", "name": "Łańcut" },
+          { "id": "181002", "name": "Białobrzegi" },
+          { "id": "181003", "name": "Czarna" },
+          { "id": "181005", "name": "Markowa" },
+          { "id": "181006", "name": "Rakszawa" },
+          { "id": "181007", "name": "Żołynia" }
+        ]
+      },
+      {
+        "id": "1811",
+        "name": "mielecki",
+        "gminy": [
+          { "id": "181101", "name": "Mielec" },
+          { "id": "181102", "name": "Borowa" },
+          { "id": "181103", "name": "Czermin" },
+          { "id": "181104", "name": "Gawłuszowice" },
+          { "id": "181106", "name": "Padew Narodowa" },
+          { "id": "181107", "name": "Przecław" },
+          { "id": "181108", "name": "Radomyśl Wielki" },
+          { "id": "181109", "name": "Tuszów Narodowy" },
+          { "id": "181110", "name": "Wadowice Górne" }
+        ]
+      },
+      {
+        "id": "1812",
+        "name": "niżański",
+        "gminy": [
+          { "id": "181201", "name": "Harasiuki" },
+          { "id": "181202", "name": "Jarocin" },
+          { "id": "181203", "name": "Jeżowe" },
+          { "id": "181204", "name": "Krzeszów" },
+          { "id": "181205", "name": "Nisko" },
+          { "id": "181206", "name": "Rudnik nad Sanem" },
+          { "id": "181207", "name": "Ulanów" }
+        ]
+      },
+      {
+        "id": "1813",
+        "name": "przemyski",
+        "gminy": [
+          { "id": "181301", "name": "Bircza" },
+          { "id": "181302", "name": "Dubiecko" },
+          { "id": "181303", "name": "Fredropol" },
+          { "id": "181304", "name": "Krasiczyn" },
+          { "id": "181305", "name": "Krzywcza" },
+          { "id": "181306", "name": "Medyka" },
+          { "id": "181307", "name": "Orły" },
+          { "id": "181308", "name": "Przemyśl" },
+          { "id": "181309", "name": "Stubno" },
+          { "id": "181310", "name": "Żurawica" }
+        ]
+      },
+      {
+        "id": "1814",
+        "name": "przeworski",
+        "gminy": [
+          { "id": "181401", "name": "Przeworsk" },
+          { "id": "181402", "name": "Adamówka" },
+          { "id": "181403", "name": "Gać" },
+          { "id": "181404", "name": "Jawornik Polski" },
+          { "id": "181405", "name": "Kańczuga" },
+          { "id": "181407", "name": "Sieniawa" },
+          { "id": "181408", "name": "Tryńcza" },
+          { "id": "181409", "name": "Zarzecze" }
+        ]
+      },
+      {
+        "id": "1815",
+        "name": "ropczycko-sędziszowski",
+        "gminy": [
+          { "id": "181501", "name": "Iwierzyce" },
+          { "id": "181502", "name": "Ostrów" },
+          { "id": "181503", "name": "Ropczyce" },
+          { "id": "181504", "name": "Sędziszów Małopolski" },
+          { "id": "181505", "name": "Wielopole Skrzyńskie" }
+        ]
+      },
+      {
+        "id": "1816",
+        "name": "rzeszowski",
+        "gminy": [
+          { "id": "181601", "name": "Dynów" },
+          { "id": "181602", "name": "Błażowa" },
+          { "id": "181603", "name": "Boguchwała" },
+          { "id": "181604", "name": "Chmielnik" },
+          { "id": "181606", "name": "Głogów Małopolski" },
+          { "id": "181607", "name": "Hyżne" },
+          { "id": "181608", "name": "Kamień" },
+          { "id": "181609", "name": "Krasne" },
+          { "id": "181610", "name": "Lubenia" },
+          { "id": "181611", "name": "Sokołów Małopolski" },
+          { "id": "181612", "name": "Świlcza" },
+          { "id": "181613", "name": "Trzebownisko" },
+          { "id": "181614", "name": "Tyczyn" }
+        ]
+      },
+      {
+        "id": "1817",
+        "name": "sanocki",
+        "gminy": [
+          { "id": "181701", "name": "Sanok" },
+          { "id": "181702", "name": "Besko" },
+          { "id": "181703", "name": "Bukowsko" },
+          { "id": "181704", "name": "Komańcza" },
+          { "id": "181706", "name": "Tyrawa Wołoska" },
+          { "id": "181707", "name": "Zagórz" },
+          { "id": "181708", "name": "Zarszyn" }
+        ]
+      },
+      {
+        "id": "1818",
+        "name": "stalowowolski",
+        "gminy": [
+          { "id": "181801", "name": "Stalowa Wola" },
+          { "id": "181802", "name": "Bojanów" },
+          { "id": "181803", "name": "Pysznica" },
+          { "id": "181804", "name": "Radomyśl nad Sanem" },
+          { "id": "181805", "name": "Zaklików" },
+          { "id": "181806", "name": "Zaleszany" }
+        ]
+      },
+      {
+        "id": "1819",
+        "name": "strzyżowski",
+        "gminy": [
+          { "id": "181901", "name": "Czudec" },
+          { "id": "181902", "name": "Frysztak" },
+          { "id": "181903", "name": "Niebylec" },
+          { "id": "181904", "name": "Strzyżów" },
+          { "id": "181905", "name": "Wiśniowa" }
+        ]
+      },
+      {
+        "id": "1820",
+        "name": "tarnobrzeski",
+        "gminy": [
+          { "id": "182001", "name": "Baranów Sandomierski" },
+          { "id": "182002", "name": "Gorzyce" },
+          { "id": "182003", "name": "Grębów" },
+          { "id": "182004", "name": "Nowa Dęba" }
+        ]
+      },
+      {
+        "id": "1821",
+        "name": "leski",
+        "gminy": [
+          { "id": "182101", "name": "Baligród" },
+          { "id": "182102", "name": "Cisna" },
+          { "id": "182103", "name": "Lesko" },
+          { "id": "182104", "name": "Olszanica" },
+          { "id": "182105", "name": "Solina" }
+        ]
+      },
+      {
+        "id": "1861",
+        "name": "Krosno",
+        "gminy": [{ "id": "1861", "name": "Krosno" }]
+      },
+      {
+        "id": "1862",
+        "name": "Przemyśl",
+        "gminy": [{ "id": "1862", "name": "Przemyśl" }]
+      },
+      {
+        "id": "1863",
+        "name": "Rzeszów",
+        "gminy": [{ "id": "1863", "name": "Rzeszów" }]
+      },
+      {
+        "id": "1864",
+        "name": "Tarnobrzeg",
+        "gminy": [{ "id": "1864", "name": "Tarnobrzeg" }]
+      }
+    ]
+  },
+  {
+    "id": "20",
+    "name": "podlaskie",
+    "powiaty": [
+      {
+        "id": "2001",
+        "name": "augustowski",
+        "gminy": [
+          { "id": "200101", "name": "Augustów" },
+          { "id": "200103", "name": "Bargłów Kościelny" },
+          { "id": "200104", "name": "Lipsk" },
+          { "id": "200105", "name": "Nowinka" },
+          { "id": "200106", "name": "Płaska" },
+          { "id": "200107", "name": "Sztabin" }
+        ]
+      },
+      {
+        "id": "2002",
+        "name": "białostocki",
+        "gminy": [
+          { "id": "200201", "name": "Choroszcz" },
+          { "id": "200202", "name": "Czarna Białostocka" },
+          { "id": "200203", "name": "Dobrzyniewo Duże" },
+          { "id": "200204", "name": "Gródek" },
+          { "id": "200205", "name": "Juchnowiec Kościelny" },
+          { "id": "200206", "name": "Łapy" },
+          { "id": "200207", "name": "Michałowo" },
+          { "id": "200208", "name": "Poświętne" },
+          { "id": "200209", "name": "Supraśl" },
+          { "id": "200210", "name": "Suraż" },
+          { "id": "200211", "name": "Turośń Kościelna" },
+          { "id": "200212", "name": "Tykocin" },
+          { "id": "200213", "name": "Wasilków" },
+          { "id": "200214", "name": "Zabłudów" },
+          { "id": "200215", "name": "Zawady" }
+        ]
+      },
+      {
+        "id": "2003",
+        "name": "bielski",
+        "gminy": [
+          { "id": "200301", "name": "Bielsk Podlaski" },
+          { "id": "200302", "name": "Brańsk" },
+          { "id": "200304", "name": "Boćki" },
+          { "id": "200306", "name": "Orla" },
+          { "id": "200307", "name": "Rudka" },
+          { "id": "200308", "name": "Wyszki" }
+        ]
+      },
+      {
+        "id": "2004",
+        "name": "grajewski",
+        "gminy": [
+          { "id": "200401", "name": "Grajewo" },
+          { "id": "200403", "name": "Radziłów" },
+          { "id": "200404", "name": "Rajgród" },
+          { "id": "200405", "name": "Szczuczyn" },
+          { "id": "200406", "name": "Wąsosz" }
+        ]
+      },
+      {
+        "id": "2005",
+        "name": "hajnowski",
+        "gminy": [
+          { "id": "200501", "name": "Hajnówka" },
+          { "id": "200502", "name": "Białowieża" },
+          { "id": "200503", "name": "Czeremcha" },
+          { "id": "200504", "name": "Czyże" },
+          { "id": "200505", "name": "Dubicze Cerkiewne" },
+          { "id": "200507", "name": "Kleszczele" },
+          { "id": "200508", "name": "Narew" },
+          { "id": "200509", "name": "Narewka" }
+        ]
+      },
+      {
+        "id": "2006",
+        "name": "kolneński",
+        "gminy": [
+          { "id": "200601", "name": "Kolno" },
+          { "id": "200602", "name": "Grabowo" },
+          { "id": "200604", "name": "Mały Płock" },
+          { "id": "200605", "name": "Stawiski" },
+          { "id": "200606", "name": "Turośl" }
+        ]
+      },
+      {
+        "id": "2007",
+        "name": "łomżyński",
+        "gminy": [
+          { "id": "200701", "name": "Jedwabne" },
+          { "id": "200702", "name": "Łomża" },
+          { "id": "200703", "name": "Miastkowo" },
+          { "id": "200704", "name": "Nowogród" },
+          { "id": "200705", "name": "Piątnica" },
+          { "id": "200706", "name": "Przytuły" },
+          { "id": "200707", "name": "Śniadowo" },
+          { "id": "200708", "name": "Wizna" },
+          { "id": "200709", "name": "Zbójna" }
+        ]
+      },
+      {
+        "id": "2008",
+        "name": "moniecki",
+        "gminy": [
+          { "id": "200801", "name": "Goniądz" },
+          { "id": "200802", "name": "Jasionówka" },
+          { "id": "200803", "name": "Jaświły" },
+          { "id": "200804", "name": "Knyszyn" },
+          { "id": "200805", "name": "Krypno" },
+          { "id": "200806", "name": "Mońki" },
+          { "id": "200807", "name": "Trzcianne" }
+        ]
+      },
+      {
+        "id": "2009",
+        "name": "sejneński",
+        "gminy": [
+          { "id": "200901", "name": "Sejny" },
+          { "id": "200902", "name": "Giby" },
+          { "id": "200903", "name": "Krasnopol" },
+          { "id": "200904", "name": "Puńsk" }
+        ]
+      },
+      {
+        "id": "2010",
+        "name": "siemiatycki",
+        "gminy": [
+          { "id": "201001", "name": "Siemiatycze" },
+          { "id": "201002", "name": "Drohiczyn" },
+          { "id": "201003", "name": "Dziadkowice" },
+          { "id": "201004", "name": "Grodzisk" },
+          { "id": "201005", "name": "Mielnik" },
+          { "id": "201006", "name": "Milejczyce" },
+          { "id": "201007", "name": "Nurzec-Stacja" },
+          { "id": "201008", "name": "Perlejewo" }
+        ]
+      },
+      {
+        "id": "2011",
+        "name": "sokólski",
+        "gminy": [
+          { "id": "201101", "name": "Dąbrowa Białostocka" },
+          { "id": "201102", "name": "Janów" },
+          { "id": "201103", "name": "Korycin" },
+          { "id": "201104", "name": "Krynki" },
+          { "id": "201105", "name": "Kuźnica" },
+          { "id": "201106", "name": "Nowy Dwór" },
+          { "id": "201107", "name": "Sidra" },
+          { "id": "201108", "name": "Sokółka" },
+          { "id": "201109", "name": "Suchowola" },
+          { "id": "201110", "name": "Szudziałowo" }
+        ]
+      },
+      {
+        "id": "2012",
+        "name": "suwalski",
+        "gminy": [
+          { "id": "201201", "name": "Bakałarzewo" },
+          { "id": "201202", "name": "Filipów" },
+          { "id": "201203", "name": "Jeleniewo" },
+          { "id": "201204", "name": "Przerośl" },
+          { "id": "201205", "name": "Raczki" },
+          { "id": "201206", "name": "Rutka-Tartak" },
+          { "id": "201207", "name": "Suwałki" },
+          { "id": "201208", "name": "Szypliszki" },
+          { "id": "201209", "name": "Wiżajny" }
+        ]
+      },
+      {
+        "id": "2013",
+        "name": "wysokomazowiecki",
+        "gminy": [
+          { "id": "201301", "name": "Wysokie Mazowieckie" },
+          { "id": "201302", "name": "Ciechanowiec" },
+          { "id": "201303", "name": "Czyżew" },
+          { "id": "201304", "name": "Klukowo" },
+          { "id": "201305", "name": "Kobylin-Borzymy" },
+          { "id": "201306", "name": "Kulesze Kościelne" },
+          { "id": "201307", "name": "Nowe Piekuty" },
+          { "id": "201308", "name": "Sokoły" },
+          { "id": "201309", "name": "Szepietowo" }
+        ]
+      },
+      {
+        "id": "2014",
+        "name": "zambrowski",
+        "gminy": [
+          { "id": "201401", "name": "Zambrów" },
+          { "id": "201402", "name": "Kołaki Kościelne" },
+          { "id": "201403", "name": "Rutki" },
+          { "id": "201404", "name": "Szumowo" }
+        ]
+      },
+      {
+        "id": "2061",
+        "name": "Białystok",
+        "gminy": [{ "id": "2061", "name": "Białystok" }]
+      },
+      {
+        "id": "2062",
+        "name": "Łomża",
+        "gminy": [{ "id": "2062", "name": "Łomża" }]
+      },
+      {
+        "id": "2063",
+        "name": "Suwałki",
+        "gminy": [{ "id": "2063", "name": "Suwałki" }]
+      }
+    ]
+  },
+  {
+    "id": "22",
+    "name": "pomorskie",
+    "powiaty": [
+      {
+        "id": "2201",
+        "name": "bytowski",
+        "gminy": [
+          { "id": "220101", "name": "Borzytuchom" },
+          { "id": "220102", "name": "Bytów" },
+          { "id": "220103", "name": "Czarna Dąbrówka" },
+          { "id": "220104", "name": "Kołczygłowy" },
+          { "id": "220105", "name": "Lipnica" },
+          { "id": "220106", "name": "Miastko" },
+          { "id": "220107", "name": "Parchowo" },
+          { "id": "220108", "name": "Studzienice" },
+          { "id": "220109", "name": "Trzebielino" },
+          { "id": "220110", "name": "Tuchomie" }
+        ]
+      },
+      {
+        "id": "2202",
+        "name": "chojnicki",
+        "gminy": [
+          { "id": "220201", "name": "Chojnice" },
+          { "id": "220202", "name": "Brusy" },
+          { "id": "220204", "name": "Czersk" },
+          { "id": "220205", "name": "Konarzyny" }
+        ]
+      },
+      {
+        "id": "2203",
+        "name": "człuchowski",
+        "gminy": [
+          { "id": "220301", "name": "Człuchów" },
+          { "id": "220302", "name": "Czarne" },
+          { "id": "220304", "name": "Debrzno" },
+          { "id": "220305", "name": "Koczała" },
+          { "id": "220306", "name": "Przechlewo" },
+          { "id": "220307", "name": "Rzeczenica" }
+        ]
+      },
+      {
+        "id": "2204",
+        "name": "gdański",
+        "gminy": [
+          { "id": "220401", "name": "Pruszcz Gdański" },
+          { "id": "220402", "name": "Cedry Wielkie" },
+          { "id": "220403", "name": "Kolbudy" },
+          { "id": "220405", "name": "Przywidz" },
+          { "id": "220406", "name": "Pszczółki" },
+          { "id": "220407", "name": "Suchy Dąb" },
+          { "id": "220408", "name": "Trąbki Wielkie" }
+        ]
+      },
+      {
+        "id": "2205",
+        "name": "kartuski",
+        "gminy": [
+          { "id": "220501", "name": "Chmielno" },
+          { "id": "220502", "name": "Kartuzy" },
+          { "id": "220503", "name": "Przodkowo" },
+          { "id": "220504", "name": "Sierakowice" },
+          { "id": "220505", "name": "Somonino" },
+          { "id": "220506", "name": "Stężyca" },
+          { "id": "220507", "name": "Sulęczyno" },
+          { "id": "220508", "name": "Żukowo" }
+        ]
+      },
+      {
+        "id": "2206",
+        "name": "kościerski",
+        "gminy": [
+          { "id": "220601", "name": "Kościerzyna" },
+          { "id": "220602", "name": "Dziemiany" },
+          { "id": "220603", "name": "Karsin" },
+          { "id": "220605", "name": "Liniewo" },
+          { "id": "220606", "name": "Lipusz" },
+          { "id": "220607", "name": "Nowa Karczma" },
+          { "id": "220608", "name": "Stara Kiszewa" }
+        ]
+      },
+      {
+        "id": "2207",
+        "name": "kwidzyński",
+        "gminy": [
+          { "id": "220701", "name": "Kwidzyn" },
+          { "id": "220702", "name": "Gardeja" },
+          { "id": "220704", "name": "Prabuty" },
+          { "id": "220705", "name": "Ryjewo" },
+          { "id": "220706", "name": "Sadlinki" }
+        ]
+      },
+      {
+        "id": "2208",
+        "name": "lęborski",
+        "gminy": [
+          { "id": "220801", "name": "Lębork" },
+          { "id": "220802", "name": "Łeba" },
+          { "id": "220803", "name": "Cewice" },
+          { "id": "220804", "name": "Nowa Wieś Lęborska" },
+          { "id": "220805", "name": "Wicko" }
+        ]
+      },
+      {
+        "id": "2209",
+        "name": "malborski",
+        "gminy": [
+          { "id": "220901", "name": "Malbork" },
+          { "id": "220903", "name": "Lichnowy" },
+          { "id": "220906", "name": "Miłoradz" },
+          { "id": "220907", "name": "Nowy Staw" },
+          { "id": "220908", "name": "Stare Pole" }
+        ]
+      },
+      {
+        "id": "2210",
+        "name": "nowodworski",
+        "gminy": [
+          { "id": "221001", "name": "Krynica Morska" },
+          { "id": "221002", "name": "Nowy Dwór Gdański" },
+          { "id": "221003", "name": "Ostaszewo" },
+          { "id": "221004", "name": "Stegna" },
+          { "id": "221005", "name": "Sztutowo" }
+        ]
+      },
+      {
+        "id": "2211",
+        "name": "pucki",
+        "gminy": [
+          { "id": "221101", "name": "Hel" },
+          { "id": "221102", "name": "Jastarnia" },
+          { "id": "221103", "name": "Puck" },
+          { "id": "221104", "name": "Władysławowo" },
+          { "id": "221105", "name": "Kosakowo" },
+          { "id": "221106", "name": "Krokowa" }
+        ]
+      },
+      {
+        "id": "2212",
+        "name": "słupski",
+        "gminy": [
+          { "id": "221201", "name": "Ustka" },
+          { "id": "221202", "name": "Damnica" },
+          { "id": "221203", "name": "Dębnica Kaszubska" },
+          { "id": "221204", "name": "Główczyce" },
+          { "id": "221205", "name": "Kępice" },
+          { "id": "221206", "name": "Kobylnica" },
+          { "id": "221207", "name": "Potęgowo" },
+          { "id": "221208", "name": "Słupsk" },
+          { "id": "221209", "name": "Smołdzino" }
+        ]
+      },
+      {
+        "id": "2213",
+        "name": "starogardzki",
+        "gminy": [
+          { "id": "221301", "name": "Czarna Woda" },
+          { "id": "221302", "name": "Skórcz" },
+          { "id": "221303", "name": "Starogard Gdański" },
+          { "id": "221304", "name": "Bobowo" },
+          { "id": "221305", "name": "Kaliska" },
+          { "id": "221306", "name": "Lubichowo" },
+          { "id": "221307", "name": "Osieczna" },
+          { "id": "221308", "name": "Osiek" },
+          { "id": "221309", "name": "Skarszewy" },
+          { "id": "221311", "name": "Smętowo Graniczne" },
+          { "id": "221313", "name": "Zblewo" }
+        ]
+      },
+      {
+        "id": "2214",
+        "name": "tczewski",
+        "gminy": [
+          { "id": "221401", "name": "Tczew" },
+          { "id": "221402", "name": "Gniew" },
+          { "id": "221403", "name": "Morzeszczyn" },
+          { "id": "221404", "name": "Pelplin" },
+          { "id": "221405", "name": "Subkowy" }
+        ]
+      },
+      {
+        "id": "2215",
+        "name": "wejherowski",
+        "gminy": [
+          { "id": "221501", "name": "Reda" },
+          { "id": "221502", "name": "Rumia" },
+          { "id": "221503", "name": "Wejherowo" },
+          { "id": "221504", "name": "Choczewo" },
+          { "id": "221505", "name": "Gniewino" },
+          { "id": "221506", "name": "Linia" },
+          { "id": "221507", "name": "Luzino" },
+          { "id": "221508", "name": "Łęczyce" },
+          { "id": "221509", "name": "Szemud" }
+        ]
+      },
+      {
+        "id": "2216",
+        "name": "sztumski",
+        "gminy": [
+          { "id": "221601", "name": "Dzierzgoń" },
+          { "id": "221602", "name": "Mikołajki Pomorskie" },
+          { "id": "221603", "name": "Stary Dzierzgoń" },
+          { "id": "221604", "name": "Stary Targ" },
+          { "id": "221605", "name": "Sztum" }
+        ]
+      },
+      {
+        "id": "2261",
+        "name": "Gdańsk",
+        "gminy": [{ "id": "2261", "name": "Gdańsk" }]
+      },
+      {
+        "id": "2262",
+        "name": "Gdynia",
+        "gminy": [{ "id": "2262", "name": "Gdynia" }]
+      },
+      {
+        "id": "2263",
+        "name": "Słupsk",
+        "gminy": [{ "id": "2263", "name": "Słupsk" }]
+      },
+      {
+        "id": "2264",
+        "name": "Sopot",
+        "gminy": [{ "id": "2264", "name": "Sopot" }]
+      }
+    ]
+  },
+  {
+    "id": "24",
+    "name": "śląskie",
+    "powiaty": [
+      {
+        "id": "2401",
+        "name": "będziński",
+        "gminy": [
+          { "id": "240101", "name": "Będzin" },
+          { "id": "240102", "name": "Czeladź" },
+          { "id": "240103", "name": "Wojkowice" },
+          { "id": "240104", "name": "Bobrowniki" },
+          { "id": "240105", "name": "Mierzęcice" },
+          { "id": "240106", "name": "Psary" },
+          { "id": "240107", "name": "Siewierz" },
+          { "id": "240108", "name": "Sławków" }
+        ]
+      },
+      {
+        "id": "2402",
+        "name": "bielski",
+        "gminy": [
+          { "id": "240201", "name": "Szczyrk" },
+          { "id": "240202", "name": "Bestwina" },
+          { "id": "240203", "name": "Buczkowice" },
+          { "id": "240204", "name": "Czechowice-Dziedzice" },
+          { "id": "240205", "name": "Jasienica" },
+          { "id": "240206", "name": "Jaworze" },
+          { "id": "240207", "name": "Kozy" },
+          { "id": "240208", "name": "Porąbka" },
+          { "id": "240209", "name": "Wilamowice" },
+          { "id": "240210", "name": "Wilkowice" }
+        ]
+      },
+      {
+        "id": "2403",
+        "name": "cieszyński",
+        "gminy": [
+          { "id": "240301", "name": "Cieszyn" },
+          { "id": "240302", "name": "Ustroń" },
+          { "id": "240303", "name": "Wisła" },
+          { "id": "240304", "name": "Brenna" },
+          { "id": "240305", "name": "Chybie" },
+          { "id": "240306", "name": "Dębowiec" },
+          { "id": "240307", "name": "Goleszów" },
+          { "id": "240308", "name": "Hażlach" },
+          { "id": "240309", "name": "Istebna" },
+          { "id": "240310", "name": "Skoczów" },
+          { "id": "240311", "name": "Strumień" },
+          { "id": "240312", "name": "Zebrzydowice" }
+        ]
+      },
+      {
+        "id": "2404",
+        "name": "częstochowski",
+        "gminy": [
+          { "id": "240401", "name": "Blachownia" },
+          { "id": "240402", "name": "Dąbrowa Zielona" },
+          { "id": "240403", "name": "Janów" },
+          { "id": "240404", "name": "Kamienica Polska" },
+          { "id": "240405", "name": "Kłomnice" },
+          { "id": "240406", "name": "Koniecpol" },
+          { "id": "240407", "name": "Konopiska" },
+          { "id": "240408", "name": "Kruszyna" },
+          { "id": "240409", "name": "Lelów" },
+          { "id": "240410", "name": "Mstów" },
+          { "id": "240411", "name": "Mykanów" },
+          { "id": "240412", "name": "Olsztyn" },
+          { "id": "240413", "name": "Poczesna" },
+          { "id": "240414", "name": "Przyrów" },
+          { "id": "240415", "name": "Rędziny" },
+          { "id": "240416", "name": "Starcza" }
+        ]
+      },
+      {
+        "id": "2405",
+        "name": "gliwicki",
+        "gminy": [
+          { "id": "240501", "name": "Knurów" },
+          { "id": "240502", "name": "Pyskowice" },
+          { "id": "240503", "name": "Gierałtowice" },
+          { "id": "240504", "name": "Pilchowice" },
+          { "id": "240505", "name": "Rudziniec" },
+          { "id": "240506", "name": "Sośnicowice" },
+          { "id": "240507", "name": "Toszek" },
+          { "id": "240508", "name": "Wielowieś" }
+        ]
+      },
+      {
+        "id": "2406",
+        "name": "kłobucki",
+        "gminy": [
+          { "id": "240601", "name": "Kłobuck" },
+          { "id": "240602", "name": "Krzepice" },
+          { "id": "240603", "name": "Lipie" },
+          { "id": "240604", "name": "Miedźno" },
+          { "id": "240605", "name": "Opatów" },
+          { "id": "240606", "name": "Panki" },
+          { "id": "240607", "name": "Popów" },
+          { "id": "240608", "name": "Przystajń" },
+          { "id": "240609", "name": "Wręczyca Wielka" }
+        ]
+      },
+      {
+        "id": "2407",
+        "name": "lubliniecki",
+        "gminy": [
+          { "id": "240701", "name": "Lubliniec" },
+          { "id": "240702", "name": "Boronów" },
+          { "id": "240703", "name": "Ciasna" },
+          { "id": "240704", "name": "Herby" },
+          { "id": "240705", "name": "Kochanowice" },
+          { "id": "240706", "name": "Koszęcin" },
+          { "id": "240707", "name": "Pawonków" },
+          { "id": "240708", "name": "Woźniki" }
+        ]
+      },
+      {
+        "id": "2408",
+        "name": "mikołowski",
+        "gminy": [
+          { "id": "240801", "name": "Łaziska Górne" },
+          { "id": "240802", "name": "Mikołów" },
+          { "id": "240803", "name": "Orzesze" },
+          { "id": "240804", "name": "Ornontowice" },
+          { "id": "240805", "name": "Wyry" }
+        ]
+      },
+      {
+        "id": "2409",
+        "name": "myszkowski",
+        "gminy": [
+          { "id": "240901", "name": "Myszków" },
+          { "id": "240902", "name": "Koziegłowy" },
+          { "id": "240903", "name": "Niegowa" },
+          { "id": "240904", "name": "Poraj" },
+          { "id": "240905", "name": "Żarki" }
+        ]
+      },
+      {
+        "id": "2410",
+        "name": "pszczyński",
+        "gminy": [
+          { "id": "241001", "name": "Goczałkowice-Zdrój" },
+          { "id": "241002", "name": "Kobiór" },
+          { "id": "241003", "name": "Miedźna" },
+          { "id": "241004", "name": "Pawłowice" },
+          { "id": "241005", "name": "Pszczyna" },
+          { "id": "241006", "name": "Suszec" }
+        ]
+      },
+      {
+        "id": "2411",
+        "name": "raciborski",
+        "gminy": [
+          { "id": "241101", "name": "Racibórz" },
+          { "id": "241102", "name": "Kornowac" },
+          { "id": "241103", "name": "Krzanowice" },
+          { "id": "241104", "name": "Krzyżanowice" },
+          { "id": "241105", "name": "Kuźnia Raciborska" },
+          { "id": "241106", "name": "Nędza" },
+          { "id": "241107", "name": "Pietrowice Wielkie" },
+          { "id": "241108", "name": "Rudnik" }
+        ]
+      },
+      {
+        "id": "2412",
+        "name": "rybnicki",
+        "gminy": [
+          { "id": "241201", "name": "Czerwionka-Leszczyny" },
+          { "id": "241202", "name": "Gaszowice" },
+          { "id": "241203", "name": "Jejkowice" },
+          { "id": "241204", "name": "Lyski" },
+          { "id": "241205", "name": "Świerklany" }
+        ]
+      },
+      {
+        "id": "2413",
+        "name": "tarnogórski",
+        "gminy": [
+          { "id": "241301", "name": "Kalety" },
+          { "id": "241302", "name": "Miasteczko Śląskie" },
+          { "id": "241303", "name": "Radzionków" },
+          { "id": "241304", "name": "Tarnowskie Góry" },
+          { "id": "241305", "name": "Krupski Młyn" },
+          { "id": "241306", "name": "Ożarowice" },
+          { "id": "241307", "name": "Świerklaniec" },
+          { "id": "241308", "name": "Tworóg" },
+          { "id": "241309", "name": "Zbrosławice" }
+        ]
+      },
+      {
+        "id": "2414",
+        "name": "bieruńsko-lędziński",
+        "gminy": [
+          { "id": "241401", "name": "Bieruń" },
+          { "id": "241402", "name": "Imielin" },
+          { "id": "241403", "name": "Lędziny" },
+          { "id": "241404", "name": "Bojszowy" },
+          { "id": "241405", "name": "Chełm Śląski" }
+        ]
+      },
+      {
+        "id": "2415",
+        "name": "wodzisławski",
+        "gminy": [
+          { "id": "241501", "name": "Pszów" },
+          { "id": "241502", "name": "Radlin" },
+          { "id": "241503", "name": "Rydułtowy" },
+          { "id": "241504", "name": "Wodzisław Śląski" },
+          { "id": "241505", "name": "Godów" },
+          { "id": "241506", "name": "Gorzyce" },
+          { "id": "241507", "name": "Lubomia" },
+          { "id": "241508", "name": "Marklowice" },
+          { "id": "241509", "name": "Mszana" }
+        ]
+      },
+      {
+        "id": "2416",
+        "name": "zawierciański",
+        "gminy": [
+          { "id": "241601", "name": "Poręba" },
+          { "id": "241602", "name": "Zawiercie" },
+          { "id": "241603", "name": "Irządze" },
+          { "id": "241604", "name": "Kroczyce" },
+          { "id": "241605", "name": "Łazy" },
+          { "id": "241606", "name": "Ogrodzieniec" },
+          { "id": "241607", "name": "Pilica" },
+          { "id": "241608", "name": "Szczekociny" },
+          { "id": "241609", "name": "Włodowice" },
+          { "id": "241610", "name": "Żarnowiec" }
+        ]
+      },
+      {
+        "id": "2417",
+        "name": "żywiecki",
+        "gminy": [
+          { "id": "241701", "name": "Żywiec" },
+          { "id": "241702", "name": "Czernichów" },
+          { "id": "241703", "name": "Gilowice" },
+          { "id": "241704", "name": "Jeleśnia" },
+          { "id": "241705", "name": "Koszarawa" },
+          { "id": "241706", "name": "Lipowa" },
+          { "id": "241707", "name": "Łękawica" },
+          { "id": "241708", "name": "Łodygowice" },
+          { "id": "241709", "name": "Milówka" },
+          { "id": "241710", "name": "Radziechowy-Wieprz" },
+          { "id": "241711", "name": "Rajcza" },
+          { "id": "241712", "name": "Ślemień" },
+          { "id": "241713", "name": "Świnna" },
+          { "id": "241714", "name": "Ujsoły" },
+          { "id": "241715", "name": "Węgierska Górka" }
+        ]
+      },
+      {
+        "id": "2461",
+        "name": "Bielsko-Biała",
+        "gminy": [{ "id": "2461", "name": "Bielsko-Biała" }]
+      },
+      {
+        "id": "2462",
+        "name": "Bytom",
+        "gminy": [{ "id": "2462", "name": "Bytom" }]
+      },
+      {
+        "id": "2463",
+        "name": "Chorzów",
+        "gminy": [{ "id": "2463", "name": "Chorzów" }]
+      },
+      {
+        "id": "2464",
+        "name": "Częstochowa",
+        "gminy": [{ "id": "2464", "name": "Częstochowa" }]
+      },
+      {
+        "id": "2465",
+        "name": "Dąbrowa Górnicza",
+        "gminy": [{ "id": "2465", "name": "Dąbrowa Górnicza" }]
+      },
+      {
+        "id": "2466",
+        "name": "Gliwice",
+        "gminy": [{ "id": "2466", "name": "Gliwice" }]
+      },
+      {
+        "id": "2467",
+        "name": "Jastrzębie-Zdrój",
+        "gminy": [{ "id": "2467", "name": "Jastrzębie-Zdrój" }]
+      },
+      {
+        "id": "2468",
+        "name": "Jaworzno",
+        "gminy": [{ "id": "2468", "name": "Jaworzno" }]
+      },
+      {
+        "id": "2469",
+        "name": "Katowice",
+        "gminy": [{ "id": "2469", "name": "Katowice" }]
+      },
+      {
+        "id": "2470",
+        "name": "Mysłowice",
+        "gminy": [{ "id": "2470", "name": "Mysłowice" }]
+      },
+      {
+        "id": "2471",
+        "name": "Piekary Śląskie",
+        "gminy": [{ "id": "2471", "name": "Piekary Śląskie" }]
+      },
+      {
+        "id": "2472",
+        "name": "Ruda Śląska",
+        "gminy": [{ "id": "2472", "name": "Ruda Śląska" }]
+      },
+      {
+        "id": "2473",
+        "name": "Rybnik",
+        "gminy": [{ "id": "2473", "name": "Rybnik" }]
+      },
+      {
+        "id": "2474",
+        "name": "Siemianowice Śląskie",
+        "gminy": [{ "id": "2474", "name": "Siemianowice Śląskie" }]
+      },
+      {
+        "id": "2475",
+        "name": "Sosnowiec",
+        "gminy": [{ "id": "2475", "name": "Sosnowiec" }]
+      },
+      {
+        "id": "2476",
+        "name": "Świętochłowice",
+        "gminy": [{ "id": "2476", "name": "Świętochłowice" }]
+      },
+      {
+        "id": "2477",
+        "name": "Tychy",
+        "gminy": [{ "id": "2477", "name": "Tychy" }]
+      },
+      {
+        "id": "2478",
+        "name": "Zabrze",
+        "gminy": [{ "id": "2478", "name": "Zabrze" }]
+      },
+      {
+        "id": "2479",
+        "name": "Żory",
+        "gminy": [{ "id": "2479", "name": "Żory" }]
+      }
+    ]
+  },
+  {
+    "id": "26",
+    "name": "świętokrzyskie",
+    "powiaty": [
+      {
+        "id": "2601",
+        "name": "buski",
+        "gminy": [
+          { "id": "260101", "name": "Busko-Zdrój" },
+          { "id": "260102", "name": "Gnojno" },
+          { "id": "260103", "name": "Nowy Korczyn" },
+          { "id": "260104", "name": "Pacanów" },
+          { "id": "260105", "name": "Solec-Zdrój" },
+          { "id": "260106", "name": "Stopnica" },
+          { "id": "260107", "name": "Tuczępy" },
+          { "id": "260108", "name": "Wiślica" }
+        ]
+      },
+      {
+        "id": "2602",
+        "name": "jędrzejowski",
+        "gminy": [
+          { "id": "260201", "name": "Imielno" },
+          { "id": "260202", "name": "Jędrzejów" },
+          { "id": "260203", "name": "Małogoszcz" },
+          { "id": "260204", "name": "Nagłowice" },
+          { "id": "260205", "name": "Oksa" },
+          { "id": "260206", "name": "Sędziszów" },
+          { "id": "260207", "name": "Słupia" },
+          { "id": "260208", "name": "Sobków" },
+          { "id": "260209", "name": "Wodzisław" }
+        ]
+      },
+      {
+        "id": "2603",
+        "name": "kazimierski",
+        "gminy": [
+          { "id": "260301", "name": "Bejsce" },
+          { "id": "260302", "name": "Czarnocin" },
+          { "id": "260303", "name": "Kazimierza Wielka" },
+          { "id": "260304", "name": "Opatowiec" },
+          { "id": "260305", "name": "Skalbmierz" }
+        ]
+      },
+      {
+        "id": "2604",
+        "name": "kielecki",
+        "gminy": [
+          { "id": "260401", "name": "Bieliny" },
+          { "id": "260402", "name": "Bodzentyn" },
+          { "id": "260403", "name": "Chęciny" },
+          { "id": "260404", "name": "Chmielnik" },
+          { "id": "260405", "name": "Daleszyce" },
+          { "id": "260406", "name": "Górno" },
+          { "id": "260407", "name": "Łagów" },
+          { "id": "260408", "name": "Łopuszno" },
+          { "id": "260409", "name": "Masłów" },
+          { "id": "260410", "name": "Miedziana Góra" },
+          { "id": "260411", "name": "Mniów" },
+          { "id": "260412", "name": "Morawica" },
+          { "id": "260413", "name": "Nowa Słupia" },
+          { "id": "260414", "name": "Piekoszów" },
+          { "id": "260415", "name": "Pierzchnica" },
+          { "id": "260416", "name": "Raków" },
+          { "id": "260417", "name": "Sitkówka-Nowiny" },
+          { "id": "260418", "name": "Strawczyn" },
+          { "id": "260419", "name": "Zagnańsk" }
+        ]
+      },
+      {
+        "id": "2605",
+        "name": "konecki",
+        "gminy": [
+          { "id": "260501", "name": "Fałków" },
+          { "id": "260502", "name": "Gowarczów" },
+          { "id": "260503", "name": "Końskie" },
+          { "id": "260504", "name": "Radoszyce" },
+          { "id": "260505", "name": "Ruda Maleniecka" },
+          { "id": "260506", "name": "Słupia Konecka" },
+          { "id": "260507", "name": "Smyków" },
+          { "id": "260508", "name": "Stąporków" }
+        ]
+      },
+      {
+        "id": "2606",
+        "name": "opatowski",
+        "gminy": [
+          { "id": "260601", "name": "Baćkowice" },
+          { "id": "260602", "name": "Iwaniska" },
+          { "id": "260603", "name": "Lipnik" },
+          { "id": "260604", "name": "Opatów" },
+          { "id": "260605", "name": "Ożarów" },
+          { "id": "260606", "name": "Sadowie" },
+          { "id": "260607", "name": "Tarłów" },
+          { "id": "260608", "name": "Wojciechowice" }
+        ]
+      },
+      {
+        "id": "2607",
+        "name": "ostrowiecki",
+        "gminy": [
+          { "id": "260701", "name": "Ostrowiec Świętokrzyski" },
+          { "id": "260702", "name": "Bałtów" },
+          { "id": "260703", "name": "Bodzechów" },
+          { "id": "260704", "name": "Ćmielów" },
+          { "id": "260705", "name": "Kunów" },
+          { "id": "260706", "name": "Waśniów" }
+        ]
+      },
+      {
+        "id": "2608",
+        "name": "pińczowski",
+        "gminy": [
+          { "id": "260801", "name": "Działoszyce" },
+          { "id": "260802", "name": "Kije" },
+          { "id": "260803", "name": "Michałów" },
+          { "id": "260804", "name": "Pińczów" },
+          { "id": "260805", "name": "Złota" }
+        ]
+      },
+      {
+        "id": "2609",
+        "name": "sandomierski",
+        "gminy": [
+          { "id": "260901", "name": "Sandomierz" },
+          { "id": "260902", "name": "Dwikozy" },
+          { "id": "260903", "name": "Klimontów" },
+          { "id": "260904", "name": "Koprzywnica" },
+          { "id": "260905", "name": "Łoniów" },
+          { "id": "260906", "name": "Obrazów" },
+          { "id": "260907", "name": "Samborzec" },
+          { "id": "260908", "name": "Wilczyce" },
+          { "id": "260909", "name": "Zawichost" }
+        ]
+      },
+      {
+        "id": "2610",
+        "name": "skarżyski",
+        "gminy": [
+          { "id": "261001", "name": "Skarżysko-Kamienna" },
+          { "id": "261002", "name": "Bliżyn" },
+          { "id": "261003", "name": "Łączna" },
+          { "id": "261004", "name": "Skarżysko Kościelne" },
+          { "id": "261005", "name": "Suchedniów" }
+        ]
+      },
+      {
+        "id": "2611",
+        "name": "starachowicki",
+        "gminy": [
+          { "id": "261101", "name": "Starachowice" },
+          { "id": "261102", "name": "Brody" },
+          { "id": "261103", "name": "Mirzec" },
+          { "id": "261104", "name": "Pawłów" },
+          { "id": "261105", "name": "Wąchock" }
+        ]
+      },
+      {
+        "id": "2612",
+        "name": "staszowski",
+        "gminy": [
+          { "id": "261201", "name": "Bogoria" },
+          { "id": "261202", "name": "Łubnice" },
+          { "id": "261203", "name": "Oleśnica" },
+          { "id": "261204", "name": "Osiek" },
+          { "id": "261205", "name": "Połaniec" },
+          { "id": "261206", "name": "Rytwiany" },
+          { "id": "261207", "name": "Staszów" },
+          { "id": "261208", "name": "Szydłów" }
+        ]
+      },
+      {
+        "id": "2613",
+        "name": "włoszczowski",
+        "gminy": [
+          { "id": "261301", "name": "Kluczewsko" },
+          { "id": "261302", "name": "Krasocin" },
+          { "id": "261303", "name": "Moskorzew" },
+          { "id": "261304", "name": "Radków" },
+          { "id": "261305", "name": "Secemin" },
+          { "id": "261306", "name": "Włoszczowa" }
+        ]
+      },
+      {
+        "id": "2661",
+        "name": "Kielce",
+        "gminy": [{ "id": "2661", "name": "Kielce" }]
+      }
+    ]
+  },
+  {
+    "id": "28",
+    "name": "warmińsko-mazurskie",
+    "powiaty": [
+      {
+        "id": "2801",
+        "name": "bartoszycki",
+        "gminy": [
+          { "id": "280101", "name": "Bartoszyce" },
+          { "id": "280102", "name": "Górowo Iławeckie" },
+          { "id": "280104", "name": "Bisztynek" },
+          { "id": "280106", "name": "Sępopol" }
+        ]
+      },
+      {
+        "id": "2802",
+        "name": "braniewski",
+        "gminy": [
+          { "id": "280201", "name": "Braniewo" },
+          { "id": "280203", "name": "Frombork" },
+          { "id": "280204", "name": "Lelkowo" },
+          { "id": "280205", "name": "Pieniężno" },
+          { "id": "280206", "name": "Płoskinia" },
+          { "id": "280207", "name": "Wilczęta" }
+        ]
+      },
+      {
+        "id": "2803",
+        "name": "działdowski",
+        "gminy": [
+          { "id": "280301", "name": "Działdowo" },
+          { "id": "280303", "name": "Iłowo-Osada" },
+          { "id": "280304", "name": "Lidzbark" },
+          { "id": "280305", "name": "Płośnica" },
+          { "id": "280306", "name": "Rybno" }
+        ]
+      },
+      {
+        "id": "2804",
+        "name": "elbląski",
+        "gminy": [
+          { "id": "280401", "name": "Elbląg" },
+          { "id": "280402", "name": "Godkowo" },
+          { "id": "280403", "name": "Gronowo Elbląskie" },
+          { "id": "280404", "name": "Markusy" },
+          { "id": "280405", "name": "Milejewo" },
+          { "id": "280406", "name": "Młynary" },
+          { "id": "280407", "name": "Pasłęk" },
+          { "id": "280408", "name": "Rychliki" },
+          { "id": "280409", "name": "Tolkmicko" }
+        ]
+      },
+      {
+        "id": "2805",
+        "name": "ełcki",
+        "gminy": [
+          { "id": "280501", "name": "Ełk" },
+          { "id": "280503", "name": "Kalinowo" },
+          { "id": "280504", "name": "Prostki" },
+          { "id": "280505", "name": "Stare Juchy" }
+        ]
+      },
+      {
+        "id": "2806",
+        "name": "giżycki",
+        "gminy": [
+          { "id": "280601", "name": "Giżycko" },
+          { "id": "280605", "name": "Kruklanki" },
+          { "id": "280606", "name": "Miłki" },
+          { "id": "280608", "name": "Ryn" },
+          { "id": "280610", "name": "Wydminy" }
+        ]
+      },
+      {
+        "id": "2807",
+        "name": "iławski",
+        "gminy": [
+          { "id": "280701", "name": "Iława" },
+          { "id": "280702", "name": "Lubawa" },
+          { "id": "280704", "name": "Kisielice" },
+          { "id": "280706", "name": "Susz" },
+          { "id": "280707", "name": "Zalewo" }
+        ]
+      },
+      {
+        "id": "2808",
+        "name": "kętrzyński",
+        "gminy": [
+          { "id": "280801", "name": "Kętrzyn" },
+          { "id": "280802", "name": "Barciany" },
+          { "id": "280804", "name": "Korsze" },
+          { "id": "280805", "name": "Reszel" },
+          { "id": "280806", "name": "Srokowo" }
+        ]
+      },
+      {
+        "id": "2809",
+        "name": "lidzbarski",
+        "gminy": [
+          { "id": "280901", "name": "Lidzbark Warmiński" },
+          { "id": "280902", "name": "Kiwity" },
+          { "id": "280904", "name": "Lubomino" },
+          { "id": "280905", "name": "Orneta" }
+        ]
+      },
+      {
+        "id": "2810",
+        "name": "mrągowski",
+        "gminy": [
+          { "id": "281001", "name": "Mrągowo" },
+          { "id": "281002", "name": "Mikołajki" },
+          { "id": "281004", "name": "Piecki" },
+          { "id": "281005", "name": "Sorkwity" }
+        ]
+      },
+      {
+        "id": "2811",
+        "name": "nidzicki",
+        "gminy": [
+          { "id": "281101", "name": "Janowiec Kościelny" },
+          { "id": "281102", "name": "Janowo" },
+          { "id": "281103", "name": "Kozłowo" },
+          { "id": "281104", "name": "Nidzica" }
+        ]
+      },
+      {
+        "id": "2812",
+        "name": "nowomiejski",
+        "gminy": [
+          { "id": "281201", "name": "Nowe Miasto Lubawskie" },
+          { "id": "281202", "name": "Biskupiec" },
+          { "id": "281203", "name": "Grodziczno" },
+          { "id": "281204", "name": "Kurzętnik" }
+        ]
+      },
+      {
+        "id": "2813",
+        "name": "olecki",
+        "gminy": [
+          { "id": "281303", "name": "Kowale Oleckie" },
+          { "id": "281304", "name": "Olecko" },
+          { "id": "281305", "name": "Świętajno" },
+          { "id": "281306", "name": "Wieliczki" }
+        ]
+      },
+      {
+        "id": "2814",
+        "name": "olsztyński",
+        "gminy": [
+          { "id": "281401", "name": "Barczewo" },
+          { "id": "281402", "name": "Biskupiec" },
+          { "id": "281403", "name": "Dobre Miasto" },
+          { "id": "281404", "name": "Dywity" },
+          { "id": "281405", "name": "Gietrzwałd" },
+          { "id": "281406", "name": "Jeziorany" },
+          { "id": "281407", "name": "Jonkowo" },
+          { "id": "281408", "name": "Kolno" },
+          { "id": "281409", "name": "Olsztynek" },
+          { "id": "281410", "name": "Purda" },
+          { "id": "281411", "name": "Stawiguda" },
+          { "id": "281412", "name": "Świątki" }
+        ]
+      },
+      {
+        "id": "2815",
+        "name": "ostródzki",
+        "gminy": [
+          { "id": "281501", "name": "Ostróda" },
+          { "id": "281502", "name": "Dąbrówno" },
+          { "id": "281503", "name": "Grunwald" },
+          { "id": "281504", "name": "Łukta" },
+          { "id": "281505", "name": "Małdyty" },
+          { "id": "281506", "name": "Miłakowo" },
+          { "id": "281507", "name": "Miłomłyn" },
+          { "id": "281508", "name": "Morąg" }
+        ]
+      },
+      {
+        "id": "2816",
+        "name": "piski",
+        "gminy": [
+          { "id": "281601", "name": "Biała Piska" },
+          { "id": "281602", "name": "Orzysz" },
+          { "id": "281603", "name": "Pisz" },
+          { "id": "281604", "name": "Ruciane-Nida" }
+        ]
+      },
+      {
+        "id": "2817",
+        "name": "szczycieński",
+        "gminy": [
+          { "id": "281701", "name": "Szczytno" },
+          { "id": "281702", "name": "Dźwierzuty" },
+          { "id": "281703", "name": "Jedwabno" },
+          { "id": "281704", "name": "Pasym" },
+          { "id": "281705", "name": "Rozogi" },
+          { "id": "281707", "name": "Świętajno" },
+          { "id": "281708", "name": "Wielbark" }
+        ]
+      },
+      {
+        "id": "2818",
+        "name": "gołdapski",
+        "gminy": [
+          { "id": "281801", "name": "Banie Mazurskie" },
+          { "id": "281802", "name": "Dubeninki" },
+          { "id": "281803", "name": "Gołdap" }
+        ]
+      },
+      {
+        "id": "2819",
+        "name": "węgorzewski",
+        "gminy": [
+          { "id": "281901", "name": "Budry" },
+          { "id": "281902", "name": "Pozezdrze" },
+          { "id": "281903", "name": "Węgorzewo" }
+        ]
+      },
+      {
+        "id": "2861",
+        "name": "Elbląg",
+        "gminy": [{ "id": "2861", "name": "Elbląg" }]
+      },
+      {
+        "id": "2862",
+        "name": "Olsztyn",
+        "gminy": [{ "id": "2862", "name": "Olsztyn" }]
+      }
+    ]
+  },
+  {
+    "id": "30",
+    "name": "wielkopolskie",
+    "powiaty": [
+      {
+        "id": "3001",
+        "name": "chodzieski",
+        "gminy": [
+          { "id": "300101", "name": "Chodzież" },
+          { "id": "300102", "name": "Budzyń" },
+          { "id": "300104", "name": "Margonin" },
+          { "id": "300105", "name": "Szamocin" }
+        ]
+      },
+      {
+        "id": "3002",
+        "name": "czarnkowsko-trzcianecki",
+        "gminy": [
+          { "id": "300201", "name": "Czarnków" },
+          { "id": "300203", "name": "Drawsko" },
+          { "id": "300204", "name": "Krzyż Wielkopolski" },
+          { "id": "300205", "name": "Lubasz" },
+          { "id": "300206", "name": "Połajewo" },
+          { "id": "300207", "name": "Trzcianka" },
+          { "id": "300208", "name": "Wieleń" }
+        ]
+      },
+      {
+        "id": "3003",
+        "name": "gnieźnieński",
+        "gminy": [
+          { "id": "300301", "name": "Gniezno" },
+          { "id": "300302", "name": "Czerniejewo" },
+          { "id": "300304", "name": "Kiszkowo" },
+          { "id": "300305", "name": "Kłecko" },
+          { "id": "300306", "name": "Łubowo" },
+          { "id": "300307", "name": "Mieleszyn" },
+          { "id": "300308", "name": "Niechanowo" },
+          { "id": "300309", "name": "Trzemeszno" },
+          { "id": "300310", "name": "Witkowo" }
+        ]
+      },
+      {
+        "id": "3004",
+        "name": "gostyński",
+        "gminy": [
+          { "id": "300401", "name": "Borek Wielkopolski" },
+          { "id": "300402", "name": "Gostyń" },
+          { "id": "300403", "name": "Krobia" },
+          { "id": "300404", "name": "Pępowo" },
+          { "id": "300405", "name": "Piaski" },
+          { "id": "300406", "name": "Pogorzela" },
+          { "id": "300407", "name": "Poniec" }
+        ]
+      },
+      {
+        "id": "3005",
+        "name": "grodziski",
+        "gminy": [
+          { "id": "300501", "name": "Granowo" },
+          { "id": "300502", "name": "Grodzisk Wielkopolski" },
+          { "id": "300503", "name": "Kamieniec" },
+          { "id": "300504", "name": "Rakoniewice" },
+          { "id": "300505", "name": "Wielichowo" }
+        ]
+      },
+      {
+        "id": "3006",
+        "name": "jarociński",
+        "gminy": [
+          { "id": "300601", "name": "Jaraczewo" },
+          { "id": "300602", "name": "Jarocin" },
+          { "id": "300603", "name": "Kotlin" },
+          { "id": "300604", "name": "Żerków" }
+        ]
+      },
+      {
+        "id": "3007",
+        "name": "kaliski",
+        "gminy": [
+          { "id": "300701", "name": "Blizanów" },
+          { "id": "300702", "name": "Brzeziny" },
+          { "id": "300703", "name": "Ceków-Kolonia" },
+          { "id": "300704", "name": "Godziesze Wielkie" },
+          { "id": "300705", "name": "Koźminek" },
+          { "id": "300706", "name": "Lisków" },
+          { "id": "300707", "name": "Mycielin" },
+          { "id": "300708", "name": "Opatówek" },
+          { "id": "300709", "name": "Stawiszyn" },
+          { "id": "300710", "name": "Szczytniki" },
+          { "id": "300711", "name": "Żelazków" }
+        ]
+      },
+      {
+        "id": "3008",
+        "name": "kępiński",
+        "gminy": [
+          { "id": "300801", "name": "Baranów" },
+          { "id": "300802", "name": "Bralin" },
+          { "id": "300803", "name": "Kępno" },
+          { "id": "300804", "name": "Łęka Opatowska" },
+          { "id": "300805", "name": "Perzów" },
+          { "id": "300806", "name": "Rychtal" },
+          { "id": "300807", "name": "Trzcinica" }
+        ]
+      },
+      {
+        "id": "3009",
+        "name": "kolski",
+        "gminy": [
+          { "id": "300901", "name": "Koło" },
+          { "id": "300902", "name": "Babiak" },
+          { "id": "300903", "name": "Chodów" },
+          { "id": "300904", "name": "Dąbie" },
+          { "id": "300905", "name": "Grzegorzew" },
+          { "id": "300906", "name": "Kłodawa" },
+          { "id": "300908", "name": "Kościelec" },
+          { "id": "300909", "name": "Olszówka" },
+          { "id": "300910", "name": "Osiek Mały" },
+          { "id": "300911", "name": "Przedecz" }
+        ]
+      },
+      {
+        "id": "3010",
+        "name": "koniński",
+        "gminy": [
+          { "id": "301001", "name": "Golina" },
+          { "id": "301002", "name": "Grodziec" },
+          { "id": "301003", "name": "Kazimierz Biskupi" },
+          { "id": "301004", "name": "Kleczew" },
+          { "id": "301005", "name": "Kramsk" },
+          { "id": "301006", "name": "Krzymów" },
+          { "id": "301007", "name": "Rychwał" },
+          { "id": "301008", "name": "Rzgów" },
+          { "id": "301009", "name": "Skulsk" },
+          { "id": "301010", "name": "Sompolno" },
+          { "id": "301011", "name": "Stare Miasto" },
+          { "id": "301012", "name": "Ślesin" },
+          { "id": "301013", "name": "Wierzbinek" },
+          { "id": "301014", "name": "Wilczyn" }
+        ]
+      },
+      {
+        "id": "3011",
+        "name": "kościański",
+        "gminy": [
+          { "id": "301101", "name": "Kościan" },
+          { "id": "301102", "name": "Czempiń" },
+          { "id": "301104", "name": "Krzywiń" },
+          { "id": "301105", "name": "Śmigiel" }
+        ]
+      },
+      {
+        "id": "3012",
+        "name": "krotoszyński",
+        "gminy": [
+          { "id": "301201", "name": "Sulmierzyce" },
+          { "id": "301202", "name": "Kobylin" },
+          { "id": "301203", "name": "Koźmin Wielkopolski" },
+          { "id": "301204", "name": "Krotoszyn" },
+          { "id": "301205", "name": "Rozdrażew" },
+          { "id": "301206", "name": "Zduny" }
+        ]
+      },
+      {
+        "id": "3013",
+        "name": "leszczyński",
+        "gminy": [
+          { "id": "301301", "name": "Krzemieniewo" },
+          { "id": "301302", "name": "Lipno" },
+          { "id": "301303", "name": "Osieczna" },
+          { "id": "301304", "name": "Rydzyna" },
+          { "id": "301305", "name": "Święciechowa" },
+          { "id": "301306", "name": "Wijewo" },
+          { "id": "301307", "name": "Włoszakowice" }
+        ]
+      },
+      {
+        "id": "3014",
+        "name": "międzychodzki",
+        "gminy": [
+          { "id": "301401", "name": "Chrzypsko Wielkie" },
+          { "id": "301402", "name": "Kwilcz" },
+          { "id": "301403", "name": "Międzychód" },
+          { "id": "301404", "name": "Sieraków" }
+        ]
+      },
+      {
+        "id": "3015",
+        "name": "nowotomyski",
+        "gminy": [
+          { "id": "301501", "name": "Kuślin" },
+          { "id": "301502", "name": "Lwówek" },
+          { "id": "301503", "name": "Miedzichowo" },
+          { "id": "301504", "name": "Nowy Tomyśl" },
+          { "id": "301505", "name": "Opalenica" },
+          { "id": "301506", "name": "Zbąszyń" }
+        ]
+      },
+      {
+        "id": "3016",
+        "name": "obornicki",
+        "gminy": [
+          { "id": "301601", "name": "Oborniki" },
+          { "id": "301602", "name": "Rogoźno" },
+          { "id": "301603", "name": "Ryczywół" }
+        ]
+      },
+      {
+        "id": "3017",
+        "name": "ostrowski",
+        "gminy": [
+          { "id": "301701", "name": "Ostrów Wielkopolski" },
+          { "id": "301702", "name": "Nowe Skalmierzyce" },
+          { "id": "301703", "name": "Odolanów" },
+          { "id": "301705", "name": "Przygodzice" },
+          { "id": "301706", "name": "Raszków" },
+          { "id": "301707", "name": "Sieroszewice" },
+          { "id": "301708", "name": "Sośnie" }
+        ]
+      },
+      {
+        "id": "3018",
+        "name": "ostrzeszowski",
+        "gminy": [
+          { "id": "301801", "name": "Czajków" },
+          { "id": "301802", "name": "Doruchów" },
+          { "id": "301803", "name": "Grabów nad Prosną" },
+          { "id": "301804", "name": "Kobyla Góra" },
+          { "id": "301805", "name": "Kraszewice" },
+          { "id": "301806", "name": "Mikstat" },
+          { "id": "301807", "name": "Ostrzeszów" }
+        ]
+      },
+      {
+        "id": "3019",
+        "name": "pilski",
+        "gminy": [
+          { "id": "301901", "name": "Piła" },
+          { "id": "301902", "name": "Białośliwie" },
+          { "id": "301903", "name": "Kaczory" },
+          { "id": "301904", "name": "Łobżenica" },
+          { "id": "301905", "name": "Miasteczko Krajeńskie" },
+          { "id": "301906", "name": "Szydłowo" },
+          { "id": "301907", "name": "Ujście" },
+          { "id": "301908", "name": "Wyrzysk" },
+          { "id": "301909", "name": "Wysoka" }
+        ]
+      },
+      {
+        "id": "3020",
+        "name": "pleszewski",
+        "gminy": [
+          { "id": "302001", "name": "Chocz" },
+          { "id": "302002", "name": "Czermin" },
+          { "id": "302003", "name": "Dobrzyca" },
+          { "id": "302004", "name": "Gizałki" },
+          { "id": "302005", "name": "Gołuchów" },
+          { "id": "302006", "name": "Pleszew" }
+        ]
+      },
+      {
+        "id": "3021",
+        "name": "poznański",
+        "gminy": [
+          { "id": "302101", "name": "Luboń" },
+          { "id": "302102", "name": "Puszczykowo" },
+          { "id": "302103", "name": "Buk" },
+          { "id": "302104", "name": "Czerwonak" },
+          { "id": "302105", "name": "Dopiewo" },
+          { "id": "302106", "name": "Kleszczewo" },
+          { "id": "302107", "name": "Komorniki" },
+          { "id": "302108", "name": "Kostrzyn" },
+          { "id": "302109", "name": "Kórnik" },
+          { "id": "302110", "name": "Mosina" },
+          { "id": "302111", "name": "Murowana Goślina" },
+          { "id": "302112", "name": "Pobiedziska" },
+          { "id": "302113", "name": "Rokietnica" },
+          { "id": "302114", "name": "Stęszew" },
+          { "id": "302115", "name": "Suchy Las" },
+          { "id": "302116", "name": "Swarzędz" },
+          { "id": "302117", "name": "Tarnowo Podgórne" }
+        ]
+      },
+      {
+        "id": "3022",
+        "name": "rawicki",
+        "gminy": [
+          { "id": "302201", "name": "Bojanowo" },
+          { "id": "302202", "name": "Jutrosin" },
+          { "id": "302203", "name": "Miejska Górka" },
+          { "id": "302204", "name": "Pakosław" },
+          { "id": "302205", "name": "Rawicz" }
+        ]
+      },
+      {
+        "id": "3023",
+        "name": "słupecki",
+        "gminy": [
+          { "id": "302301", "name": "Słupca" },
+          { "id": "302302", "name": "Lądek" },
+          { "id": "302303", "name": "Orchowo" },
+          { "id": "302304", "name": "Ostrowite" },
+          { "id": "302305", "name": "Powidz" },
+          { "id": "302307", "name": "Strzałkowo" },
+          { "id": "302308", "name": "Zagórów" }
+        ]
+      },
+      {
+        "id": "3024",
+        "name": "szamotulski",
+        "gminy": [
+          { "id": "302401", "name": "Obrzycko" },
+          { "id": "302402", "name": "Duszniki" },
+          { "id": "302403", "name": "Kaźmierz" },
+          { "id": "302405", "name": "Ostroróg" },
+          { "id": "302406", "name": "Pniewy" },
+          { "id": "302407", "name": "Szamotuły" },
+          { "id": "302408", "name": "Wronki" }
+        ]
+      },
+      {
+        "id": "3025",
+        "name": "średzki",
+        "gminy": [
+          { "id": "302501", "name": "Dominowo" },
+          { "id": "302502", "name": "Krzykosy" },
+          { "id": "302503", "name": "Nowe Miasto nad Wartą" },
+          { "id": "302504", "name": "Środa Wielkopolska" },
+          { "id": "302505", "name": "Zaniemyśl" }
+        ]
+      },
+      {
+        "id": "3026",
+        "name": "śremski",
+        "gminy": [
+          { "id": "302601", "name": "Brodnica" },
+          { "id": "302602", "name": "Dolsk" },
+          { "id": "302603", "name": "Książ Wielkopolski" },
+          { "id": "302604", "name": "Śrem" }
+        ]
+      },
+      {
+        "id": "3027",
+        "name": "turecki",
+        "gminy": [
+          { "id": "302701", "name": "Turek" },
+          { "id": "302702", "name": "Brudzew" },
+          { "id": "302703", "name": "Dobra" },
+          { "id": "302704", "name": "Kawęczyn" },
+          { "id": "302705", "name": "Malanów" },
+          { "id": "302706", "name": "Przykona" },
+          { "id": "302707", "name": "Tuliszków" },
+          { "id": "302709", "name": "Władysławów" }
+        ]
+      },
+      {
+        "id": "3028",
+        "name": "wągrowiecki",
+        "gminy": [
+          { "id": "302801", "name": "Wągrowiec" },
+          { "id": "302802", "name": "Damasławek" },
+          { "id": "302803", "name": "Gołańcz" },
+          { "id": "302804", "name": "Mieścisko" },
+          { "id": "302805", "name": "Skoki" },
+          { "id": "302806", "name": "Wapno" }
+        ]
+      },
+      {
+        "id": "3029",
+        "name": "wolsztyński",
+        "gminy": [
+          { "id": "302901", "name": "Przemęt" },
+          { "id": "302902", "name": "Siedlec" },
+          { "id": "302903", "name": "Wolsztyn" }
+        ]
+      },
+      {
+        "id": "3030",
+        "name": "wrzesiński",
+        "gminy": [
+          { "id": "303001", "name": "Kołaczkowo" },
+          { "id": "303002", "name": "Miłosław" },
+          { "id": "303003", "name": "Nekla" },
+          { "id": "303004", "name": "Pyzdry" },
+          { "id": "303005", "name": "Września" }
+        ]
+      },
+      {
+        "id": "3031",
+        "name": "złotowski",
+        "gminy": [
+          { "id": "303101", "name": "Złotów" },
+          { "id": "303102", "name": "Jastrowie" },
+          { "id": "303103", "name": "Krajenka" },
+          { "id": "303104", "name": "Lipka" },
+          { "id": "303105", "name": "Okonek" },
+          { "id": "303106", "name": "Tarnówka" },
+          { "id": "303107", "name": "Zakrzewo" }
+        ]
+      },
+      {
+        "id": "3061",
+        "name": "Kalisz",
+        "gminy": [{ "id": "3061", "name": "Kalisz" }]
+      },
+      {
+        "id": "3062",
+        "name": "Konin",
+        "gminy": [{ "id": "3062", "name": "Konin" }]
+      },
+      {
+        "id": "3063",
+        "name": "Leszno",
+        "gminy": [{ "id": "3063", "name": "Leszno" }]
+      },
+      {
+        "id": "3064",
+        "name": "Poznań",
+        "gminy": [{ "id": "3064", "name": "Poznań" }]
+      }
+    ]
+  },
+  {
+    "id": "32",
+    "name": "zachodniopomorskie",
+    "powiaty": [
+      {
+        "id": "3201",
+        "name": "białogardzki",
+        "gminy": [
+          { "id": "320101", "name": "Białogard" },
+          { "id": "320103", "name": "Karlino" },
+          { "id": "320104", "name": "Tychowo" }
+        ]
+      },
+      {
+        "id": "3202",
+        "name": "choszczeński",
+        "gminy": [
+          { "id": "320201", "name": "Bierzwnik" },
+          { "id": "320202", "name": "Choszczno" },
+          { "id": "320203", "name": "Drawno" },
+          { "id": "320204", "name": "Krzęcin" },
+          { "id": "320205", "name": "Pełczyce" },
+          { "id": "320206", "name": "Recz" }
+        ]
+      },
+      {
+        "id": "3203",
+        "name": "drawski",
+        "gminy": [
+          { "id": "320301", "name": "Czaplinek" },
+          { "id": "320302", "name": "Drawsko Pomorskie" },
+          { "id": "320303", "name": "Kalisz Pomorski" },
+          { "id": "320305", "name": "Wierzchowo" },
+          { "id": "320306", "name": "Złocieniec" }
+        ]
+      },
+      {
+        "id": "3204",
+        "name": "goleniowski",
+        "gminy": [
+          { "id": "320402", "name": "Goleniów" },
+          { "id": "320403", "name": "Maszewo" },
+          { "id": "320404", "name": "Nowogard" },
+          { "id": "320405", "name": "Osina" },
+          { "id": "320406", "name": "Przybiernów" },
+          { "id": "320407", "name": "Stepnica" }
+        ]
+      },
+      {
+        "id": "3205",
+        "name": "gryficki",
+        "gminy": [
+          { "id": "320501", "name": "Brojce" },
+          { "id": "320502", "name": "Gryfice" },
+          { "id": "320503", "name": "Karnice" },
+          { "id": "320504", "name": "Płoty" },
+          { "id": "320507", "name": "Rewal" },
+          { "id": "320508", "name": "Trzebiatów" }
+        ]
+      },
+      {
+        "id": "3206",
+        "name": "gryfiński",
+        "gminy": [
+          { "id": "320601", "name": "Banie" },
+          { "id": "320602", "name": "Cedynia" },
+          { "id": "320603", "name": "Chojna" },
+          { "id": "320604", "name": "Gryfino" },
+          { "id": "320605", "name": "Mieszkowice" },
+          { "id": "320606", "name": "Moryń" },
+          { "id": "320607", "name": "Stare Czarnowo" },
+          { "id": "320608", "name": "Trzcińsko-Zdrój" },
+          { "id": "320609", "name": "Widuchowa" }
+        ]
+      },
+      {
+        "id": "3207",
+        "name": "kamieński",
+        "gminy": [
+          { "id": "320701", "name": "Dziwnów" },
+          { "id": "320702", "name": "Golczewo" },
+          { "id": "320703", "name": "Kamień Pomorski" },
+          { "id": "320704", "name": "Międzyzdroje" },
+          { "id": "320705", "name": "Świerzno" },
+          { "id": "320706", "name": "Wolin" }
+        ]
+      },
+      {
+        "id": "3208",
+        "name": "kołobrzeski",
+        "gminy": [
+          { "id": "320801", "name": "Kołobrzeg" },
+          { "id": "320802", "name": "Dygowo" },
+          { "id": "320803", "name": "Gościno" },
+          { "id": "320805", "name": "Rymań" },
+          { "id": "320806", "name": "Siemyśl" },
+          { "id": "320807", "name": "Ustronie Morskie" }
+        ]
+      },
+      {
+        "id": "3209",
+        "name": "koszaliński",
+        "gminy": [
+          { "id": "320901", "name": "Będzino" },
+          { "id": "320902", "name": "Biesiekierz" },
+          { "id": "320903", "name": "Bobolice" },
+          { "id": "320904", "name": "Manowo" },
+          { "id": "320905", "name": "Mielno" },
+          { "id": "320906", "name": "Polanów" },
+          { "id": "320907", "name": "Sianów" },
+          { "id": "320908", "name": "Świeszyno" }
+        ]
+      },
+      {
+        "id": "3210",
+        "name": "myśliborski",
+        "gminy": [
+          { "id": "321001", "name": "Barlinek" },
+          { "id": "321002", "name": "Boleszkowice" },
+          { "id": "321003", "name": "Dębno" },
+          { "id": "321004", "name": "Myślibórz" },
+          { "id": "321005", "name": "Nowogródek Pomorski" }
+        ]
+      },
+      {
+        "id": "3211",
+        "name": "policki",
+        "gminy": [
+          { "id": "321101", "name": "Dobra (Szczecińska)" },
+          { "id": "321102", "name": "Kołbaskowo" },
+          { "id": "321103", "name": "Nowe Warpno" },
+          { "id": "321104", "name": "Police" }
+        ]
+      },
+      {
+        "id": "3212",
+        "name": "pyrzycki",
+        "gminy": [
+          { "id": "321201", "name": "Bielice" },
+          { "id": "321202", "name": "Kozielice" },
+          { "id": "321203", "name": "Lipiany" },
+          { "id": "321204", "name": "Przelewice" },
+          { "id": "321205", "name": "Pyrzyce" },
+          { "id": "321206", "name": "Warnice" }
+        ]
+      },
+      {
+        "id": "3213",
+        "name": "sławieński",
+        "gminy": [
+          { "id": "321301", "name": "Darłowo" },
+          { "id": "321302", "name": "Sławno" },
+          { "id": "321304", "name": "Malechowo" },
+          { "id": "321305", "name": "Postomino" }
+        ]
+      },
+      {
+        "id": "3214",
+        "name": "stargardzki",
+        "gminy": [
+          { "id": "321401", "name": "Stargard" },
+          { "id": "321402", "name": "Chociwel" },
+          { "id": "321403", "name": "Dobrzany" },
+          { "id": "321404", "name": "Dolice" },
+          { "id": "321405", "name": "Ińsko" },
+          { "id": "321406", "name": "Kobylanka" },
+          { "id": "321408", "name": "Marianowo" },
+          { "id": "321409", "name": "Stara Dąbrowa" },
+          { "id": "321411", "name": "Suchań" }
+        ]
+      },
+      {
+        "id": "3215",
+        "name": "szczecinecki",
+        "gminy": [
+          { "id": "321501", "name": "Szczecinek" },
+          { "id": "321502", "name": "Barwice" },
+          { "id": "321503", "name": "Biały Bór" },
+          { "id": "321504", "name": "Borne Sulinowo" },
+          { "id": "321505", "name": "Grzmiąca" }
+        ]
+      },
+      {
+        "id": "3216",
+        "name": "świdwiński",
+        "gminy": [
+          { "id": "321601", "name": "Świdwin" },
+          { "id": "321602", "name": "Brzeżno" },
+          { "id": "321603", "name": "Połczyn-Zdrój" },
+          { "id": "321604", "name": "Rąbino" },
+          { "id": "321605", "name": "Sławoborze" }
+        ]
+      },
+      {
+        "id": "3217",
+        "name": "wałecki",
+        "gminy": [
+          { "id": "321701", "name": "Wałcz" },
+          { "id": "321702", "name": "Człopa" },
+          { "id": "321703", "name": "Mirosławiec" },
+          { "id": "321704", "name": "Tuczno" }
+        ]
+      },
+      {
+        "id": "3218",
+        "name": "łobeski",
+        "gminy": [
+          { "id": "321801", "name": "Dobra" },
+          { "id": "321802", "name": "Łobez" },
+          { "id": "321803", "name": "Radowo Małe" },
+          { "id": "321804", "name": "Resko" },
+          { "id": "321805", "name": "Węgorzyno" }
+        ]
+      },
+      {
+        "id": "3261",
+        "name": "Koszalin",
+        "gminy": [{ "id": "3261", "name": "Koszalin" }]
+      },
+      {
+        "id": "3262",
+        "name": "Szczecin",
+        "gminy": [{ "id": "3262", "name": "Szczecin" }]
+      },
+      {
+        "id": "3263",
+        "name": "Świnoujście",
+        "gminy": [{ "id": "3263", "name": "Świnoujście" }]
+      }
+    ]
+  }
+]

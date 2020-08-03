@@ -1,0 +1,17 @@
+@import "./backend/rcps/switches";
+@import "./backend/rcps/checkbox";
+aside {
+    .sidebar {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        nav {
+            width: 100%;
+            align-self: start;
+        }
+        .logout {
+            align-self: flex-end;
+            flex-grow: 1;
+        }
+    }
+}

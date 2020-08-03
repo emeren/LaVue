@@ -1,0 +1,13 @@
+{
+    "chromeWebSecurity": false,
+    "integrationFolder": "./tests/e2e/backend/",
+    "testFiles": "**/*.*",
+    "supportFile": "./tests/e2e/index.js",
+    "baseUrl": "http://rcps.test",
+    "env": {
+        "email": "tomasz.szenborn@lodzkie.pl",
+        "password": "123456"
+    },
+    "viewportWidth": 1600,
+    "viewportHeight": 900
+}
