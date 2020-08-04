@@ -1,20 +1,25 @@
 <template>
-  <div class="container-fluid">
-    <ContentHeader title="Kategorie"></ContentHeader>
-    <div class="row">
-      <InfoBox bg="success" size="6"></InfoBox>
-      <InfoBox bg="primary" title="Posts count" :number="4" size="6"></InfoBox>
-    </div>
+    <div class="container-fluid">
+        <ContentHeader title="Categories"></ContentHeader>
+        <div class="row">
+            <InfoBox bg="success" size="6"></InfoBox>
+            <InfoBox
+                bg="primary"
+                title="Posts count"
+                :number="4"
+                size="6"
+            ></InfoBox>
+        </div>
 
-    <div class="justify-content-between row">
-      <nested-test class="col-8" v-model="nestedCategories" />
-      <!-- <raw-displayer
+        <div class="justify-content-between row">
+            <nested-test class="col-8" v-model="nestedCategories" />
+            <!-- <raw-displayer
                 class="col-4"
                 :title="'Vuex Store'"
                 :value="elements"
       />-->
+        </div>
     </div>
-  </div>
 </template>
 
 <script>
@@ -26,36 +31,36 @@ import SingleCategoryRow from "./components/SingleCategoryRow";
 
 import { mapGetters } from "vuex";
 export default {
-  data() {
-    return {
-      name: "Categories",
-      display: "Nested (v-model & vuex)",
-      order: 16,
-    };
-  },
-
-  components: {
-    ContentHeader,
-    InfoBox,
-    NestedTest,
-    singleRow: SingleCategoryRow,
-  },
-  created() {
-    this.$store.dispatch("categories/loadCategories");
-  },
-
-  computed: {
-    ...mapGetters("categories", ["getCategories"]),
-    nestedCategories: {
-      get() {
-        return this.getCategories;
-      },
-      set(value) {
-        console.log(value);
-        this.$store.dispatch("categories/updateCategories", value);
-      },
+    data() {
+        return {
+            name: "Categories",
+            display: "Nested (v-model & vuex)",
+            order: 16
+        };
     },
-  },
-  methods: {},
+
+    components: {
+        ContentHeader,
+        InfoBox,
+        NestedTest,
+        singleRow: SingleCategoryRow
+    },
+    created() {
+        this.$store.dispatch("categories/loadCategories");
+    },
+
+    computed: {
+        ...mapGetters("categories", ["getCategories"]),
+        nestedCategories: {
+            get() {
+                return this.getCategories;
+            },
+            set(value) {
+                console.log(value);
+                this.$store.dispatch("categories/updateCategories", value);
+            }
+        }
+    },
+    methods: {}
 };
 </script>
