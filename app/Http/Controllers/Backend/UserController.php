@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Backend;
 
+use Illuminate\Support\Facades\Hash;
+use DB;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\UsersResource;
 use App\User;
@@ -37,10 +39,21 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        $user = new User($request->all());
-        $store = $user->save();
+        $this->validate($request, [
+            'name' => 'required',
+            'email' => 'required|email|unique:users,email',
+            'password' => 'required|same:confirm-password',
+            'roles' => 'required'
+        ]);
+
+        $input = $request->all();
+        $input['password'] = Hash::make($input['password']);
+
+        $user = User::create($input);
+        $user->assignRole($request->input('roles'));
+
         // return UsersResource::make($user);
-        if ($store) {
+        if ($user) {
             return response()->make(UsersResource::make($user), 201);
         } else {
             return response()->json(['Error' => 'Failed to store record'], 500);
@@ -79,18 +92,28 @@ class UserController extends Controller
      */
     public function update(Request $request, int $userId)
     {
+        $this->validate($request, [
+            'name' => 'required',
+            'email' => 'required|email|unique:users,email,' . $userId,
+            'password' => 'same:confirm-password',
+            'roles' => 'required'
+        ]);
+
+        $input = $request->all();
+        if (!empty($input['password'])) {
+            $input['password'] = Hash::make($input['password']);
+        }
+
         $user = User::find($userId);
+
         if (!$user) {
             return response()->json(['Error' => 'Not Found'], 404);
         }
-        $fields = ['name', 'email', 'allowed_login']; //fields allowed to update
-        foreach ($fields as $field) {
-            if ($request->has($field)) {
-                $user->$field = request($field);
-            }
-        }
-        $update = $user->save();
-        if ($update) {
+        $user->update($input);
+
+        DB::table('model_has_roles')->where('model_id', $userId)->delete();
+        $user->assignRole($request->input('roles'));
+        if ($user) {
             return response(UsersResource::make($user), 200);
         } else {
             return response()->json(['Error' => 'Record update failed'], 500);

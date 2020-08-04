@@ -30,6 +30,14 @@ Route::group(['prefix' => 'panel'], function () {
     Route::get('register', 'Backend\Auth\RegisterController@showRegistrationForm')->name('register');
     Route::post('register', 'Backend\Auth\RegisterController@register');
 
+
+    //User Roles
+
+    Route::resource('roles', 'RoleController');
+    Route::resource('users', 'UserController');
+    Route::resource('products', 'ProductController');
+
+
     // Password Reset Routes...
 
     Route::post('password/email', 'Backend\Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');

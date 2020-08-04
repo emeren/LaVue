@@ -1,40 +1,47 @@
 <template>
     <div class="row p-4 postsTopBar">
-        <div class="actions">
-            <a class="btn btn-success btn-sm text-white" href="panel#/post/add">
-                <i class="fas fa-plus"></i> Create
-            </a>
-        </div>
-        <div class="d-flex flex-wrap filters">
-            <div class="form-group search">
-                <label>Search:</label>
-                <input
-                    @keyup="searchByWord"
-                    type="text"
-                    class="form-control"
-                    v-model="filters.search"
-                />
+        <div
+            class="col-lg-12 col-md-12 d-flex  align-items-center justify-items-between"
+        >
+            <div class="actions">
+                <a
+                    class="btn btn-success btn-sm text-white"
+                    href="panel#/post/add"
+                >
+                    <i class="fas fa-plus"></i> Create
+                </a>
             </div>
-            <div class="form-group">
-                <label>Category:</label>
-                <select class="custom-select" @change="changeCategory">
-                    <option :value="null">All</option>
-                    <option
-                        v-for="(category, index) in postsCategories"
-                        :key="index"
-                        :value="category"
-                        >{{ getCategoryName(category) }}</option
-                    >
-                    <option value="0">none</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label>Status:</label>
-                <select class="custom-select" @change="changeStatus">
-                    <option value="all">All</option>
-                    <option value="published">Opublikowane</option>
-                    <option value="unpublished">Nieopublikowane</option>
-                </select>
+            <div class="d-flex flex-wrap filters">
+                <div class="form-group search">
+                    <label>Search:</label>
+                    <input
+                        @keyup="searchByWord"
+                        type="text"
+                        class="form-control"
+                        v-model="filters.search"
+                    />
+                </div>
+                <div class="form-group">
+                    <label>Category:</label>
+                    <select class="custom-select" @change="changeCategory">
+                        <option :value="null">All</option>
+                        <option
+                            v-for="(category, index) in postsCategories"
+                            :key="index"
+                            :value="category"
+                            >{{ getCategoryName(category) }}</option
+                        >
+                        <option value="0">none</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Status:</label>
+                    <select class="custom-select" @change="changeStatus">
+                        <option value="all">All</option>
+                        <option value="published">Opublikowane</option>
+                        <option value="unpublished">Nieopublikowane</option>
+                    </select>
+                </div>
             </div>
         </div>
     </div>

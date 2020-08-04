@@ -1,7 +1,7 @@
 <template>
     <div class="container-fluid">
         <ContentHeader
-            :title="isEditing ? 'Edit post' : 'Create post'"
+            :title="isEditing ? 'Edit user' : 'Create user'"
         ></ContentHeader>
         <div class="row">
             <InfoBox
@@ -77,6 +77,8 @@
 </template>
 
 <script>
+import { mapGetters } from "vuex";
+
 import InfoBox from "../../../components/InfoBox";
 import ContentHeader from "../../../layout/partials/ContentHeader";
 
@@ -85,7 +87,7 @@ import PostMeta from "./PostMeta";
 import PostForm from "./PostForm";
 import PostThumbnail from "./PostThumbnail";
 import PostGallery from "./PostGallery";
-import { mapGetters, mapState } from "vuex";
+
 export default {
     components: {
         InfoBox,

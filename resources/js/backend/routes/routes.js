@@ -1,4 +1,5 @@
-import Users from "../pages/Users";
+import Users from "../pages/users/Users";
+import User from "../pages/users/User";
 import Desktop from "../pages/Desktop";
 
 import Posts from "../pages/posts/Posts";
@@ -11,6 +12,7 @@ import Logs from "../pages/Logs";
 const routes = [
     { path: "/", component: Desktop, name: "dashboard" },
     { path: "/users", component: Users },
+    { path: "/user/:id", component: User, meta: { transitionName: 'slide' } },
 
     //posts
     { path: "/posts", component: Posts, name: "posts" },
