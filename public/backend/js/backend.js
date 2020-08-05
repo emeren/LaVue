@@ -81593,10 +81593,10 @@ var mutations = {
     state.users = users;
   },
   CREATE_USER: function CREATE_USER(state, createdUserData) {
-    var index = state.posts.findIndex(function (user) {
+    var index = state.users.findIndex(function (user) {
       return user.id == createdUserData.id;
     });
-    state.posts.push(index, 1, createdUserData);
+    state.users.push(index, 1, createdUserData);
   },
   UPDATE_USER: function UPDATE_USER(state, updatedUserdata) {
     var index = state.users.findIndex(function (user) {

@@ -37,8 +37,8 @@ const mutations = {
         state.users = users
     },
     CREATE_USER(state, createdUserData) {
-        let index = state.posts.findIndex((user) => user.id == createdUserData.id);
-        state.posts.push(index, 1, createdUserData);
+        let index = state.users.findIndex((user) => user.id == createdUserData.id);
+        state.users.push(index, 1, createdUserData);
     },
     UPDATE_USER(state, updatedUserdata) {
         let index = state.users.findIndex((user) => user.id == updatedUserdata.id);
