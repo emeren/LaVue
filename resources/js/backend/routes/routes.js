@@ -12,6 +12,7 @@ import Logs from "../pages/Logs";
 const routes = [
     { path: "/", component: Desktop, name: "dashboard" },
     { path: "/users", name: "users", component: Users },
+    { path: "/users/add", name: "user-add", component: User, meta: { transitionName: 'slide' } },
     { path: "/user/:id", component: User, meta: { transitionName: 'slide' } },
 
     //posts

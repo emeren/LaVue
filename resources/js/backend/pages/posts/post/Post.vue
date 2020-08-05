@@ -1,7 +1,7 @@
 <template>
     <div class="container-fluid">
         <ContentHeader
-            :title="isEditing ? 'Edit user' : 'Create user'"
+            :title="isEditing ? 'Edit post' : 'Create post'"
         ></ContentHeader>
         <div class="row">
             <InfoBox
@@ -117,16 +117,7 @@ export default {
             }
         };
     },
-    // watch: {
-    //   postData: function(newPost, oldPost) {
-    //     console.log("newval");
-    //     console.log(newPost);
-    //     console.log("old");
-    //     console.log(oldPost);
-    //   }
-    // },
     created() {
-        console.log(this.postData);
         if (this.$route.params.id > 0) {
             this.submitBusttonText = "Update";
             this.pageTitle = "Edycja artykulu";

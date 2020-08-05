@@ -7,7 +7,7 @@
             <div class="col-lg-5 col-md-5 col-sm-12">
                 <!-- Profile Image -->
                 <div class="card card-primary card-outline">
-                    <div class="card-body box-profile" v-if="user">
+                    <div class="card-body box-profile" v-if="isEditing">
                         <div class="text-center">
                             <img
                                 class="profile-user-img img-fluid img-circle"
@@ -70,10 +70,21 @@
                                 />
                             </div>
                             <div class="form-group">
+                                <label for="exampleInputEmail1">Email</label>
+                                <input
+                                    v-model="userData.email"
+                                    type="email"
+                                    name="email"
+                                    class="form-control"
+                                    id="exampleInputEmail1"
+                                    placeholder="Enter email"
+                                />
+                            </div>
+                            <div class="form-group">
                                 <label for="exampleInputFile"
                                     >Avatar 75x75</label
                                 >
-                                <!-- <div class="input-group">
+                                <div class="input-group">
                                     <div class="custom-file">
                                         <input
                                             name="avatar"
@@ -92,7 +103,7 @@
                                             >Upload</span
                                         >
                                     </div>
-                                </div> -->
+                                </div>
                             </div>
                             <div class="form-group">
                                 <label for="InputPassword">New password</label>
@@ -110,12 +121,12 @@
                                     >Repeat password</label
                                 >
                                 <input
-                                    v-model="userData.password"
+                                    v-model="userData.confirmPassword"
                                     type="password"
                                     class="form-control"
                                     id="exampleInputPassword1"
                                     placeholder="Repeat password"
-                                    name="confirm-password"
+                                    name="confirmPassword"
                                 />
                             </div>
                         </div>
@@ -161,7 +172,12 @@ export default {
         };
     },
     created() {
-        this.userData = this.getUser(this.$route.params.id);
+        if (this.$route.params.id > 0) {
+            this.userData = this.getUser(this.$route.params.id);
+            this.isEditing = true;
+        } else {
+            this.isEditing = false;
+        }
     },
     mounted() {
         this.$store.dispatch("users/loadUsers");

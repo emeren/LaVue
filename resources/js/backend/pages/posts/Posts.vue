@@ -91,7 +91,6 @@ export default {
         //TODO check if posts exists
         this.$store.dispatch("posts/loadPosts");
         this.$store.dispatch("categories/loadCategories");
-        console.log();
     },
     data() {
         return {

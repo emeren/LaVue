@@ -21,7 +21,7 @@ const actions = {
     },
     createUser({ commit }, userData) {
         axios.post(usersApi, userData).then(user => {
-            commit("CREATE_POST", user.data);
+            commit("CREATE_USER", user.data);
         });
     },
     updateUser({ commit }, userData) {

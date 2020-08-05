@@ -4,6 +4,16 @@
         <div class="row">
             <ContentColorBox title="Users" bg="blue"></ContentColorBox>
         </div>
+        <div class="row py-5">
+            <div class="col-lg-12 col-sm-12 col-12">
+                <a
+                    class="btn btn-success btn-sm text-white"
+                    href="panel#/users/add"
+                >
+                    <i class="fas fa-plus"></i> Create
+                </a>
+            </div>
+        </div>
         <div class="row">
             <div class="col-lg-12">
                 <div class="card">

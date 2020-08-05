@@ -3586,7 +3586,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     //TODO check if posts exists
     this.$store.dispatch("posts/loadPosts");
     this.$store.dispatch("categories/loadCategories");
-    console.log();
   },
   data: function data() {
     return {
@@ -3977,17 +3976,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       }
     };
   },
-  // watch: {
-  //   postData: function(newPost, oldPost) {
-  //     console.log("newval");
-  //     console.log(newPost);
-  //     console.log("old");
-  //     console.log(oldPost);
-  //   }
-  // },
   created: function created() {
-    console.log(this.postData);
-
     if (this.$route.params.id > 0) {
       this.submitBusttonText = "Update";
       this.pageTitle = "Edycja artykulu";
@@ -4581,6 +4570,17 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -4603,7 +4603,12 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     };
   },
   created: function created() {
-    this.userData = this.getUser(this.$route.params.id);
+    if (this.$route.params.id > 0) {
+      this.userData = this.getUser(this.$route.params.id);
+      this.isEditing = true;
+    } else {
+      this.isEditing = false;
+    }
   },
   mounted: function mounted() {
     this.$store.dispatch("users/loadUsers");
@@ -4663,6 +4668,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_ContentColorBox__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/ContentColorBox */ "./resources/js/backend/components/ContentColorBox.vue");
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_3__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -46894,7 +46909,7 @@ var render = function() {
     { staticClass: "container-fluid" },
     [
       _c("ContentHeader", {
-        attrs: { title: _vm.isEditing ? "Edit user" : "Create user" }
+        attrs: { title: _vm.isEditing ? "Edit post" : "Create post" }
       }),
       _vm._v(" "),
       _c(
@@ -47725,7 +47740,7 @@ var render = function() {
       _c("div", { staticClass: "row py-5 " }, [
         _c("div", { staticClass: "col-lg-5 col-md-5 col-sm-12" }, [
           _c("div", { staticClass: "card card-primary card-outline" }, [
-            _vm.user
+            _vm.isEditing
               ? _c("div", { staticClass: "card-body box-profile" }, [
                   _c("div", { staticClass: "text-center" }, [
                     _c("img", {
@@ -47826,6 +47841,39 @@ var render = function() {
                       })
                     ]),
                     _vm._v(" "),
+                    _c("div", { staticClass: "form-group" }, [
+                      _c("label", { attrs: { for: "exampleInputEmail1" } }, [
+                        _vm._v("Email")
+                      ]),
+                      _vm._v(" "),
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.userData.email,
+                            expression: "userData.email"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: {
+                          type: "email",
+                          name: "email",
+                          id: "exampleInputEmail1",
+                          placeholder: "Enter email"
+                        },
+                        domProps: { value: _vm.userData.email },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(_vm.userData, "email", $event.target.value)
+                          }
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
                     _vm._m(2),
                     _vm._v(" "),
                     _c("div", { staticClass: "form-group" }, [
@@ -47875,8 +47923,8 @@ var render = function() {
                           {
                             name: "model",
                             rawName: "v-model",
-                            value: _vm.userData.password,
-                            expression: "userData.password"
+                            value: _vm.userData.confirmPassword,
+                            expression: "userData.confirmPassword"
                           }
                         ],
                         staticClass: "form-control",
@@ -47884,9 +47932,9 @@ var render = function() {
                           type: "password",
                           id: "exampleInputPassword1",
                           placeholder: "Repeat password",
-                          name: "confirm-password"
+                          name: "confirmPassword"
                         },
-                        domProps: { value: _vm.userData.password },
+                        domProps: { value: _vm.userData.confirmPassword },
                         on: {
                           input: function($event) {
                             if ($event.target.composing) {
@@ -47894,7 +47942,7 @@ var render = function() {
                             }
                             _vm.$set(
                               _vm.userData,
-                              "password",
+                              "confirmPassword",
                               $event.target.value
                             )
                           }
@@ -47958,6 +48006,30 @@ var staticRenderFns = [
     return _c("div", { staticClass: "form-group" }, [
       _c("label", { attrs: { for: "exampleInputFile" } }, [
         _vm._v("Avatar 75x75")
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "input-group" }, [
+        _c("div", { staticClass: "custom-file" }, [
+          _c("input", {
+            staticClass: "custom-file-input",
+            attrs: { name: "avatar", type: "file", id: "exampleInputFile" }
+          }),
+          _vm._v(" "),
+          _c(
+            "label",
+            {
+              staticClass: "custom-file-label",
+              attrs: { for: "exampleInputFile" }
+            },
+            [_vm._v("Choose file")]
+          )
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "input-group-append" }, [
+          _c("span", { staticClass: "input-group-text", attrs: { id: "" } }, [
+            _vm._v("Upload")
+          ])
+        ])
       ])
     ])
   }
@@ -47996,14 +48068,16 @@ var render = function() {
         1
       ),
       _vm._v(" "),
+      _vm._m(0),
+      _vm._v(" "),
       _c("div", { staticClass: "row" }, [
         _c("div", { staticClass: "col-lg-12" }, [
           _c("div", { staticClass: "card" }, [
-            _vm._m(0),
+            _vm._m(1),
             _vm._v(" "),
             _c("div", { staticClass: "card-body p-0" }, [
               _c("table", { staticClass: "table table-striped projects" }, [
-                _vm._m(1),
+                _vm._m(2),
                 _vm._v(" "),
                 _c(
                   "tbody",
@@ -48098,6 +48172,26 @@ var render = function() {
   )
 }
 var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "row py-5" }, [
+      _c("div", { staticClass: "col-lg-12 col-sm-12 col-12" }, [
+        _c(
+          "a",
+          {
+            staticClass: "btn btn-success btn-sm text-white",
+            attrs: { href: "panel#/users/add" }
+          },
+          [
+            _c("i", { staticClass: "fas fa-plus" }),
+            _vm._v(" Create\n            ")
+          ]
+        )
+      ])
+    ])
+  },
   function() {
     var _vm = this
     var _h = _vm.$createElement
@@ -80844,6 +80938,13 @@ var routes = [{
   name: "users",
   component: _pages_users_Users__WEBPACK_IMPORTED_MODULE_0__["default"]
 }, {
+  path: "/users/add",
+  name: "user-add",
+  component: _pages_users_User__WEBPACK_IMPORTED_MODULE_1__["default"],
+  meta: {
+    transitionName: 'slide'
+  }
+}, {
   path: "/user/:id",
   component: _pages_users_User__WEBPACK_IMPORTED_MODULE_1__["default"],
   meta: {
@@ -81476,7 +81577,7 @@ var actions = {
   createUser: function createUser(_ref2, userData) {
     var commit = _ref2.commit;
     axios__WEBPACK_IMPORTED_MODULE_0___default.a.post(usersApi, userData).then(function (user) {
-      commit("CREATE_POST", user.data);
+      commit("CREATE_USER", user.data);
     });
   },
   updateUser: function updateUser(_ref3, userData) {
