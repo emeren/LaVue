@@ -19,8 +19,14 @@ const actions = {
                 commit("LOAD_USERS", users);
             });
     },
+    createUser({ commit }, userData) {
+        axios.post(usersApi, userData).then(user => {
+            commit("CREATE_POST", user.data);
+        });
+    },
     updateUser({ commit }, userData) {
         axios.put(usersApi + userData.id, userData).then(user => {
+            console.log('user', user);
             commit("UPDATE_USER", user.data);
         });
     }
@@ -30,9 +36,13 @@ const mutations = {
     LOAD_USERS(state, users) {
         state.users = users
     },
+    CREATE_USER(state, createdUserData) {
+        let index = state.posts.findIndex((user) => user.id == createdUserData.id);
+        state.posts.push(index, 1, createdUserData);
+    },
     UPDATE_USER(state, updatedUserdata) {
         let index = state.users.findIndex((user) => user.id == updatedUserdata.id);
-        state.user.splice(index, 1, updatedUserdata);
+        state.users.splice(index, 1, updatedUserdata);
     }
 
 };

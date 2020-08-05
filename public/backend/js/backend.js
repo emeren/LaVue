@@ -4581,8 +4581,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
-//
-//
 
 
 
@@ -4620,7 +4618,33 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     userPosts: function userPosts() {
       return this.$store.getters["posts/userPosts"];
     }
-  })
+  }),
+  methods: {
+    formSubmit: function formSubmit() {
+      this.$route.params.id > 0 ? this.updateUser() : this.createUser();
+    },
+    createUser: function createUser() {
+      this.$store.dispatch("users/createUser", this.userData).then(this.$notify({
+        group: "foo-css",
+        title: "Success!",
+        text: "User created",
+        type: "success"
+      }));
+      this.$router.push({
+        name: "users"
+      });
+    },
+    updateUser: function updateUser() {
+      this.$store.dispatch("users/updateUser", this.userData).then(this.$notify({
+        group: "foo-css",
+        title: "Update",
+        text: "User updated",
+        type: "success"
+      }), this.$router.push({
+        name: "users"
+      }));
+    }
+  }
 });
 
 /***/ }),
@@ -47785,10 +47809,10 @@ var render = function() {
                         ],
                         staticClass: "form-control",
                         attrs: {
-                          type: "email",
-                          name: "email",
+                          type: "text",
+                          name: "name",
                           id: "exampleInputEmail1",
-                          placeholder: "Enter email"
+                          placeholder: "Enter name"
                         },
                         domProps: { value: _vm.userData.name },
                         on: {
@@ -47879,7 +47903,26 @@ var render = function() {
                     ])
                   ]),
                   _vm._v(" "),
-                  _vm._m(3)
+                  _c("div", { staticClass: "card-footer" }, [
+                    _c(
+                      "button",
+                      {
+                        staticClass: "btn btn-primary",
+                        attrs: { type: "submit" },
+                        on: {
+                          click: function($event) {
+                            $event.preventDefault()
+                            return _vm.formSubmit()
+                          }
+                        }
+                      },
+                      [
+                        _vm._v(
+                          "\n                            Submit\n                        "
+                        )
+                      ]
+                    )
+                  ])
                 ])
               ])
             ])
@@ -47915,50 +47958,7 @@ var staticRenderFns = [
     return _c("div", { staticClass: "form-group" }, [
       _c("label", { attrs: { for: "exampleInputFile" } }, [
         _vm._v("Avatar 75x75")
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "input-group" }, [
-        _c("div", { staticClass: "custom-file" }, [
-          _c("input", {
-            staticClass: "custom-file-input",
-            attrs: { name: "avatar", type: "file", id: "exampleInputFile" }
-          }),
-          _vm._v(" "),
-          _c(
-            "label",
-            {
-              staticClass: "custom-file-label",
-              attrs: { for: "exampleInputFile" }
-            },
-            [_vm._v("Choose file")]
-          )
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "input-group-append" }, [
-          _c("span", { staticClass: "input-group-text", attrs: { id: "" } }, [
-            _vm._v("Upload")
-          ])
-        ])
       ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "card-footer" }, [
-      _c(
-        "button",
-        {
-          staticClass: "btn btn-primary",
-          attrs: { type: "submit", onSubmit: "{}" }
-        },
-        [
-          _vm._v(
-            "\n                            Submit\n                        "
-          )
-        ]
-      )
     ])
   }
 ]
@@ -80841,6 +80841,7 @@ var routes = [{
   name: "dashboard"
 }, {
   path: "/users",
+  name: "users",
   component: _pages_users_Users__WEBPACK_IMPORTED_MODULE_0__["default"]
 }, {
   path: "/user/:id",
@@ -81472,9 +81473,16 @@ var actions = {
       commit("LOAD_USERS", users);
     });
   },
-  updateUser: function updateUser(_ref2, userData) {
+  createUser: function createUser(_ref2, userData) {
     var commit = _ref2.commit;
+    axios__WEBPACK_IMPORTED_MODULE_0___default.a.post(usersApi, userData).then(function (user) {
+      commit("CREATE_POST", user.data);
+    });
+  },
+  updateUser: function updateUser(_ref3, userData) {
+    var commit = _ref3.commit;
     axios__WEBPACK_IMPORTED_MODULE_0___default.a.put(usersApi + userData.id, userData).then(function (user) {
+      console.log('user', user);
       commit("UPDATE_USER", user.data);
     });
   }
@@ -81483,11 +81491,17 @@ var mutations = {
   LOAD_USERS: function LOAD_USERS(state, users) {
     state.users = users;
   },
+  CREATE_USER: function CREATE_USER(state, createdUserData) {
+    var index = state.posts.findIndex(function (user) {
+      return user.id == createdUserData.id;
+    });
+    state.posts.push(index, 1, createdUserData);
+  },
   UPDATE_USER: function UPDATE_USER(state, updatedUserdata) {
     var index = state.users.findIndex(function (user) {
       return user.id == updatedUserdata.id;
     });
-    state.user.splice(index, 1, updatedUserdata);
+    state.users.splice(index, 1, updatedUserdata);
   }
 };
 /* harmony default export */ __webpack_exports__["default"] = ({

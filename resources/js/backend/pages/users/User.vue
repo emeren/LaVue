@@ -59,23 +59,21 @@
                     <form role="form">
                         <div class="card-body">
                             <div class="form-group">
-                                <label for="exampleInputEmail1"
-                                    >Name</label
-                                >
+                                <label for="exampleInputEmail1">Name</label>
                                 <input
                                     v-model="userData.name"
-                                    type="email"
-                                    name="email"
+                                    type="text"
+                                    name="name"
                                     class="form-control"
                                     id="exampleInputEmail1"
-                                    placeholder="Enter email"
+                                    placeholder="Enter name"
                                 />
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputFile"
                                     >Avatar 75x75</label
                                 >
-                                <div class="input-group">
+                                <!-- <div class="input-group">
                                     <div class="custom-file">
                                         <input
                                             name="avatar"
@@ -94,7 +92,7 @@
                                             >Upload</span
                                         >
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                             <div class="form-group">
                                 <label for="InputPassword">New password</label>
@@ -127,7 +125,7 @@
                             <button
                                 type="submit"
                                 class="btn btn-primary"
-                                onSubmit="{}"
+                                @click.prevent="formSubmit()"
                             >
                                 Submit
                             </button>
@@ -178,6 +176,33 @@ export default {
         },
         userPosts() {
             return this.$store.getters["posts/userPosts"];
+        }
+    },
+    methods: {
+        formSubmit() {
+            this.$route.params.id > 0 ? this.updateUser() : this.createUser();
+        },
+        createUser() {
+            this.$store.dispatch("users/createUser", this.userData).then(
+                this.$notify({
+                    group: "foo-css",
+                    title: "Success!",
+                    text: "User created",
+                    type: "success"
+                })
+            );
+            this.$router.push({ name: "users" });
+        },
+        updateUser() {
+            this.$store.dispatch("users/updateUser", this.userData).then(
+                this.$notify({
+                    group: "foo-css",
+                    title: "Update",
+                    text: "User updated",
+                    type: "success"
+                }),
+                this.$router.push({ name: "users" })
+            );
         }
     }
 };

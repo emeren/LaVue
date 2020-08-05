@@ -11,7 +11,7 @@ import Logs from "../pages/Logs";
 
 const routes = [
     { path: "/", component: Desktop, name: "dashboard" },
-    { path: "/users", component: Users },
+    { path: "/users", name: "users", component: Users },
     { path: "/user/:id", component: User, meta: { transitionName: 'slide' } },
 
     //posts
