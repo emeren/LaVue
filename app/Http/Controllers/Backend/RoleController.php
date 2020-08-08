@@ -1,13 +1,15 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Backend;
 
 
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Spatie\Permission\Models\Role;
+use Illuminate\Http\Request;
 use Spatie\Permission\Models\Permission;
 use DB;
+
+use Spatie\Permission\Models\Role;
+use App\Http\Resources\RolesResource;
 
 class RoleController extends Controller
 {
@@ -32,8 +34,7 @@ class RoleController extends Controller
     public function index(Request $request)
     {
         $roles = Role::orderBy('id', 'DESC')->paginate(5);
-        return view('roles.index', compact('roles'))
-            ->with('i', ($request->input('page', 1) - 1) * 5);
+        return RolesResource::collection($roles);
     }
 
     /**
@@ -43,7 +44,7 @@ class RoleController extends Controller
      */
     public function create()
     {
-        $permission = Permission::get();
+
         return view('roles.create', compact('permission'));
     }
 
@@ -110,14 +111,14 @@ class RoleController extends Controller
     {
         $this->validate($request, [
             'name' => 'required',
-            'permission' => 'required',
+            'permissions' => 'required',
         ]);
 
         $role = Role::find($id);
         $role->name = $request->input('name');
         $role->save();
 
-        $role->syncPermissions($request->input('permission'));
+        $role->syncPermissions($request->input('permissions'));
 
         return redirect()->route('roles.index')
             ->with('success', 'Role updated successfully');

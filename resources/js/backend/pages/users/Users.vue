@@ -27,6 +27,7 @@
                                     <th style="width: 1%"></th>
                                     <th style="width: 20%">Name</th>
                                     <th style="width: 30%">Email</th>
+                                    <th>Roles</th>
                                     <th>Posts</th>
                                     <th style="width: 20%"></th>
                                 </tr>
@@ -52,6 +53,13 @@
                                     </td>
                                     <td>
                                         <a>{{ user.email }}</a>
+                                    </td>
+                                    <td>
+                                        <a>{{
+                                            user.roles
+                                                ? Object.keys(user.roles)
+                                                : ""
+                                        }}</a>
                                     </td>
                                     <td class="project_progress">
                                         <div class="progress progress-sm">

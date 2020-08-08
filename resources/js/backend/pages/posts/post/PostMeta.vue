@@ -65,6 +65,9 @@ export default {
             setCategory: []
         };
     },
+    created() {
+        console.log("postData", this.postData);
+    },
     computed: {
         ...mapGetters("posts", ["activePostsCategories"]),
         ...mapGetters("categories", ["getUniqeCats"]),

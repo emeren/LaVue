@@ -7,12 +7,12 @@
             <div class="col-lg-5 col-md-5 col-sm-12">
                 <!-- Profile Image -->
                 <div class="card card-primary card-outline">
-                    <div class="card-body box-profile" v-if="isEditing">
+                    <div class="card-body box-profile" v-if="isEditing && user">
                         <div class="text-center">
                             <img
                                 class="profile-user-img img-fluid img-circle"
                                 :src="
-                                    `https://api.adorable.io/avatars/285/${user.id}@adorable.png`
+                                    `https://api.adorable.io/avatars/285/1@adorable.png`
                                 "
                                 alt="User profile picture"
                             />
@@ -143,6 +143,59 @@
                         </div>
                     </form>
                 </div>
+                <div class="card card-primary" v-if="roles">
+                    <div class="card-header">
+                        <h3 class="card-title">Change User Roles</h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <!-- form start -->
+                    <form role="form">
+                        <div class="card-body">
+                            <div class="form-group">
+                                <div>
+                                    <div
+                                        class="chiller_cb"
+                                        v-for="(role, index) in roles"
+                                        :key="index"
+                                    >
+                                        <input
+                                            v-if="user.roles.length > 0"
+                                            :id="'cat' + index"
+                                            type="checkbox"
+                                            :value="role.id"
+                                            v-model="userData.roles"
+                                            @change="handleRolesChange"
+                                        />
+
+                                        <input
+                                            v-else
+                                            :id="'cat' + index"
+                                            type="checkbox"
+                                            :value="role.id"
+                                            v-model="userData.roles"
+                                            @change="handleRolesChange"
+                                        />
+                                        <label :for="'cat' + role.id">
+                                            {{ role.name }}
+                                        </label>
+                                        <span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.card-body -->
+
+                        <div class="card-footer">
+                            <button
+                                type="submit"
+                                class="btn btn-primary"
+                                @click.prevent="formSubmit()"
+                            >
+                                Submit
+                            </button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
@@ -181,17 +234,21 @@ export default {
     },
     mounted() {
         this.$store.dispatch("users/loadUsers");
+        this.$store.dispatch("roles/loadRoles");
     },
     computed: {
         ...mapGetters("users", ["getUser"]),
+        ...mapGetters("roles", ["getRoles"]),
         user() {
-            console.log("this.$store", this.getUser(this.$route.params.id));
             let user = this.getUser(this.$route.params.id);
             this.userData = user;
             return user;
         },
         userPosts() {
             return this.$store.getters["posts/userPosts"];
+        },
+        roles() {
+            return this.$store.getters["roles/getRoles"];
         }
     },
     methods: {
@@ -219,6 +276,9 @@ export default {
                 }),
                 this.$router.push({ name: "users" })
             );
+        },
+        handleRolesChange() {
+            console.log("e", e);
         }
     }
 };

@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers\Backend;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use DB;
-use App\Http\Controllers\Controller;
+use Spatie\Permission\Models\Role;
 use App\Http\Resources\UsersResource;
 use App\User;
 use Illuminate\Http\Request;
+
 
 class UserController extends Controller
 {
@@ -29,6 +31,8 @@ class UserController extends Controller
      */
     public function create()
     {
+        $roles = Role::pluck('name', 'name')->all();
+        return view('users.create', compact('roles'));
     }
 
     /**
@@ -43,6 +47,7 @@ class UserController extends Controller
             'name' => 'required',
             'email' => 'required|email|unique:users,email',
             'password' => 'required|same:confirmPassword',
+            'roles' => 'required'
         ]);
 
         $input = $request->all();
@@ -51,37 +56,12 @@ class UserController extends Controller
         $user = User::create($input);
         $user->assignRole($request->input('roles'));
 
-        // return UsersResource::make($user);
         if ($user) {
             return response()->make(UsersResource::make($user), 201);
         } else {
             return response()->json(['Error' => 'Failed to store record'], 500);
         }
-        //
     }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\User  $user
-     * @return \Illuminate\Http\Response
-     */
-    public function show(User $user)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\User  $user
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(User $user)
-    {
-        //
-    }
-
     /**
      * Update the specified resource in storage.
      *
@@ -95,6 +75,7 @@ class UserController extends Controller
             'name' => 'required',
             'email' => 'required|email|unique:users,email,' . $userId,
             'password' => 'same:confirm-password',
+            'roles' => 'required'
         ]);
 
         $input = $request->all();
