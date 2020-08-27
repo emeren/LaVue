@@ -7,7 +7,7 @@
             <div class="col-lg-5 col-md-5 col-sm-12">
                 <!-- Profile Image -->
                 <div class="card card-primary card-outline">
-                    <div class="card-body box-profile" v-if="isEditing && user">
+                    <div class="card-body box-profile" v-if="userData">
                         <div class="text-center">
                             <img
                                 class="profile-user-img img-fluid img-circle"
@@ -19,40 +19,63 @@
                         </div>
 
                         <h3 class="profile-username text-center">
-                            {{ user.name }}
+                            {{ userData.name }}
                         </h3>
 
-                        <p class="text-muted text-center" v-if="user.email">
-                            {{ user.email }}
+                        <p class="text-muted text-center" v-if="userData.email">
+                            {{ userData.email }}
                         </p>
-
-                        <ul class="list-group list-group-unbordered mb-3">
-                            <li class="list-group-item">
-                                <b>Posts</b>
-                                <a class="float-right">{{
-                                    user.posts.length
-                                }}</a>
-                            </li>
-                            <li class="list-group-item">
-                                <b>Posts</b>
-                                <a class="float-right">{{
-                                    user.posts.length
-                                }}</a>
-                            </li>
-                        </ul>
-
-                        <a href="#" class="btn btn-primary btn-block"
-                            ><b>Send message</b></a
-                        >
                     </div>
+
                     <!-- /.card-body -->
                 </div>
                 <!-- /.card -->
+
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">User posts</h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body p-0">
+                        <ul
+                            class="products-list product-list-in-card pl-2 pr-2"
+                        >
+                            <li
+                                class="item"
+                                v-for="post in posts"
+                                :key="post.id"
+                            >
+                                <div class="product-img">
+                                    <img
+                                        alt="Avatar"
+                                        class="thumbnail"
+                                        :src="
+                                            `https://picsum.photos/${post.id}`
+                                        "
+                                    />
+                                </div>
+                                <div class="product-info">
+                                    <a
+                                        href="javascript:void(0)"
+                                        class="product-title"
+                                        >{{ post.title }}
+                                        >
+                                        <span
+                                            class="product-description"
+                                            v-html="post.description"
+                                        >
+                                        </span>
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
             <div class="col-lg-7 col-md-7 col-dm-12" v-if="userData">
                 <div class="card card-primary">
                     <div class="card-header">
-                        <h3 class="card-title">Change User Data</h3>
+                        <h3 class="card-title">Change userData Data</h3>
                     </div>
                     <!-- /.card-header -->
                     <!-- form start -->
@@ -129,53 +152,32 @@
                                     name="confirmPassword"
                                 />
                             </div>
-                        </div>
-                        <!-- /.card-body -->
-
-                        <div class="card-footer">
-                            <button
-                                type="submit"
-                                class="btn btn-primary"
-                                @click.prevent="formSubmit()"
-                            >
-                                Submit
-                            </button>
-                        </div>
-                    </form>
-                </div>
-                <div class="card card-primary" v-if="roles">
-                    <div class="card-header">
-                        <h3 class="card-title">Change User Roles</h3>
-                    </div>
-                    <!-- /.card-header -->
-                    <!-- form start -->
-                    <form role="form">
-                        <div class="card-body">
                             <div class="form-group">
+                                <label for="ConfirmPassword"
+                                    >Manage roles</label
+                                >
                                 <div>
                                     <div
                                         class="chiller_cb"
-                                        v-for="(role, index) in roles"
-                                        :key="index"
+                                        v-for="role in roles"
+                                        :key="role.id"
                                     >
                                         <input
-                                            v-if="user.roles.length > 0"
-                                            :id="'cat' + index"
+                                            v-if="userData.roles.length"
+                                            :id="'role' + role.id"
                                             type="checkbox"
                                             :value="role.id"
                                             v-model="userData.roles"
-                                            @change="handleRolesChange"
                                         />
 
                                         <input
                                             v-else
-                                            :id="'cat' + index"
+                                            :id="'role' + role.id"
                                             type="checkbox"
                                             :value="role.id"
                                             v-model="userData.roles"
-                                            @change="handleRolesChange"
                                         />
-                                        <label :for="'cat' + role.id">
+                                        <label :for="'role' + role.id">
                                             {{ role.name }}
                                         </label>
                                         <span></span>
@@ -220,35 +222,38 @@ export default {
                 password: "",
                 confirmPassword: "",
                 created_at: "",
+                roles: [],
                 updated_at: ""
             }
         };
     },
+    beforeCreate() {
+        this.$store.dispatch("users/loadUsers");
+        this.$store.dispatch("roles/loadRoles");
+    },
     created() {
         if (this.$route.params.id > 0) {
-            this.userData = this.getUser(this.$route.params.id);
+            const user = this.singleUser(this.$route.params.id);
+            this.userData = user;
+            console.log("user123", user);
             this.isEditing = true;
         } else {
             this.isEditing = false;
         }
     },
-    mounted() {
-        this.$store.dispatch("users/loadUsers");
-        this.$store.dispatch("roles/loadRoles");
-    },
     computed: {
-        ...mapGetters("users", ["getUser"]),
+        ...mapGetters("users", ["singleUser"]),
+        ...mapGetters("users", ["userPosts"]),
         ...mapGetters("roles", ["getRoles"]),
-        user() {
-            let user = this.getUser(this.$route.params.id);
-            this.userData = user;
-            return user;
-        },
-        userPosts() {
-            return this.$store.getters["posts/userPosts"];
-        },
         roles() {
             return this.$store.getters["roles/getRoles"];
+        },
+        user() {
+            return this.userData;
+        },
+        posts() {
+            let posts = this.userPosts(this.$route.params.id);
+            return posts;
         }
     },
     methods: {
@@ -276,9 +281,6 @@ export default {
                 }),
                 this.$router.push({ name: "users" })
             );
-        },
-        handleRolesChange() {
-            console.log("e", e);
         }
     }
 };

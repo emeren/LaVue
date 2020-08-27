@@ -34,8 +34,8 @@ Route::group(['prefix' => 'panel'], function () {
     //User Roles
 
     // Route::resource('roles', 'RoleController');
-    Route::resource('users', 'UserController');
-    Route::resource('products', 'ProductController');
+    // Route::resource('users', 'UserController');
+    // Route::resource('products', 'ProductController');
 
 
     // Password Reset Routes...

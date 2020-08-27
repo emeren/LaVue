@@ -4345,8 +4345,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
@@ -4371,8 +4369,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     }
   }),
   methods: {
-    categoryChange: function categoryChange(e) {// console.log(e.target.value);
-    },
     isChecked: function isChecked(catId) {
       var usedCats = this.activePostsCategories.map(function (uC) {
         return uC.id;
@@ -4538,8 +4534,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
-//
-//
 
 
 
@@ -4557,18 +4551,16 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       }
     };
   },
+  beforeCreate: function beforeCreate() {
+    this.$store.dispatch("roles/loadRoles");
+  },
   created: function created() {
     if (this.$route.params.id > 0) {
       this.roleData = this.getRole(this.$route.params.id);
-      console.log("roleData", this.roleData);
-      this.isEditing = true;
-    } else {
-      this.isEditing = false;
     }
   },
   computed: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapGetters"])("roles", ["getRole"]), {
     permissions: function permissions() {
-      console.log("this.$store", this.$store);
       return this.$store.getters["permissions/getPermissions"];
     }
   }),
@@ -4590,6 +4582,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       }));
     },
     createPost: function createPost() {
+      console.log("this.roleData", this.roleData);
       this.$store.dispatch("roles/createRole", this.roleData).then(this.$notify({
         group: "foo-css",
         title: "Success!",
@@ -4935,6 +4928,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
 
 
 
@@ -4952,33 +4947,35 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         password: "",
         confirmPassword: "",
         created_at: "",
+        roles: [],
         updated_at: ""
       }
     };
   },
+  beforeCreate: function beforeCreate() {
+    this.$store.dispatch("users/loadUsers");
+    this.$store.dispatch("roles/loadRoles");
+  },
   created: function created() {
     if (this.$route.params.id > 0) {
-      this.userData = this.getUser(this.$route.params.id);
+      var user = this.singleUser(this.$route.params.id);
+      this.userData = user;
+      console.log("user123", user);
       this.isEditing = true;
     } else {
       this.isEditing = false;
     }
   },
-  mounted: function mounted() {
-    this.$store.dispatch("users/loadUsers");
-    this.$store.dispatch("roles/loadRoles");
-  },
-  computed: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapGetters"])("users", ["getUser"]), {}, Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapGetters"])("roles", ["getRoles"]), {
-    user: function user() {
-      var user = this.getUser(this.$route.params.id);
-      this.userData = user;
-      return user;
-    },
-    userPosts: function userPosts() {
-      return this.$store.getters["posts/userPosts"];
-    },
+  computed: _objectSpread({}, Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapGetters"])("users", ["singleUser"]), {}, Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapGetters"])("users", ["userPosts"]), {}, Object(vuex__WEBPACK_IMPORTED_MODULE_0__["mapGetters"])("roles", ["getRoles"]), {
     roles: function roles() {
       return this.$store.getters["roles/getRoles"];
+    },
+    user: function user() {
+      return this.userData;
+    },
+    posts: function posts() {
+      var posts = this.userPosts(this.$route.params.id);
+      return posts;
     }
   }),
   methods: {
@@ -5005,9 +5002,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       }), this.$router.push({
         name: "users"
       }));
-    },
-    handleRolesChange: function handleRolesChange() {
-      console.log("e", e);
     }
   }
 });
@@ -5136,6 +5130,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 
 
 
@@ -5151,6 +5148,7 @@ __webpack_require__.r(__webpack_exports__);
   computed: {
     allUsers: function allUsers() {
       console.log("this.$store", this.$store);
+      console.log('this.$store.getters["users/getUsers"];', this.$store.getters["users/getUsers"]);
       return this.$store.getters["users/getUsers"];
     },
     postsCount: function postsCount() {
@@ -5160,7 +5158,7 @@ __webpack_require__.r(__webpack_exports__);
     }
   },
   methods: {
-    userPostuserPercentage: function userPostuserPercentage(userPostsLength) {
+    userPostUserPercentage: function userPostUserPercentage(userPostsLength) {
       var allPostsCount = this.allUsers.reduce(function (acc, cur) {
         return acc + cur.posts.length;
       }, 0);
@@ -47881,8 +47879,8 @@ var render = function() {
       _c("div", { staticClass: "form-group" }, [
         _c(
           "div",
-          _vm._l(_vm.categories, function(category, index) {
-            return _c("div", { key: index, staticClass: "chiller_cb" }, [
+          _vm._l(_vm.categories, function(category) {
+            return _c("div", { key: category.id, staticClass: "chiller_cb" }, [
               _vm.postData.categories.length
                 ? _c("input", {
                     directives: [
@@ -47901,35 +47899,32 @@ var render = function() {
                         : _vm.postData.categories
                     },
                     on: {
-                      change: [
-                        function($event) {
-                          var $$a = _vm.postData.categories,
-                            $$el = $event.target,
-                            $$c = $$el.checked ? true : false
-                          if (Array.isArray($$a)) {
-                            var $$v = category.id,
-                              $$i = _vm._i($$a, $$v)
-                            if ($$el.checked) {
-                              $$i < 0 &&
-                                _vm.$set(
-                                  _vm.postData,
-                                  "categories",
-                                  $$a.concat([$$v])
-                                )
-                            } else {
-                              $$i > -1 &&
-                                _vm.$set(
-                                  _vm.postData,
-                                  "categories",
-                                  $$a.slice(0, $$i).concat($$a.slice($$i + 1))
-                                )
-                            }
+                      change: function($event) {
+                        var $$a = _vm.postData.categories,
+                          $$el = $event.target,
+                          $$c = $$el.checked ? true : false
+                        if (Array.isArray($$a)) {
+                          var $$v = category.id,
+                            $$i = _vm._i($$a, $$v)
+                          if ($$el.checked) {
+                            $$i < 0 &&
+                              _vm.$set(
+                                _vm.postData,
+                                "categories",
+                                $$a.concat([$$v])
+                              )
                           } else {
-                            _vm.$set(_vm.postData, "categories", $$c)
+                            $$i > -1 &&
+                              _vm.$set(
+                                _vm.postData,
+                                "categories",
+                                $$a.slice(0, $$i).concat($$a.slice($$i + 1))
+                              )
                           }
-                        },
-                        _vm.categoryChange
-                      ]
+                        } else {
+                          _vm.$set(_vm.postData, "categories", $$c)
+                        }
+                      }
                     }
                   })
                 : _c("input", {
@@ -47949,35 +47944,32 @@ var render = function() {
                         : _vm.postData.categories
                     },
                     on: {
-                      change: [
-                        function($event) {
-                          var $$a = _vm.postData.categories,
-                            $$el = $event.target,
-                            $$c = $$el.checked ? true : false
-                          if (Array.isArray($$a)) {
-                            var $$v = category.id,
-                              $$i = _vm._i($$a, $$v)
-                            if ($$el.checked) {
-                              $$i < 0 &&
-                                _vm.$set(
-                                  _vm.postData,
-                                  "categories",
-                                  $$a.concat([$$v])
-                                )
-                            } else {
-                              $$i > -1 &&
-                                _vm.$set(
-                                  _vm.postData,
-                                  "categories",
-                                  $$a.slice(0, $$i).concat($$a.slice($$i + 1))
-                                )
-                            }
+                      change: function($event) {
+                        var $$a = _vm.postData.categories,
+                          $$el = $event.target,
+                          $$c = $$el.checked ? true : false
+                        if (Array.isArray($$a)) {
+                          var $$v = category.id,
+                            $$i = _vm._i($$a, $$v)
+                          if ($$el.checked) {
+                            $$i < 0 &&
+                              _vm.$set(
+                                _vm.postData,
+                                "categories",
+                                $$a.concat([$$v])
+                              )
                           } else {
-                            _vm.$set(_vm.postData, "categories", $$c)
+                            $$i > -1 &&
+                              _vm.$set(
+                                _vm.postData,
+                                "categories",
+                                $$a.slice(0, $$i).concat($$a.slice($$i + 1))
+                              )
                           }
-                        },
-                        _vm.categoryChange
-                      ]
+                        } else {
+                          _vm.$set(_vm.postData, "categories", $$c)
+                        }
+                      }
                     }
                   }),
               _vm._v(" "),
@@ -48114,201 +48106,171 @@ var render = function() {
         _vm._v(" "),
         _c("form", { attrs: { role: "form" } }, [
           _c("div", { staticClass: "card-body" }, [
-            _vm.isEditing
-              ? _c("div", { staticClass: "form-group" }, [
-                  _c("label", { attrs: { for: "exampleInputEmail1" } }, [
-                    _vm._v("Name")
-                  ]),
-                  _vm._v(" "),
-                  _c("input", {
-                    directives: [
-                      {
-                        name: "model",
-                        rawName: "v-model",
-                        value: _vm.roleData.name,
-                        expression: "roleData.name"
-                      }
-                    ],
-                    staticClass: "form-control",
-                    attrs: {
-                      type: "text",
-                      name: "name",
-                      id: "exampleInputEmail1",
-                      placeholder: "Enter name"
-                    },
-                    domProps: { value: _vm.roleData.name },
-                    on: {
-                      input: function($event) {
-                        if ($event.target.composing) {
-                          return
-                        }
-                        _vm.$set(_vm.roleData, "name", $event.target.value)
-                      }
+            _c("div", { staticClass: "form-group" }, [
+              _c("label", { attrs: { for: "exampleInputEmail1" } }, [
+                _vm._v("Name")
+              ]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.roleData.name,
+                    expression: "roleData.name"
+                  }
+                ],
+                staticClass: "form-control",
+                attrs: {
+                  type: "text",
+                  name: "name",
+                  id: "exampleInputEmail1",
+                  placeholder: "Enter name"
+                },
+                domProps: { value: _vm.roleData.name },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
                     }
-                  })
-                ])
-              : _vm._e(),
+                    _vm.$set(_vm.roleData, "name", $event.target.value)
+                  }
+                }
+              })
+            ]),
             _vm._v(" "),
-            _vm.isEditing
-              ? _c("div", { staticClass: "form-group" }, [
-                  _c(
+            _c("div", { staticClass: "form-group" }, [
+              _c(
+                "div",
+                _vm._l(_vm.permissions, function(permission) {
+                  return _c(
                     "div",
-                    _vm._l(_vm.permissions, function(permission) {
-                      return _c(
-                        "div",
-                        { key: permission.id, staticClass: "chiller_cb" },
-                        [
-                          _vm.roleData.permissions.length
-                            ? _c("input", {
-                                directives: [
-                                  {
-                                    name: "model",
-                                    rawName: "v-model",
-                                    value: _vm.roleData.permissions,
-                                    expression: "roleData.permissions"
+                    { key: permission.id, staticClass: "chiller_cb" },
+                    [
+                      _vm.roleData.permissions.length
+                        ? _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.roleData.permissions,
+                                expression: "roleData.permissions"
+                              }
+                            ],
+                            attrs: {
+                              id: "cat" + permission.id,
+                              type: "checkbox",
+                              checked: ""
+                            },
+                            domProps: {
+                              value: permission.id,
+                              checked: Array.isArray(_vm.roleData.permissions)
+                                ? _vm._i(
+                                    _vm.roleData.permissions,
+                                    permission.id
+                                  ) > -1
+                                : _vm.roleData.permissions
+                            },
+                            on: {
+                              change: function($event) {
+                                var $$a = _vm.roleData.permissions,
+                                  $$el = $event.target,
+                                  $$c = $$el.checked ? true : false
+                                if (Array.isArray($$a)) {
+                                  var $$v = permission.id,
+                                    $$i = _vm._i($$a, $$v)
+                                  if ($$el.checked) {
+                                    $$i < 0 &&
+                                      _vm.$set(
+                                        _vm.roleData,
+                                        "permissions",
+                                        $$a.concat([$$v])
+                                      )
+                                  } else {
+                                    $$i > -1 &&
+                                      _vm.$set(
+                                        _vm.roleData,
+                                        "permissions",
+                                        $$a
+                                          .slice(0, $$i)
+                                          .concat($$a.slice($$i + 1))
+                                      )
                                   }
-                                ],
-                                attrs: {
-                                  id: "cat" + permission.id,
-                                  type: "checkbox",
-                                  checked: ""
-                                },
-                                domProps: {
-                                  value: permission.id,
-                                  checked: Array.isArray(
-                                    _vm.roleData.permissions
-                                  )
-                                    ? _vm._i(
-                                        _vm.roleData.permissions,
-                                        permission.id
-                                      ) > -1
-                                    : _vm.roleData.permissions
-                                },
-                                on: {
-                                  change: [
-                                    function($event) {
-                                      var $$a = _vm.roleData.permissions,
-                                        $$el = $event.target,
-                                        $$c = $$el.checked ? true : false
-                                      if (Array.isArray($$a)) {
-                                        var $$v = permission.id,
-                                          $$i = _vm._i($$a, $$v)
-                                        if ($$el.checked) {
-                                          $$i < 0 &&
-                                            _vm.$set(
-                                              _vm.roleData,
-                                              "permissions",
-                                              $$a.concat([$$v])
-                                            )
-                                        } else {
-                                          $$i > -1 &&
-                                            _vm.$set(
-                                              _vm.roleData,
-                                              "permissions",
-                                              $$a
-                                                .slice(0, $$i)
-                                                .concat($$a.slice($$i + 1))
-                                            )
-                                        }
-                                      } else {
-                                        _vm.$set(
-                                          _vm.roleData,
-                                          "permissions",
-                                          $$c
-                                        )
-                                      }
-                                    },
-                                    function($event) {
-                                      return _vm.handlePermissionChange($event)
-                                    }
-                                  ]
+                                } else {
+                                  _vm.$set(_vm.roleData, "permissions", $$c)
                                 }
-                              })
-                            : _c("input", {
-                                directives: [
-                                  {
-                                    name: "model",
-                                    rawName: "v-model",
-                                    value: _vm.roleData.permissions,
-                                    expression: "roleData.permissions"
+                              }
+                            }
+                          })
+                        : _c("input", {
+                            directives: [
+                              {
+                                name: "model",
+                                rawName: "v-model",
+                                value: _vm.roleData.permissions,
+                                expression: "roleData.permissions"
+                              }
+                            ],
+                            attrs: {
+                              id: "cat" + permission.id,
+                              type: "checkbox"
+                            },
+                            domProps: {
+                              value: permission.id,
+                              checked: Array.isArray(_vm.roleData.permissions)
+                                ? _vm._i(
+                                    _vm.roleData.permissions,
+                                    permission.id
+                                  ) > -1
+                                : _vm.roleData.permissions
+                            },
+                            on: {
+                              change: function($event) {
+                                var $$a = _vm.roleData.permissions,
+                                  $$el = $event.target,
+                                  $$c = $$el.checked ? true : false
+                                if (Array.isArray($$a)) {
+                                  var $$v = permission.id,
+                                    $$i = _vm._i($$a, $$v)
+                                  if ($$el.checked) {
+                                    $$i < 0 &&
+                                      _vm.$set(
+                                        _vm.roleData,
+                                        "permissions",
+                                        $$a.concat([$$v])
+                                      )
+                                  } else {
+                                    $$i > -1 &&
+                                      _vm.$set(
+                                        _vm.roleData,
+                                        "permissions",
+                                        $$a
+                                          .slice(0, $$i)
+                                          .concat($$a.slice($$i + 1))
+                                      )
                                   }
-                                ],
-                                attrs: {
-                                  id: "cat" + permission.id,
-                                  type: "checkbox"
-                                },
-                                domProps: {
-                                  value: permission.id,
-                                  checked: Array.isArray(
-                                    _vm.roleData.permissions
-                                  )
-                                    ? _vm._i(
-                                        _vm.roleData.permissions,
-                                        permission.id
-                                      ) > -1
-                                    : _vm.roleData.permissions
-                                },
-                                on: {
-                                  change: [
-                                    function($event) {
-                                      var $$a = _vm.roleData.permissions,
-                                        $$el = $event.target,
-                                        $$c = $$el.checked ? true : false
-                                      if (Array.isArray($$a)) {
-                                        var $$v = permission.id,
-                                          $$i = _vm._i($$a, $$v)
-                                        if ($$el.checked) {
-                                          $$i < 0 &&
-                                            _vm.$set(
-                                              _vm.roleData,
-                                              "permissions",
-                                              $$a.concat([$$v])
-                                            )
-                                        } else {
-                                          $$i > -1 &&
-                                            _vm.$set(
-                                              _vm.roleData,
-                                              "permissions",
-                                              $$a
-                                                .slice(0, $$i)
-                                                .concat($$a.slice($$i + 1))
-                                            )
-                                        }
-                                      } else {
-                                        _vm.$set(
-                                          _vm.roleData,
-                                          "permissions",
-                                          $$c
-                                        )
-                                      }
-                                    },
-                                    function($event) {
-                                      return _vm.handlePermissionChange($event)
-                                    }
-                                  ]
+                                } else {
+                                  _vm.$set(_vm.roleData, "permissions", $$c)
                                 }
-                              }),
-                          _vm._v(" "),
-                          _c(
-                            "label",
-                            { attrs: { for: "cat" + permission.id } },
-                            [
-                              _vm._v(
-                                "\n                                " +
-                                  _vm._s(permission.name) +
-                                  "\n                            "
-                              )
-                            ]
-                          ),
-                          _vm._v(" "),
-                          _c("span")
-                        ]
-                      )
-                    }),
-                    0
+                              }
+                            }
+                          }),
+                      _vm._v(" "),
+                      _c("label", { attrs: { for: "cat" + permission.id } }, [
+                        _vm._v(
+                          "\n                                " +
+                            _vm._s(permission.name) +
+                            "\n                            "
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("span")
+                    ]
                   )
-                ])
-              : _vm._e()
+                }),
+                0
+              )
+            ])
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "card-footer" }, [
@@ -48339,7 +48301,7 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "card-header" }, [
-      _c("h3", { staticClass: "card-title" }, [_vm._v("Change User Data")])
+      _c("h3", { staticClass: "card-title" }, [_vm._v("Role settings")])
     ])
   }
 ]
@@ -48506,7 +48468,7 @@ var render = function() {
       _c("div", { staticClass: "row py-5 " }, [
         _c("div", { staticClass: "col-lg-5 col-md-5 col-sm-12" }, [
           _c("div", { staticClass: "card card-primary card-outline" }, [
-            _vm.isEditing && _vm.user
+            _vm.userData
               ? _c("div", { staticClass: "card-body box-profile" }, [
                   _c("div", { staticClass: "text-center" }, [
                     _c("img", {
@@ -48522,46 +48484,67 @@ var render = function() {
                   _c("h3", { staticClass: "profile-username text-center" }, [
                     _vm._v(
                       "\n                        " +
-                        _vm._s(_vm.user.name) +
+                        _vm._s(_vm.userData.name) +
                         "\n                    "
                     )
                   ]),
                   _vm._v(" "),
-                  _vm.user.email
+                  _vm.userData.email
                     ? _c("p", { staticClass: "text-muted text-center" }, [
                         _vm._v(
                           "\n                        " +
-                            _vm._s(_vm.user.email) +
+                            _vm._s(_vm.userData.email) +
                             "\n                    "
                         )
                       ])
-                    : _vm._e(),
-                  _vm._v(" "),
-                  _c(
-                    "ul",
-                    { staticClass: "list-group list-group-unbordered mb-3" },
-                    [
-                      _c("li", { staticClass: "list-group-item" }, [
-                        _c("b", [_vm._v("Posts")]),
-                        _vm._v(" "),
-                        _c("a", { staticClass: "float-right" }, [
-                          _vm._v(_vm._s(_vm.user.posts.length))
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("li", { staticClass: "list-group-item" }, [
-                        _c("b", [_vm._v("Posts")]),
-                        _vm._v(" "),
-                        _c("a", { staticClass: "float-right" }, [
-                          _vm._v(_vm._s(_vm.user.posts.length))
-                        ])
-                      ])
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _vm._m(0)
+                    : _vm._e()
                 ])
               : _vm._e()
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "card" }, [
+            _vm._m(0),
+            _vm._v(" "),
+            _c("div", { staticClass: "card-body p-0" }, [
+              _c(
+                "ul",
+                { staticClass: "products-list product-list-in-card pl-2 pr-2" },
+                _vm._l(_vm.posts, function(post) {
+                  return _c("li", { key: post.id, staticClass: "item" }, [
+                    _c("div", { staticClass: "product-img" }, [
+                      _c("img", {
+                        staticClass: "thumbnail",
+                        attrs: {
+                          alt: "Avatar",
+                          src: "https://picsum.photos/" + post.id
+                        }
+                      })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "product-info" }, [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "product-title",
+                          attrs: { href: "javascript:void(0)" }
+                        },
+                        [
+                          _vm._v(
+                            _vm._s(post.title) +
+                              "\n                                    >\n                                    "
+                          ),
+                          _c("span", {
+                            staticClass: "product-description",
+                            domProps: { innerHTML: _vm._s(post.description) }
+                          })
+                        ]
+                      )
+                    ])
+                  ])
+                }),
+                0
+              )
+            ])
           ])
         ]),
         _vm._v(" "),
@@ -48712,6 +48695,142 @@ var render = function() {
                           }
                         }
                       })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "form-group" }, [
+                      _c("label", { attrs: { for: "ConfirmPassword" } }, [
+                        _vm._v("Manage roles")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        _vm._l(_vm.roles, function(role) {
+                          return _c(
+                            "div",
+                            { key: role.id, staticClass: "chiller_cb" },
+                            [
+                              _vm.userData.roles.length
+                                ? _c("input", {
+                                    directives: [
+                                      {
+                                        name: "model",
+                                        rawName: "v-model",
+                                        value: _vm.userData.roles,
+                                        expression: "userData.roles"
+                                      }
+                                    ],
+                                    attrs: {
+                                      id: "role" + role.id,
+                                      type: "checkbox"
+                                    },
+                                    domProps: {
+                                      value: role.id,
+                                      checked: Array.isArray(_vm.userData.roles)
+                                        ? _vm._i(_vm.userData.roles, role.id) >
+                                          -1
+                                        : _vm.userData.roles
+                                    },
+                                    on: {
+                                      change: function($event) {
+                                        var $$a = _vm.userData.roles,
+                                          $$el = $event.target,
+                                          $$c = $$el.checked ? true : false
+                                        if (Array.isArray($$a)) {
+                                          var $$v = role.id,
+                                            $$i = _vm._i($$a, $$v)
+                                          if ($$el.checked) {
+                                            $$i < 0 &&
+                                              _vm.$set(
+                                                _vm.userData,
+                                                "roles",
+                                                $$a.concat([$$v])
+                                              )
+                                          } else {
+                                            $$i > -1 &&
+                                              _vm.$set(
+                                                _vm.userData,
+                                                "roles",
+                                                $$a
+                                                  .slice(0, $$i)
+                                                  .concat($$a.slice($$i + 1))
+                                              )
+                                          }
+                                        } else {
+                                          _vm.$set(_vm.userData, "roles", $$c)
+                                        }
+                                      }
+                                    }
+                                  })
+                                : _c("input", {
+                                    directives: [
+                                      {
+                                        name: "model",
+                                        rawName: "v-model",
+                                        value: _vm.userData.roles,
+                                        expression: "userData.roles"
+                                      }
+                                    ],
+                                    attrs: {
+                                      id: "role" + role.id,
+                                      type: "checkbox"
+                                    },
+                                    domProps: {
+                                      value: role.id,
+                                      checked: Array.isArray(_vm.userData.roles)
+                                        ? _vm._i(_vm.userData.roles, role.id) >
+                                          -1
+                                        : _vm.userData.roles
+                                    },
+                                    on: {
+                                      change: function($event) {
+                                        var $$a = _vm.userData.roles,
+                                          $$el = $event.target,
+                                          $$c = $$el.checked ? true : false
+                                        if (Array.isArray($$a)) {
+                                          var $$v = role.id,
+                                            $$i = _vm._i($$a, $$v)
+                                          if ($$el.checked) {
+                                            $$i < 0 &&
+                                              _vm.$set(
+                                                _vm.userData,
+                                                "roles",
+                                                $$a.concat([$$v])
+                                              )
+                                          } else {
+                                            $$i > -1 &&
+                                              _vm.$set(
+                                                _vm.userData,
+                                                "roles",
+                                                $$a
+                                                  .slice(0, $$i)
+                                                  .concat($$a.slice($$i + 1))
+                                              )
+                                          }
+                                        } else {
+                                          _vm.$set(_vm.userData, "roles", $$c)
+                                        }
+                                      }
+                                    }
+                                  }),
+                              _vm._v(" "),
+                              _c(
+                                "label",
+                                { attrs: { for: "role" + role.id } },
+                                [
+                                  _vm._v(
+                                    "\n                                        " +
+                                      _vm._s(role.name) +
+                                      "\n                                    "
+                                  )
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c("span")
+                            ]
+                          )
+                        }),
+                        0
+                      )
                     ])
                   ]),
                   _vm._v(" "),
@@ -48736,200 +48855,7 @@ var render = function() {
                     )
                   ])
                 ])
-              ]),
-              _vm._v(" "),
-              _vm.roles
-                ? _c("div", { staticClass: "card card-primary" }, [
-                    _vm._m(3),
-                    _vm._v(" "),
-                    _c("form", { attrs: { role: "form" } }, [
-                      _c("div", { staticClass: "card-body" }, [
-                        _c("div", { staticClass: "form-group" }, [
-                          _c(
-                            "div",
-                            _vm._l(_vm.roles, function(role, index) {
-                              return _c(
-                                "div",
-                                { key: index, staticClass: "chiller_cb" },
-                                [
-                                  _vm.user.roles.length > 0
-                                    ? _c("input", {
-                                        directives: [
-                                          {
-                                            name: "model",
-                                            rawName: "v-model",
-                                            value: _vm.userData.roles,
-                                            expression: "userData.roles"
-                                          }
-                                        ],
-                                        attrs: {
-                                          id: "cat" + index,
-                                          type: "checkbox"
-                                        },
-                                        domProps: {
-                                          value: role.id,
-                                          checked: Array.isArray(
-                                            _vm.userData.roles
-                                          )
-                                            ? _vm._i(
-                                                _vm.userData.roles,
-                                                role.id
-                                              ) > -1
-                                            : _vm.userData.roles
-                                        },
-                                        on: {
-                                          change: [
-                                            function($event) {
-                                              var $$a = _vm.userData.roles,
-                                                $$el = $event.target,
-                                                $$c = $$el.checked
-                                                  ? true
-                                                  : false
-                                              if (Array.isArray($$a)) {
-                                                var $$v = role.id,
-                                                  $$i = _vm._i($$a, $$v)
-                                                if ($$el.checked) {
-                                                  $$i < 0 &&
-                                                    _vm.$set(
-                                                      _vm.userData,
-                                                      "roles",
-                                                      $$a.concat([$$v])
-                                                    )
-                                                } else {
-                                                  $$i > -1 &&
-                                                    _vm.$set(
-                                                      _vm.userData,
-                                                      "roles",
-                                                      $$a
-                                                        .slice(0, $$i)
-                                                        .concat(
-                                                          $$a.slice($$i + 1)
-                                                        )
-                                                    )
-                                                }
-                                              } else {
-                                                _vm.$set(
-                                                  _vm.userData,
-                                                  "roles",
-                                                  $$c
-                                                )
-                                              }
-                                            },
-                                            _vm.handleRolesChange
-                                          ]
-                                        }
-                                      })
-                                    : _c("input", {
-                                        directives: [
-                                          {
-                                            name: "model",
-                                            rawName: "v-model",
-                                            value: _vm.userData.roles,
-                                            expression: "userData.roles"
-                                          }
-                                        ],
-                                        attrs: {
-                                          id: "cat" + index,
-                                          type: "checkbox"
-                                        },
-                                        domProps: {
-                                          value: role.id,
-                                          checked: Array.isArray(
-                                            _vm.userData.roles
-                                          )
-                                            ? _vm._i(
-                                                _vm.userData.roles,
-                                                role.id
-                                              ) > -1
-                                            : _vm.userData.roles
-                                        },
-                                        on: {
-                                          change: [
-                                            function($event) {
-                                              var $$a = _vm.userData.roles,
-                                                $$el = $event.target,
-                                                $$c = $$el.checked
-                                                  ? true
-                                                  : false
-                                              if (Array.isArray($$a)) {
-                                                var $$v = role.id,
-                                                  $$i = _vm._i($$a, $$v)
-                                                if ($$el.checked) {
-                                                  $$i < 0 &&
-                                                    _vm.$set(
-                                                      _vm.userData,
-                                                      "roles",
-                                                      $$a.concat([$$v])
-                                                    )
-                                                } else {
-                                                  $$i > -1 &&
-                                                    _vm.$set(
-                                                      _vm.userData,
-                                                      "roles",
-                                                      $$a
-                                                        .slice(0, $$i)
-                                                        .concat(
-                                                          $$a.slice($$i + 1)
-                                                        )
-                                                    )
-                                                }
-                                              } else {
-                                                _vm.$set(
-                                                  _vm.userData,
-                                                  "roles",
-                                                  $$c
-                                                )
-                                              }
-                                            },
-                                            _vm.handleRolesChange
-                                          ]
-                                        }
-                                      }),
-                                  _vm._v(" "),
-                                  _c(
-                                    "label",
-                                    { attrs: { for: "cat" + role.id } },
-                                    [
-                                      _vm._v(
-                                        "\n                                        " +
-                                          _vm._s(role.name) +
-                                          "\n                                    "
-                                      )
-                                    ]
-                                  ),
-                                  _vm._v(" "),
-                                  _c("span")
-                                ]
-                              )
-                            }),
-                            0
-                          )
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "card-footer" }, [
-                        _c(
-                          "button",
-                          {
-                            staticClass: "btn btn-primary",
-                            attrs: { type: "submit" },
-                            on: {
-                              click: function($event) {
-                                $event.preventDefault()
-                                return _vm.formSubmit()
-                              }
-                            }
-                          },
-                          [
-                            _vm._v(
-                              "\n                            Submit\n                        "
-                            )
-                          ]
-                        )
-                      ])
-                    ])
-                  ])
-                : _vm._e()
+              ])
             ])
           : _vm._e()
       ])
@@ -48942,18 +48868,16 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "a",
-      { staticClass: "btn btn-primary btn-block", attrs: { href: "#" } },
-      [_c("b", [_vm._v("Send message")])]
-    )
+    return _c("div", { staticClass: "card-header" }, [
+      _c("h3", { staticClass: "card-title" }, [_vm._v("User posts")])
+    ])
   },
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "card-header" }, [
-      _c("h3", { staticClass: "card-title" }, [_vm._v("Change User Data")])
+      _c("h3", { staticClass: "card-title" }, [_vm._v("Change userData Data")])
     ])
   },
   function() {
@@ -48988,14 +48912,6 @@ var staticRenderFns = [
           ])
         ])
       ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "card-header" }, [
-      _c("h3", { staticClass: "card-title" }, [_vm._v("Change User Roles")])
     ])
   }
 ]
@@ -49077,11 +48993,19 @@ var render = function() {
                       _c("td", [_c("a", [_vm._v(_vm._s(user.email))])]),
                       _vm._v(" "),
                       _c("td", [
-                        _c("a", [
-                          _vm._v(
-                            _vm._s(user.roles ? Object.keys(user.roles) : "")
-                          )
-                        ])
+                        _c(
+                          "ul",
+                          _vm._l(user.roles, function(role) {
+                            return _c("li", { key: role.id }, [
+                              _vm._v(
+                                "\n                                            " +
+                                  _vm._s(role.name) +
+                                  "\n                                        "
+                              )
+                            ])
+                          }),
+                          0
+                        )
                       ]),
                       _vm._v(" "),
                       _c("td", { staticClass: "project_progress" }, [
@@ -49090,7 +49014,7 @@ var render = function() {
                             staticClass: "progress-bar bg-green",
                             style:
                               "width: " +
-                              _vm.userPostuserPercentage(user.posts.length) +
+                              _vm.userPostUserPercentage(user.posts.length) +
                               "%",
                             attrs: {
                               role: "progressbar",
@@ -82135,7 +82059,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
 /* harmony import */ var vuex_persist__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vuex-persist */ "./node_modules/vuex-persist/dist/esm/index.js");
 /* harmony import */ var _modules_dashboardStore__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/dashboardStore */ "./resources/js/backend/store/modules/dashboardStore.js");
-/* harmony import */ var _modules_usersStore__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/usersStore */ "./resources/js/backend/store/modules/usersStore.js");
+/* harmony import */ var _modules_users__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./modules/users */ "./resources/js/backend/store/modules/users/index.js");
 /* harmony import */ var _modules_permissionsStore__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./modules/permissionsStore */ "./resources/js/backend/store/modules/permissionsStore.js");
 /* harmony import */ var _modules_posts__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modules/posts */ "./resources/js/backend/store/modules/posts/index.js");
 /* harmony import */ var _modules_categoriesStore__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./modules/categoriesStore */ "./resources/js/backend/store/modules/categoriesStore.js");
@@ -82157,10 +82081,10 @@ var vuexLocalStorage = new vuex_persist__WEBPACK_IMPORTED_MODULE_2__["default"](
 
 
 /* harmony default export */ __webpack_exports__["default"] = (new vuex__WEBPACK_IMPORTED_MODULE_1__["default"].Store({
-  // plugins: [vuexLocalStorage.plugin],
+  plugins: [vuexLocalStorage.plugin],
   modules: {
     dashboard: _modules_dashboardStore__WEBPACK_IMPORTED_MODULE_3__["default"],
-    users: _modules_usersStore__WEBPACK_IMPORTED_MODULE_4__["default"],
+    users: _modules_users__WEBPACK_IMPORTED_MODULE_4__["default"],
     roles: _modules_rolesStore__WEBPACK_IMPORTED_MODULE_8__["default"],
     permissions: _modules_permissionsStore__WEBPACK_IMPORTED_MODULE_5__["default"],
     posts: _modules_posts__WEBPACK_IMPORTED_MODULE_6__["default"],
@@ -82756,9 +82680,9 @@ var getters = {
     return state.roles;
   },
   getRole: function getRole(state) {
-    return function (id) {
+    return function (roleId) {
       return state.roles.find(function (role) {
-        return role.id == id;
+        return role.id == roleId;
       });
     };
   }
@@ -82774,7 +82698,9 @@ var actions = {
   },
   createRole: function createRole(_ref2, roleData) {
     var commit = _ref2.commit;
+    console.log('roleData From action ', roleData);
     axios__WEBPACK_IMPORTED_MODULE_0___default.a.post(rolesApi, roleData).then(function (role) {
+      console.log('roleasdasdasdasdas', role);
       commit("CREATE_ROLE", role.data);
     });
   },
@@ -82814,10 +82740,10 @@ var mutations = {
 
 /***/ }),
 
-/***/ "./resources/js/backend/store/modules/usersStore.js":
-/*!**********************************************************!*\
-  !*** ./resources/js/backend/store/modules/usersStore.js ***!
-  \**********************************************************/
+/***/ "./resources/js/backend/store/modules/users/actions.js":
+/*!*************************************************************!*\
+  !*** ./resources/js/backend/store/modules/users/actions.js ***!
+  \*************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -82826,68 +82752,139 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 
-var usersApi = "/panel/api/users/";
+var usersApi = "/panel/api/users/"; //POSTS
+
+var loadUsers = function loadUsers(_ref) {
+  var commit = _ref.commit;
+  axios__WEBPACK_IMPORTED_MODULE_0___default.a.get(usersApi).then(function (response) {
+    return response.data.data;
+  }).then(function (users) {
+    commit("LOAD_USERS", users);
+  });
+};
+
+var createUser = function createUser(_ref2, userData) {
+  var commit = _ref2.commit;
+  axios__WEBPACK_IMPORTED_MODULE_0___default.a.post(usersApi, userData).then(function (user) {
+    commit("CREATE_USER", user.data);
+  });
+};
+
+var updateUser = function updateUser(_ref3, userData) {
+  var commit = _ref3.commit;
+  axios__WEBPACK_IMPORTED_MODULE_0___default.a.put(usersApi + userData.id, userData).then(function (user) {
+    console.log('user updateUser', user);
+    commit("UPDATE_USER", user.data);
+  });
+};
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  loadUsers: loadUsers,
+  createUser: createUser,
+  updateUser: updateUser
+});
+
+/***/ }),
+
+/***/ "./resources/js/backend/store/modules/users/getters.js":
+/*!*************************************************************!*\
+  !*** ./resources/js/backend/store/modules/users/getters.js ***!
+  \*************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var getUsers = function getUsers(state) {
+  return state.users;
+};
+
+var singleUser = function singleUser(state) {
+  return function (userId) {
+    return state.users.find(function (user) {
+      return user.id == userId;
+    });
+  };
+};
+
+var userPosts = function userPosts(state) {
+  return function (userId) {
+    var user = state.users.find(function (user) {
+      return user.id == userId;
+    });
+    return user.posts;
+  };
+};
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  getUsers: getUsers,
+  singleUser: singleUser,
+  userPosts: userPosts
+});
+
+/***/ }),
+
+/***/ "./resources/js/backend/store/modules/users/index.js":
+/*!***********************************************************!*\
+  !*** ./resources/js/backend/store/modules/users/index.js ***!
+  \***********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _actions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./actions */ "./resources/js/backend/store/modules/users/actions.js");
+/* harmony import */ var _getters__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./getters */ "./resources/js/backend/store/modules/users/getters.js");
+/* harmony import */ var _mutations__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./mutations */ "./resources/js/backend/store/modules/users/mutations.js");
+
+
+
 var state = {
   users: []
-};
-var getters = {
-  getUsers: function getUsers(state) {
-    return state.users;
-  },
-  getUser: function getUser(state) {
-    return function (userId) {
-      return state.users.find(function (user) {
-        return user.id == userId;
-      });
-    };
-  }
-};
-var actions = {
-  loadUsers: function loadUsers(_ref) {
-    var commit = _ref.commit;
-    axios__WEBPACK_IMPORTED_MODULE_0___default.a.get(usersApi).then(function (response) {
-      return response.data.data;
-    }).then(function (users) {
-      commit("LOAD_USERS", users);
-    });
-  },
-  createUser: function createUser(_ref2, userData) {
-    var commit = _ref2.commit;
-    axios__WEBPACK_IMPORTED_MODULE_0___default.a.post(usersApi, userData).then(function (user) {
-      commit("CREATE_USER", user.data);
-    });
-  },
-  updateUser: function updateUser(_ref3, userData) {
-    var commit = _ref3.commit;
-    axios__WEBPACK_IMPORTED_MODULE_0___default.a.put(usersApi + userData.id, userData).then(function (user) {
-      console.log('user', user);
-      commit("UPDATE_USER", user.data);
-    });
-  }
-};
-var mutations = {
-  LOAD_USERS: function LOAD_USERS(state, users) {
-    state.users = users;
-  },
-  CREATE_USER: function CREATE_USER(state, createdUserData) {
-    var index = state.users.findIndex(function (user) {
-      return user.id == createdUserData.id;
-    });
-    state.users.push(index, 1, createdUserData);
-  },
-  UPDATE_USER: function UPDATE_USER(state, updatedUserdata) {
-    var index = state.users.findIndex(function (user) {
-      return user.id == updatedUserdata.id;
-    });
-    state.users.splice(index, 1, updatedUserdata);
-  }
 };
 /* harmony default export */ __webpack_exports__["default"] = ({
   namespaced: true,
   state: state,
-  getters: getters,
-  actions: actions,
-  mutations: mutations
+  getters: _getters__WEBPACK_IMPORTED_MODULE_1__["default"],
+  actions: _actions__WEBPACK_IMPORTED_MODULE_0__["default"],
+  mutations: _mutations__WEBPACK_IMPORTED_MODULE_2__["default"]
+});
+
+/***/ }),
+
+/***/ "./resources/js/backend/store/modules/users/mutations.js":
+/*!***************************************************************!*\
+  !*** ./resources/js/backend/store/modules/users/mutations.js ***!
+  \***************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var LOAD_USERS = function LOAD_USERS(state, users) {
+  console.log('state', state);
+  console.log('users from mutation', users);
+  state.users = users;
+};
+
+var CREATE_USER = function CREATE_USER(state, createdUserData) {
+  var index = state.users.findIndex(function (user) {
+    return user.id == createdUserData.id;
+  });
+  state.users.push(index, 1, createdUserData);
+};
+
+var UPDATE_USER = function UPDATE_USER(state, updatedUserdata) {
+  var index = state.users.findIndex(function (user) {
+    return user.id == updatedUserdata.id;
+  });
+  state.users.splice(index, 1, updatedUserdata);
+};
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  LOAD_USERS: LOAD_USERS,
+  CREATE_USER: CREATE_USER,
+  UPDATE_USER: UPDATE_USER
 });
 
 /***/ }),

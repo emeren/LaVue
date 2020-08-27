@@ -55,11 +55,14 @@
                                         <a>{{ user.email }}</a>
                                     </td>
                                     <td>
-                                        <a>{{
-                                            user.roles
-                                                ? Object.keys(user.roles)
-                                                : ""
-                                        }}</a>
+                                        <ul>
+                                            <li
+                                                v-for="role in user.roles"
+                                                :key="role.id"
+                                            >
+                                                {{ role.name }}
+                                            </li>
+                                        </ul>
                                     </td>
                                     <td class="project_progress">
                                         <div class="progress progress-sm">
@@ -70,7 +73,7 @@
                                                 aria-volumemin="0"
                                                 aria-volumemax="100"
                                                 :style="
-                                                    `width: ${userPostuserPercentage(
+                                                    `width: ${userPostUserPercentage(
                                                         user.posts.length
                                                     )}%`
                                                 "
@@ -123,6 +126,10 @@ export default {
     computed: {
         allUsers() {
             console.log("this.$store", this.$store);
+            console.log(
+                'this.$store.getters["users/getUsers"];',
+                this.$store.getters["users/getUsers"]
+            );
             return this.$store.getters["users/getUsers"];
         },
         postsCount() {
@@ -133,7 +140,7 @@ export default {
         }
     },
     methods: {
-        userPostuserPercentage(userPostsLength) {
+        userPostUserPercentage(userPostsLength) {
             const allPostsCount = this.allUsers.reduce(
                 (acc, cur) => acc + cur.posts.length,
                 0

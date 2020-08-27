@@ -20,8 +20,8 @@
                 <div>
                     <div
                         class="chiller_cb"
-                        v-for="(category, index) in categories"
-                        :key="index"
+                        v-for="category in categories"
+                        :key="category.id"
                     >
                         <input
                             v-if="postData.categories.length"
@@ -29,7 +29,6 @@
                             type="checkbox"
                             :value="category.id"
                             v-model="postData.categories"
-                            @change="categoryChange"
                         />
 
                         <input
@@ -38,7 +37,6 @@
                             type="checkbox"
                             :value="category.id"
                             v-model="postData.categories"
-                            @change="categoryChange"
                         />
                         <label :for="'cat' + category.id">
                             {{ category.name }}
@@ -79,9 +77,6 @@ export default {
         }
     },
     methods: {
-        categoryChange(e) {
-            // console.log(e.target.value);
-        },
         isChecked(catId) {
             let usedCats = this.activePostsCategories.map(uC => uC.id);
             return usedCats.some(item => item == catId);

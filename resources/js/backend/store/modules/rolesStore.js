@@ -7,7 +7,7 @@ const state = {
 
 const getters = {
      getRoles: state => state.roles,
-     getRole: (state) => (id) => state.roles.find((role) => role.id == id)
+     getRole: (state) => (roleId) => state.roles.find((role) => role.id == roleId)
 };
 
 const actions = {
@@ -20,11 +20,14 @@ const actions = {
                });
      },
      createRole({ commit }, roleData) {
+          console.log('roleData From action ', roleData);
           axios.post(rolesApi, roleData).then(role => {
+               console.log('roleasdasdasdasdas', role);
                commit("CREATE_ROLE", role.data);
           });
      },
      updateRole({ commit }, roleData) {
+
           axios.put(rolesApi + roleData.id, roleData).then(role => {
                console.log('role', role);
                commit("UPDATE_ROLE", role.data);

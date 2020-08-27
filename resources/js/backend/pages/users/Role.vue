@@ -3,13 +3,13 @@
         <ContentHeader title="Manage role"></ContentHeader>
         <div class="card card-primary">
             <div class="card-header">
-                <h3 class="card-title">Change User Data</h3>
+                <h3 class="card-title">Role settings</h3>
             </div>
             <!-- /.card-header -->
             <!-- form start -->
             <form role="form">
                 <div class="card-body">
-                    <div class="form-group" v-if="isEditing">
+                    <div class="form-group">
                         <label for="exampleInputEmail1">Name</label>
                         <input
                             v-model="roleData.name"
@@ -20,7 +20,7 @@
                             placeholder="Enter name"
                         />
                     </div>
-                    <div class="form-group" v-if="isEditing">
+                    <div class="form-group">
                         <div>
                             <div
                                 class="chiller_cb"
@@ -33,7 +33,6 @@
                                     type="checkbox"
                                     :value="permission.id"
                                     v-model="roleData.permissions"
-                                    @change="handlePermissionChange($event)"
                                     checked
                                 />
 
@@ -43,7 +42,6 @@
                                     type="checkbox"
                                     :value="permission.id"
                                     v-model="roleData.permissions"
-                                    @change="handlePermissionChange($event)"
                                 />
                                 <label :for="'cat' + permission.id">
                                     {{ permission.name }}
@@ -88,19 +86,17 @@ export default {
             }
         };
     },
+    beforeCreate() {
+        this.$store.dispatch("roles/loadRoles");
+    },
     created() {
         if (this.$route.params.id > 0) {
             this.roleData = this.getRole(this.$route.params.id);
-            console.log("roleData", this.roleData);
-            this.isEditing = true;
-        } else {
-            this.isEditing = false;
         }
     },
     computed: {
         ...mapGetters("roles", ["getRole"]),
         permissions() {
-            console.log("this.$store", this.$store);
             return this.$store.getters["permissions/getPermissions"];
         }
     },
@@ -123,6 +119,7 @@ export default {
             );
         },
         createPost() {
+            console.log("this.roleData", this.roleData);
             this.$store.dispatch("roles/createRole", this.roleData).then(
                 this.$notify({
                     group: "foo-css",

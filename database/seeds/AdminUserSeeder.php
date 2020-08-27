@@ -25,11 +25,11 @@ class AdminUserSeeder extends Seeder
             'remember_token' => Str::random(10),
         ]);
 
-        $role = Role::create(['name' => 'Admin']);
+        $role = Role::create(['name' => 'super-admin']);
 
         $permissions = Permission::pluck('id', 'id')->all();
 
         $role->syncPermissions($permissions);
-        $user->assignRole([$role->id]);
+        $user->assignRole('super-admin');
     }
 }

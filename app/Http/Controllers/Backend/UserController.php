@@ -73,9 +73,7 @@ class UserController extends Controller
     {
         $this->validate($request, [
             'name' => 'required',
-            'email' => 'required|email|unique:users,email,' . $userId,
-            'password' => 'same:confirm-password',
-            'roles' => 'required'
+            // 'roles' => 'required'
         ]);
 
         $input = $request->all();
@@ -90,7 +88,7 @@ class UserController extends Controller
         }
         $user->update($input);
 
-        DB::table('model_has_roles')->where('model_id', $userId)->delete();
+        // DB::table('model_has_roles')->where('model_id', $userId)->delete();
         $user->assignRole($request->input('roles'));
         if ($user) {
             return response(UsersResource::make($user), 200);
