@@ -20,15 +20,18 @@
                     <table class="table table-striped">
                         <thead>
                             <tr>
-                                <th style="width: 10px">#</th>
+                                <th style="width: 10px">id</th>
                                 <th>Role name</th>
                                 <th>Permissions</th>
                                 <th style="width: 40px">Actions</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr v-for="role in allRoles" :key="role.id">
-                                <td>1.</td>
+                            <tr
+                                v-for="role in allRoles.slice().reverse()"
+                                :key="role.id"
+                            >
+                                <td>{{ role.id }}</td>
                                 <td>{{ role.name }}</td>
                                 <td>
                                     <ul class="list-unstyled">

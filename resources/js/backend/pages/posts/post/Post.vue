@@ -122,6 +122,7 @@ export default {
             this.submitBusttonText = "Update";
             this.pageTitle = "Edycja artykulu";
             this.postData = this.singlePost(this.$route.params.id);
+            console.log("this.postData", this.postData);
             this.isEditing = true;
         } else {
             this.pageTitle = "Creating article";

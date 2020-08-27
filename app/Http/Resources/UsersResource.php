@@ -9,6 +9,9 @@ use App\Http\Resources\PostsResource;
 class UsersResource extends JsonResource
 {
 
+
+
+
     /**
      * Transform the resource into an array.
      *

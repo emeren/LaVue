@@ -88,7 +88,7 @@ class UserController extends Controller
         }
         $user->update($input);
 
-        // DB::table('model_has_roles')->where('model_id', $userId)->delete();
+        DB::table('model_has_roles')->where('model_id', $userId)->delete();
         $user->assignRole($request->input('roles'));
         if ($user) {
             return response(UsersResource::make($user), 200);

@@ -26,7 +26,6 @@
                             {{ userData.email }}
                         </p>
                     </div>
-
                     <!-- /.card-body -->
                 </div>
                 <!-- /.card -->
@@ -128,7 +127,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="form-group">
+                            <div class="form-group mt-3">
                                 <label for="InputPassword">New password</label>
                                 <input
                                     v-model="userData.password"
@@ -153,37 +152,20 @@
                                 />
                             </div>
                             <div class="form-group">
-                                <label for="ConfirmPassword"
-                                    >Manage roles</label
-                                >
-                                <div>
-                                    <div
-                                        class="chiller_cb"
-                                        v-for="role in roles"
-                                        :key="role.id"
-                                    >
-                                        <input
-                                            v-if="userData.roles.length"
-                                            :id="'role' + role.id"
-                                            type="checkbox"
-                                            :value="role.id"
-                                            v-model="userData.roles"
-                                        />
-
-                                        <input
-                                            v-else
-                                            :id="'role' + role.id"
-                                            type="checkbox"
-                                            :value="role.id"
-                                            v-model="userData.roles"
-                                        />
-                                        <label :for="'role' + role.id">
-                                            {{ role.name }}
-                                        </label>
-                                        <span></span>
-                                    </div>
+                                <div class="mt-3">
+                                    <input
+                                        id="allowedLogin"
+                                        type="checkbox"
+                                        :value="userData.allowed_login"
+                                        v-model="userData.allowed_login"
+                                    />
+                                    <label for="allowedLogin">
+                                        Allowd login
+                                    </label>
                                 </div>
                             </div>
+
+                            <UserRoles :userData="userData"></UserRoles>
                         </div>
                         <!-- /.card-body -->
 
@@ -208,10 +190,13 @@ import { mapGetters } from "vuex";
 
 import InfoBox from "../../components/InfoBox";
 import ContentHeader from "../../layout/partials/ContentHeader";
+
+import UserRoles from "./UserRoles";
 export default {
     name: "User",
     components: {
-        ContentHeader
+        ContentHeader,
+        UserRoles
     },
     data() {
         return {
@@ -223,7 +208,8 @@ export default {
                 confirmPassword: "",
                 created_at: "",
                 roles: [],
-                updated_at: ""
+                updated_at: "",
+                allowed_login: false
             }
         };
     },
@@ -246,10 +232,7 @@ export default {
         ...mapGetters("users", ["userPosts"]),
         ...mapGetters("roles", ["getRoles"]),
         roles() {
-            return this.$store.getters["roles/getRoles"];
-        },
-        user() {
-            return this.userData;
+            return this.getRoles;
         },
         posts() {
             let posts = this.userPosts(this.$route.params.id);

@@ -33,72 +33,12 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr v-for="user in allUsers" :key="user.id">
-                                    <td>
-                                        <img
-                                            alt="Avatar"
-                                            class="table-avatar"
-                                            :src="
-                                                `https://api.adorable.io/avatars/285/${user.id}@adorable.png`
-                                            "
-                                        />
-                                    </td>
-                                    <td>
-                                        <a>{{ user.name }}</a>
-                                        <br />
-                                        <small
-                                            >Created
-                                            {{ user.created_at }}</small
-                                        >
-                                    </td>
-                                    <td>
-                                        <a>{{ user.email }}</a>
-                                    </td>
-                                    <td>
-                                        <ul>
-                                            <li
-                                                v-for="role in user.roles"
-                                                :key="role.id"
-                                            >
-                                                {{ role.name }}
-                                            </li>
-                                        </ul>
-                                    </td>
-                                    <td class="project_progress">
-                                        <div class="progress progress-sm">
-                                            <div
-                                                class="progress-bar bg-green"
-                                                role="progressbar"
-                                                aria-volumenow="57"
-                                                aria-volumemin="0"
-                                                aria-volumemax="100"
-                                                :style="
-                                                    `width: ${userPostUserPercentage(
-                                                        user.posts.length
-                                                    )}%`
-                                                "
-                                            ></div>
-                                        </div>
-                                        <small>
-                                            <strong>{{
-                                                user.posts.length
-                                            }}</strong>
-                                            posts in blog {{ postsCount }}
-                                        </small>
-                                    </td>
-                                    <td class="project-actions text-right">
-                                        <a
-                                            class="btn btn-primary btn-sm"
-                                            href="#"
-                                        >
-                                            <a :href="`/panel#/user/${user.id}`"
-                                                ><i
-                                                    class="fas fa-search text-white"
-                                                ></i
-                                            ></a>
-                                        </a>
-                                    </td>
-                                </tr>
+                                <SingleUserRow
+                                    v-for="user in allUsers"
+                                    :key="user.id"
+                                    :userData="user"
+                                    :userPostUserPercentage="allUsers"
+                                ></SingleUserRow>
                             </tbody>
                         </table>
                     </div>
@@ -114,22 +54,20 @@ import { mapGetters, mapState } from "vuex";
 
 import ContentHeader from "../../layout/partials/ContentHeader";
 import ContentColorBox from "../../components/ContentColorBox";
+
+import SingleUserRow from "./SingleUserRow";
 import { method } from "lodash";
 export default {
     components: {
         ContentColorBox,
-        ContentHeader
+        ContentHeader,
+        SingleUserRow
     },
     mounted() {
         this.$store.dispatch("users/loadUsers");
     },
     computed: {
         allUsers() {
-            console.log("this.$store", this.$store);
-            console.log(
-                'this.$store.getters["users/getUsers"];',
-                this.$store.getters["users/getUsers"]
-            );
             return this.$store.getters["users/getUsers"];
         },
         postsCount() {
