@@ -51,6 +51,7 @@ class UsersTest extends TestCase
             "name" => 'test',
             "email" => 'test@example.net',
             'password' => Hash::make('123456'),
+
             "allowed_login" => true
         ]);
         $response->assertStatus($responseCode);

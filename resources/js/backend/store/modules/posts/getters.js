@@ -8,6 +8,10 @@ const singlePost = (state) => (id) => {
     return state.posts.find((post) => post.id == id);
 };
 
+const userPosts = (state) => (userId) => {
+    return state.posts.find((post) => post.author == userId);
+};
+
 const postsCount = (state) =>
     state.posts.filter((post) => post.deleted_at == null).length;
 
@@ -78,6 +82,7 @@ export default {
     allPosts,
     deletedPosts,
     singlePost,
+    userPosts,
     deletedPostsCount,
     postsCount,
     filteredPosts,

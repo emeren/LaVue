@@ -2,16 +2,30 @@
 
 namespace App\Http\Controllers\Backend;
 
-use App\Post;
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 use Illuminate\Http\JsonResponse;
-use App\Http\Resources\PostsResource;
 use Illuminate\Support\Facades\Log;
+
+use App\Post;
+use App\Http\Resources\PostsResource;
 
 
 class PostController extends Controller
 {
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    function __construct()
+    {
+        $this->middleware('permission:post-list|post-create|post-edit|post-delete', ['only' => ['index', 'show']]);
+        $this->middleware('permission:post-create', ['only' => ['create', 'store']]);
+        $this->middleware('permission:post-edit', ['only' => ['edit', 'update']]);
+        $this->middleware('permission:post-delete', ['only' => ['destroy']]);
+    }
     /**
      * Display a listing of the resource.
      *
@@ -21,17 +35,6 @@ class PostController extends Controller
     {
         $posts = Post::with('categories')->orderBy('created_at', 'desc')->withTrashed()->get();
         return PostsResource::collection($posts);
-    }
-
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
     }
 
     /**
@@ -47,8 +50,6 @@ class PostController extends Controller
         //     "title" =>  ['required', 'unique:posts', 'max:150'],
         //     "description" => ['required'],
         // ]);
-
-
 
         $postData = [
             "title" => $request->title,
@@ -97,19 +98,6 @@ class PostController extends Controller
         }
 
         return response()->json(PostsResource::make($post), 200);
-    }
-
-
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Post  $post
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Post $post)
-    {
-        //
     }
 
     /**

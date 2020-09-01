@@ -77,6 +77,8 @@
 </template>
 
 <script>
+import { mapGetters } from "vuex";
+
 import InfoBox from "../../../components/InfoBox";
 import ContentHeader from "../../../layout/partials/ContentHeader";
 
@@ -85,7 +87,7 @@ import PostMeta from "./PostMeta";
 import PostForm from "./PostForm";
 import PostThumbnail from "./PostThumbnail";
 import PostGallery from "./PostGallery";
-import { mapGetters, mapState } from "vuex";
+
 export default {
     components: {
         InfoBox,
@@ -115,20 +117,12 @@ export default {
             }
         };
     },
-    // watch: {
-    //   postData: function(newPost, oldPost) {
-    //     console.log("newval");
-    //     console.log(newPost);
-    //     console.log("old");
-    //     console.log(oldPost);
-    //   }
-    // },
     created() {
-        console.log(this.postData);
         if (this.$route.params.id > 0) {
             this.submitBusttonText = "Update";
             this.pageTitle = "Edycja artykulu";
             this.postData = this.singlePost(this.$route.params.id);
+            console.log("this.postData", this.postData);
             this.isEditing = true;
         } else {
             this.pageTitle = "Creating article";

@@ -1,7 +1,7 @@
 <template>
     <div class="card">
         <div class="card-header">
-            <h3 class="card-title">Categories</h3>
+            <h3 class="card-title">roles</h3>
 
             <div class="card-tools">
                 <button
@@ -20,15 +20,15 @@
                 <div>
                     <div
                         class="chiller_cb"
-                        v-for="category in categories"
+                        v-for="category in roles"
                         :key="category.id"
                     >
                         <input
-                            v-if="postData.categories.length"
+                            v-if="userData.roles.length"
                             :id="'cat' + category.id"
                             type="checkbox"
                             :value="category.id"
-                            v-model="postData.categories"
+                            v-model="userData.roles"
                         />
 
                         <input
@@ -36,7 +36,7 @@
                             :id="'cat' + category.id"
                             type="checkbox"
                             :value="category.id"
-                            v-model="postData.categories"
+                            v-model="userData.roles"
                         />
                         <label :for="'cat' + category.id">
                             {{ category.name }}
@@ -54,7 +54,7 @@
 import { mapGetters } from "vuex";
 export default {
     props: {
-        postData: {
+        userData: {
             required: true
         }
     },
@@ -64,22 +64,12 @@ export default {
         };
     },
     created() {
-        console.log("postData", this.postData);
+        console.log("userData", this.userData);
     },
     computed: {
-        ...mapGetters("posts", ["activePostsCategories"]),
-        ...mapGetters("categories", ["getUniqeCats"]),
-        categories() {
-            return this.getUniqeCats;
-        },
-        activeCategories() {
-            return this.$store.getters["posts/activePostsCategories"];
-        }
-    },
-    methods: {
-        isChecked(catId) {
-            let usedCats = this.activePostsCategories.map(uC => uC.id);
-            return usedCats.some(item => item == catId);
+        ...mapGetters("roles", ["getRoles"]),
+        roles() {
+            return this.getRoles;
         }
     }
 };

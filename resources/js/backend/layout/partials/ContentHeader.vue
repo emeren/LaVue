@@ -24,6 +24,7 @@
 
 <script>
 export default {
+    name: "ContentHeader",
     props: {
         title: {
             type: String,

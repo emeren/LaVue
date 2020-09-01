@@ -9,16 +9,20 @@ const vuexLocalStorage = new VuexPersist({
 });
 //stores
 import dashboardStore from "./modules/dashboardStore";
-import usersStore from "./modules/usersStore";
+import usersStore from "./modules/users";
+import permissionsStore from "./modules/permissionsStore";
 
 import postsStore from "./modules/posts";
 import categoriesStore from "./modules/categoriesStore";
+import rolesStore from "./modules/rolesStore";
 
 export default new Vuex.Store({
-    // plugins: [vuexLocalStorage.plugin],
+    plugins: [vuexLocalStorage.plugin],
     modules: {
         dashboard: dashboardStore,
         users: usersStore,
+        roles: rolesStore,
+        permissions: permissionsStore,
         posts: postsStore,
         categories: categoriesStore,
     }

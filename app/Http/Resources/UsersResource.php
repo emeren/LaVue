@@ -8,6 +8,10 @@ use App\Http\Resources\PostsResource;
 
 class UsersResource extends JsonResource
 {
+
+
+
+
     /**
      * Transform the resource into an array.
      *
@@ -16,6 +20,14 @@ class UsersResource extends JsonResource
      */
     public function toArray($request)
     {
+
+        //flat nested roles array
+        $userRoles = $this->roles->toArray();
+        $rolesIds = [];
+        foreach ($userRoles as $value) {
+            array_push($rolesIds, $value['id']);
+        }
+
 
         return [
             'id' => $this->id,
@@ -27,6 +39,7 @@ class UsersResource extends JsonResource
             'created_at' => $this->created_at->format('Y-m-d H:i:s'),
             'updated_at' => optional($this->updated_at)->format('Y-m-d H:i:s'),
             'deleted_at' => optional($this->deleted_at)->format('Y-m-d H:i:s'),
+            'roles' => $rolesIds
         ];
     }
 }

@@ -30,6 +30,14 @@ Route::group(['prefix' => 'panel'], function () {
     Route::get('register', 'Backend\Auth\RegisterController@showRegistrationForm')->name('register');
     Route::post('register', 'Backend\Auth\RegisterController@register');
 
+
+    //User Roles
+
+    // Route::resource('roles', 'RoleController');
+    // Route::resource('users', 'UserController');
+    // Route::resource('products', 'ProductController');
+
+
     // Password Reset Routes...
 
     Route::post('password/email', 'Backend\Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
@@ -61,6 +69,15 @@ Route::group(['prefix' => 'panel'], function () {
         Route::post('users', 'Backend\UserController@store')->name('user.store');
         Route::put('users/{id}', 'Backend\UserController@update')->name('user.update');
         Route::delete('users/{id}', 'Backend\UserController@destroy')->name('user.destroy');
+
+        //ROLES
+        Route::get('roles', 'Backend\RoleController@index')->name('roles');
+        Route::post('roles', 'Backend\RoleController@store')->name('role.store');
+        Route::put('roles/{id}', 'Backend\RoleController@update')->name('post.update');
+        Route::delete('roles/{id}', 'Backend\RoleController@destroy')->name('user.destroy');
+
+        //PERMISSIONS
+        Route::get('permissions', 'Backend\PermissionController@index')->name('roles');
     });
 });
 

@@ -1,5 +1,10 @@
-import Users from "../pages/Users";
 import Desktop from "../pages/Desktop";
+
+import Users from "../pages/users/Users";
+import User from "../pages/users/User";
+
+import Roles from "../pages/users/Roles";
+import Role from "../pages/users/Role";
 
 import Posts from "../pages/posts/Posts";
 import Post from "../pages/posts/post/Post";
@@ -10,7 +15,13 @@ import Logs from "../pages/Logs";
 
 const routes = [
     { path: "/", component: Desktop, name: "dashboard" },
-    { path: "/users", component: Users },
+    { path: "/users", name: "users", component: Users },
+    { path: "/users/add", name: "user-add", component: User, meta: { transitionName: 'slide' } },
+    { path: "/user/:id", component: User, meta: { transitionName: 'slide' } },
+
+    { path: "/roles", name: "roles", component: Roles, meta: { transitionName: 'slide' } },
+    { path: "/role/:id", name: "role-edit", component: Role, meta: { transitionName: 'slide' } },
+    { path: "/permissions", name: "permissions", component: Permissions, meta: { transitionName: 'slide' } },
 
     //posts
     { path: "/posts", component: Posts, name: "posts" },
