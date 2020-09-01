@@ -2316,6 +2316,20 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -2348,10 +2362,6 @@ __webpack_require__.r(__webpack_exports__);
       }, {
         title: "Roles",
         link: "/roles",
-        icon: "fa-list-alt"
-      }, {
-        title: "Permmisions",
-        link: "/permmisions",
         icon: "fa-list-alt"
       }]
     };
@@ -45732,6 +45742,7 @@ var render = function() {
               {
                 staticClass: "nav nav-pills nav-sidebar flex-column",
                 attrs: {
+                  id: "menuList",
                   "data-widget": "treeview",
                   role: "menu",
                   "data-accordion": "false"
@@ -45742,23 +45753,31 @@ var render = function() {
                   attrs: { icon: "fa-th", title: "Desktop", link: "/" }
                 }),
                 _vm._v(" "),
-                _c("NavItemTree", {
+                _c("NavItem", {
                   attrs: {
                     icon: "fa-book-open",
-                    name: "blog",
-                    title: "Blog",
-                    link: "#",
-                    subItems: _vm.subMenuBlog
+                    title: "Posts",
+                    link: "/posts"
                   }
                 }),
                 _vm._v(" "),
-                _c("NavItemTree", {
+                _c("NavItem", {
                   attrs: {
-                    icon: "fa-user",
-                    name: "users",
-                    title: "Users",
-                    link: "#",
-                    subItems: _vm.subMenuUsers
+                    icon: "fa-bookmark",
+                    title: "Categories",
+                    link: "/categories"
+                  }
+                }),
+                _vm._v(" "),
+                _c("NavItem", {
+                  attrs: { icon: "fa-user", title: "Users", link: "/users" }
+                }),
+                _vm._v(" "),
+                _c("NavItem", {
+                  attrs: {
+                    icon: "fa-address-card",
+                    title: "Roles",
+                    link: "/roles"
                   }
                 }),
                 _vm._v(" "),
