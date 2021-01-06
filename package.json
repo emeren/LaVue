@@ -15,7 +15,7 @@
     "devDependencies": {
         "@fortawesome/fontawesome-free": "^5.11.2",
         "@vue/test-utils": "^1.0.0-beta.32",
-        "axios": "^0.19",
+        "axios": "^0.21",
         "bootstrap": "^4.4.1",
         "cross-env": "^7.0",
         "cypress": "^4.3.0",
